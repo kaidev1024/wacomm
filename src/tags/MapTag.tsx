@@ -1,5 +1,5 @@
 import { MapSvg } from 'psvg';
-import { SvgTag } from 'src/components/utilcom';
+import SvgTag from 'src/SvgTag';
 
 interface MapTagProps {
   isHighlighted?: boolean;

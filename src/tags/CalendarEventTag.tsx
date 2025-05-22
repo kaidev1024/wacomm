@@ -1,6 +1,6 @@
-import SvgTag from 'src/components/utilcom/SvgTag';
 import { ZeroFunc, ZeroFuncType } from 'pujs';
 import { CalendarEventSvg, SvgSize } from 'psvg';
+import SvgTag from 'src/SvgTag';
 
 interface CalendarEventTagProps {
   label?: string;

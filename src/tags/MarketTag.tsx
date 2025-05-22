@@ -1,4 +1,4 @@
-import { SvgTag } from 'src/components/utilcom';
+import SvgTag from 'src/SvgTag';
 import { ZeroFunc, ZeroFuncType } from 'pujs';
 import { SvgSize, MarketSvg } from 'psvg';
 

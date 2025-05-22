@@ -1,4 +1,4 @@
-import ExpandableContainer from './expandableContainer/ExpandableContainer';
+import { ExpandableContainer } from './expandableContainer';
 import TextUpdater, { TextUpdaterProps } from './TextUpdater';
 
 interface ExpandableTextUpdaterProps extends TextUpdaterProps {
@@ -16,7 +16,7 @@ function ExpandableTextUpdater({
   title,
   editable,
   isExpandable = true,
-}:ExpandableTextUpdaterProps) {
+}: ExpandableTextUpdaterProps) {
   return (
     <ExpandableContainer title={title} className="p-1" isExpandable={isExpandable}>
       <TextUpdater

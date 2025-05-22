@@ -1,6 +1,6 @@
-import { SvgTag } from 'src/components/utilcom';
 import { ArenaSvg, SvgSize } from 'psvg';
 import { ZeroFunc, ZeroFuncType } from 'pujs';
+import SvgTag from 'src/SvgTag';
 
 interface ArenaTagProps {
   label?: string;

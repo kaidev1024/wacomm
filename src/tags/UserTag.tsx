@@ -1,4 +1,4 @@
-import SvgTag from 'src/components/utilcom/SvgTag';
+import SvgTag from 'src/SvgTag';
 import { SvgSize, UserSvg } from 'psvg';
 
 interface UserTagProps {

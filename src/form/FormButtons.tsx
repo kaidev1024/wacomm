@@ -1,5 +1,7 @@
-import { Button, Row, SubmitButton } from 'src/components/utilcom';
 import { ZeroFunc, ZeroFuncType } from 'pujs';
+import Row from 'src/Row';
+import SubmitButton from './SubmitButton';
+import { Button } from 'src/buttons';
 
 interface FormButtonsProps {
   cancelEdit?: ZeroFuncType;

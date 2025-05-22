@@ -1,5 +1,6 @@
 import { twcn, ZeroFunc, ZeroFuncType } from 'pujs';
-import { LoadingIndicator, Row } from 'src/components/utilcom';
+import { LoadingIndicator } from 'src/loadingIndicator';
+import Row from 'src/Row';
 
 interface SubmitButtonProps {
   className?: string;

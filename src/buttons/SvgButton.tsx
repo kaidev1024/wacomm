@@ -2,7 +2,7 @@ import { twConcat, twcn } from 'pujs';
 import { ElementType } from 'react';
 import { SvgSize } from 'psvg';
 import Container from '../Container';
-import LoadingIndicator from '../loadingIndicator/LoadingIndicator';
+import { LoadingIndicator } from '../loadingIndicator';
 
 export interface IconProps {
   Svg: ElementType;
