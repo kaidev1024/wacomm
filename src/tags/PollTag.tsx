@@ -1,0 +1,36 @@
+import SvgTag from 'src/components/utilcom/SvgTag';
+import { ZeroFunc, ZeroFuncType } from 'pujs';
+import { PollSvg, SvgSize } from 'psvg';
+
+interface PollTagProps {
+  label?: string;
+  isHighlighted?: boolean;
+  onClick?: ZeroFuncType;
+  className?: string;
+  svgSize?: SvgSize;
+}
+
+function PollTag({
+  label = '',
+  isHighlighted = false,
+  onClick = ZeroFunc,
+  className = '',
+  svgSize = SvgSize.md,
+}: PollTagProps) {
+
+  return (
+    <SvgTag
+      label={label || 'Polls'}
+      icon={{
+        Svg: PollSvg,
+        size: svgSize,
+        className: isHighlighted ? 'stroke-blue-500 fill-none' : 'stroke-gray-666 fill-none',
+      }}
+      onClick={onClick}
+      className={className}
+      isHighlighted={isHighlighted}
+    />
+  );
+}
+
+export default PollTag;
