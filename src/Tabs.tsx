@@ -33,7 +33,7 @@ function Tabs({
   const nTabs = useRef(tabs.length);
 
   const itemRenderer = ({ label, value }: TabProps, i: number) => {
-    let className = 'w-16 h-fit  text-center py-0 px-2 border w-fit text-center';
+    let className = 'w-16 h-fit  text-center py-0 px-2 border border-gray-300 w-fit text-center';
     if (pickedTab === value) className = twcn(className, 'bg-blue-200 text-blue-500', classNames?.picked);
     if (classNames) {
       const {

@@ -25,7 +25,7 @@ function SubmitButton({
   return (
     <button
       type="submit"
-      className={twcn('SubmitButton px-1 border rounded-lg w-full px-2 bg-blue-500 text-white', className)}
+      className={twcn('SubmitButton px-1 border border-gray-300 rounded-lg w-full px-2 bg-blue-500 text-white', className)}
       disabled={disabled}
       onClick={onClick}
       {...optional}

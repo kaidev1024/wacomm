@@ -13,7 +13,7 @@ interface ButtonProps {
 }
 
 const getClassName = (isHighlighted: boolean, disabled: boolean, className?: string) => {
-  let ret = twcn('flex flex-row items-center justify-center px-1 border rounded-lg w-full bg-white', className);
+  let ret = twcn('flex flex-row items-center justify-center px-1 border border-gray-300 rounded-lg w-full bg-white', className);
   if (isHighlighted) ret = twcn(ret, 'bg-blue-200 border-0');
   if (disabled) ret = twcn(ret, 'bg-gray-200');
   return ret;
