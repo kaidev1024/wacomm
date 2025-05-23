@@ -33,7 +33,7 @@ function Input({
   return (
     <>
       <input
-        className={twcn('Input rounded px-1 py-0 w-full text-gray-600 border-gray-300', className)}
+        className={twcn('Input border border-gray-300 rounded px-1 py-0 w-full text-gray-600 border-gray-300', className)}
         type={type}
         placeholder={placeholder}
         {...register(name, { value: defaultValue })}
