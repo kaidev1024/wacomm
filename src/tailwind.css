@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 @import 'psvg/dist/psvg.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 input[type=file]::file-selector-button {
   border: 2px solid #6c5ce7;

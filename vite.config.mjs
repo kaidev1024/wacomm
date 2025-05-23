@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react-swc';
 import dts from 'vite-plugin-dts';
 import path from 'path';
 import tailwindcss from "@tailwindcss/vite";
+import forms from '@tailwindcss/forms';
 
 export default defineConfig({
   plugins: [
@@ -12,6 +13,7 @@ export default defineConfig({
       insertTypesEntry: true,
     }),
     tailwindcss(),
+    forms,
   ],
   resolve: {
     alias: {
