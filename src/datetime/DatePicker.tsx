@@ -19,10 +19,16 @@ function DatePicker({ value, setValue }: DatePickerProps) {
         slotProps={{
           textField: {
             sx: {
+              '& .MuiPickersSectionList-root': {
+                padding: 0,
+              },
+              '& .MuiPickersInputBase-sectionsContainer': {
+                padding: 0,
+              },
               height: 30, "& .MuiInputBase-root": {
                 height: 30,
                 "& .MuiInputBase-input": {
-                  padding: "0px 16px",
+                  padding: "0px 0px",
                 },
               }
             },

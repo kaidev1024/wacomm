@@ -21,6 +21,12 @@ function DateTimePicker({
         slotProps={{
           textField: {
             sx: {
+              '& .MuiPickersSectionList-root': {
+                padding: 0,
+              },
+              '& .MuiPickersInputBase-sectionsContainer': {
+                padding: 0,
+              },
               width: "100%",
               height: 30, "& .MuiInputBase-root": {
                 height: 30,

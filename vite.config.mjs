@@ -19,6 +19,7 @@ export default defineConfig({
     alias: {
       src: path.resolve(__dirname, 'src'),
     },
+    dedupe: ['react', 'react-dom', '@mui/material', '@mui/x-date-pickers'],
   },
   define: {
     global: {},
