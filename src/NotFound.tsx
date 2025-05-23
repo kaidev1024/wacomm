@@ -3,7 +3,7 @@ interface NotFoundProps {
 }
 
 function NotFound({ label }: NotFoundProps) {
-  return <div className="bg-white p-2 text-gray-666 text-lg rounded-lg">{label}</div>;
+  return <div className="bg-white p-2 text-gray-600 text-lg rounded-lg">{label}</div>;
 }
 
 export default NotFound;

@@ -24,7 +24,7 @@ function PollTag({
       icon={{
         Svg: PollSvg,
         size: svgSize,
-        className: isHighlighted ? 'stroke-blue-500 fill-none' : 'stroke-gray-666 fill-none',
+        className: isHighlighted ? 'stroke-blue-500 fill-none' : 'stroke-gray-600 fill-none',
       }}
       onClick={onClick}
       className={className}

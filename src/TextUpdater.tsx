@@ -52,7 +52,7 @@ function TextUpdater({
   ) : (
     <p
       onClick={() => setIsEditing(editable)}
-      className={twcn('TextUpdater text-sm bg-gray-50 text-gray-666 p-1 rounded-lg mt-1', classNameDisplay)}
+      className={twcn('TextUpdater text-sm bg-gray-50 text-gray-600 p-1 rounded-lg mt-1', classNameDisplay)}
     >
       {content || placeholder}
     </p>

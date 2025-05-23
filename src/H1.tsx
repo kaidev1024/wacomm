@@ -13,7 +13,7 @@ export default function H1({
 }: H1Props) {
   return (
     <h1
-      className={twcn('text-gray-666 text-lg overflow-x-scroll', className)}
+      className={twcn('text-gray-600 text-lg overflow-x-scroll', className)}
       onClick={onClick}
     >
       {label}

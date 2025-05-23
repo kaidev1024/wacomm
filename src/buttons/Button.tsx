@@ -20,7 +20,7 @@ const getClassName = (isHighlighted: boolean, disabled: boolean, className?: str
 };
 
 const getLabelClassName = (isHighlighted: boolean, disabled: boolean, className?: string) => {
-  let ret = twcn('text-gray-666', className);
+  let ret = twcn('text-gray-600', className);
   if (isHighlighted) ret = twcn(ret, 'text-blue-500');
   if (disabled) ret = twcn(ret, 'text-gray-888');
   return ret;

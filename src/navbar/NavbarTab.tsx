@@ -19,7 +19,7 @@ function NavbarTab({
 }: NavbarTabProps) {
   return (
     <div
-      className={twcn('px-3 py-0.5 text-gray-666 text-center', className, isHighlighted ? (tabHighlightedClassName || 'border-blue-500 border-b-2 text-blue-500') : '')}
+      className={twcn('px-3 py-0.5 text-gray-600 text-center', className, isHighlighted ? (tabHighlightedClassName || 'border-blue-500 border-b-2 text-blue-500') : '')}
       onClick={() => onPick(tabName)}
     >
       {label}

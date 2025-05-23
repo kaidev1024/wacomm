@@ -14,7 +14,7 @@ function DateRange({
   className = '',
 }: DateRangeProps) {
   return (
-    <div className={twcn("text-gray-666 text-sm", className)}>{formatDateTimeRange(startDate, endDate)}</div>
+    <div className={twcn("text-gray-600 text-sm", className)}>{formatDateTimeRange(startDate, endDate)}</div>
   );
 }
 

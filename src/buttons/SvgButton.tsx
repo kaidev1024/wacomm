@@ -31,7 +31,7 @@ const getClassName = (isHighlighted: boolean, disabled: boolean, className?: str
 };
 
 const getLabelClassName = (isHighlighted: boolean, disabled: boolean, className?: string) => {
-  let ret = 'text-gray-666';
+  let ret = 'text-gray-600';
   if (isHighlighted) ret = twConcat(ret, 'text-blue-500');
   if (disabled) ret = twConcat(ret, 'text-gray-888');
   return twcn(ret, className);
@@ -62,7 +62,7 @@ function SvgButton({
       onClick={onClick}
     >
       <Container isVertical={isVertical} className="items-center gap-0">
-        {Svg && <Svg size={svgSize} className={twcn(`${isHighlighted ? 'fill-blue-500' : 'fill-gray-666'}`, svgClassName)} />}
+        {Svg && <Svg size={svgSize} className={twcn(`${isHighlighted ? 'fill-blue-500' : 'fill-gray-600'}`, svgClassName)} />}
         <div className={getLabelClassName(isHighlighted!, disabled!, labelClassName)}>{label}</div>
       </Container>
       {isLoading && <LoadingIndicator />}

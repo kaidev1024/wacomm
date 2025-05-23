@@ -14,7 +14,7 @@ function CloseIcon({
 }: CloseIconProps) {
   return (
     <div className={twcn(`w-5 hover:cursor-pointer ${hidden && 'hidden'}`, className)} onClick={onClick}>
-      <CloseSvg size={SvgSize.sm} className={twcn('fill-gray-666', className)} />
+      <CloseSvg size={SvgSize.sm} className={twcn('fill-gray-600', className)} />
     </div>
   );
 }

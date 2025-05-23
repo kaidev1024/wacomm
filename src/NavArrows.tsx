@@ -48,13 +48,13 @@ function NavArrows({ handleNext, handlePrev }: NavArrowsProps) {
           className={twcn(getArrowStype(clickedArrow * Arrow.Prev), 'mx-2 rounded-full text-center pl-2 pr-1 py-0')}
           onClick={onClickPrev}
         >
-          <LeftArrowSvg className="fill-gray-666" />
+          <LeftArrowSvg className="fill-gray-600" />
         </div>
         <div
           className={getArrowStype(clickedArrow * Arrow.Next)}
           onClick={onClickNext}
         >
-          <RightArrowSvg className="fill-gray-666" />
+          <RightArrowSvg className="fill-gray-600" />
         </div>
       </Row>
     </div>

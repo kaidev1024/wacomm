@@ -100,11 +100,11 @@ function Modal({
       shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
       onRequestClose={onClose}
     >
-      <Row className="justify-between items-center w-full h-fit border-b border-gray-333 border-dashed pb-2 mb-2">
+      <Row className="justify-between items-center w-full h-fit border-b border-gray-300 border-dashed pb-2 mb-2">
         <H1 label={title} />
         {!isCloseIconHidden && (
           <CloseIcon
-            className="right-1 text-gray-666"
+            className="right-1 text-gray-600"
             onClick={onClose}
           />
         )}

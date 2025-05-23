@@ -8,8 +8,11 @@
     "dist"
   ],
   "exports": {
-    "import": "./dist/pcom.es.js",
-    "require": "./dist/pcom.cjs.js"
+    ".": {
+      "import": "./dist/pcom.es.js",
+      "require": "./dist/pcom.cjs.js"
+    },
+    "./dist/pcom.css": "./dist/pcom.css"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

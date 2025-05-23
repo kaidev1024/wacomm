@@ -19,7 +19,7 @@ function EditIcon({
     >
       <EditSvg
         size={SvgSize.sm}
-        className={twcn('fill-gray-666', className)} />
+        className={twcn('fill-gray-600', className)} />
     </div>
   );
 }

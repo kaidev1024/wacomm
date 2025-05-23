@@ -31,7 +31,7 @@ const getClassName = (isVertical: boolean, isHighlighted: boolean) => {
 };
 
 const getLabelClassName = (isVertical: boolean, isHighlighted: boolean) => {
-  let ret = 'text-gray-666 text-sm';
+  let ret = 'text-gray-600 text-sm';
   if (isHighlighted) ret = 'text-blue-500';
   if (isVertical) ret = twcn(ret, 'text-xs -mt-3');
   return ret;
@@ -57,7 +57,7 @@ function SvgTag({
       isVertical={isVertical}
       onClick={onClick}
     >
-      <Svg className={twcn(`${isHighlighted ? 'fill-blue-500 text-blue-500' : 'fill-gray-666'}`, svgClassName)} size={svgSize} />
+      <Svg className={twcn(`${isHighlighted ? 'fill-blue-500 text-blue-500' : 'fill-gray-600'}`, svgClassName)} size={svgSize} />
       {!isLabelHidden && label && (
         <div className={twcn(getLabelClassName(isVertical!, isHighlighted!), labelClassName)}>
           {label}

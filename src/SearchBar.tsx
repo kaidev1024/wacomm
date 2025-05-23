@@ -25,7 +25,7 @@ function SearchBar({
   return (
     <input
       type="text"
-      className={twcn('SearchBar text-lg text-gray-666 w-full py-0.5 px-1', className)}
+      className={twcn('SearchBar text-lg text-gray-600 w-full py-0.5 px-1', className)}
       value={value}
       placeholder={placeholder || 'Search...'}
       onKeyDown={handleKeyDown}
