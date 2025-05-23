@@ -18,6 +18,7 @@ export default defineConfig({
   },
   define: {
     global: {},
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
   },
   build: {
     lib: {
@@ -27,7 +28,7 @@ export default defineConfig({
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ['react', 'react-dom', '@mui/material', '@mui/system'],
       output: {
         globals: {
           react: 'React',
