@@ -22,9 +22,9 @@ interface SvgTagProps {
 
 const getClassName = (isVertical: boolean, isHighlighted: boolean) => {
   let ret = 'py-0.5 px-2 gap-2';
-  if (isVertical) ret = twcn(ret, 'items-center py-1 px-2 border-b-2 border-blue-500 border-opacity-0');
+  if (isVertical) ret = twcn(ret, 'items-center py-1 px-2 border-b-2 border-white');
   if (isHighlighted) {
-    if (isVertical) ret = twcn(ret, 'border-opacity-100');
+    if (isVertical) ret = twcn(ret, 'border-blue-500');
     else ret = `${ret} bg-blue-200 rounded-full`;
   }
   return ret;
