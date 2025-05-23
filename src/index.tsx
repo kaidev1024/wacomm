@@ -24,6 +24,7 @@ export { default as CloseIcon } from './CloseIcon';
 export { default as NotFound } from './NotFound';
 export { default as TextInput } from './TextInput';
 export { default as H1 } from './H1';
+export { default as Autocomplete } from './Autocomplete';
 export * from './expandableContainer';
 export * from './loadingIndicator';
 export * from './buttons';
