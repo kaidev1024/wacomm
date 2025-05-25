@@ -1,11 +1,11 @@
 import { twcn } from 'pujs';
 
-interface TextInputProps {
+export interface TextInputProps {
   placeholder?: string;
   className?: string;
   value: string;
   disabled?: boolean;
-  onChange: any;
+  onChange: (s: string) => void;
 }
 
 function TextInput({
@@ -18,7 +18,7 @@ function TextInput({
 
   return (
     <input
-      className={twcn('Input border border-gray-300 rounded px-1 py-0 w-full text-gray-600 border-gray-300', className)}
+      className={twcn('Input border border-gray-300 rounded px-1 py-0 text-gray-600 border-gray-300', className)}
       type='text'
       value={value}
       placeholder={placeholder}

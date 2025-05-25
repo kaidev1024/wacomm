@@ -1,6 +1,6 @@
 import { twcn } from "pujs";
 
-interface NumberInputProps {
+export interface NumberInputProps {
   placeholder?: string;
   className?: string;
   value: number;
@@ -17,7 +17,7 @@ function NumberInput({
 }: NumberInputProps) {
   return (
     <input
-      className={twcn('Input border border-gray-300 rounded px-1 py-0 w-full text-gray-600', className)}
+      className={twcn('Input border border-gray-300 rounded px-1 py-0 text-gray-600', className)}
       type='number'
       value={value}
       min={0}
