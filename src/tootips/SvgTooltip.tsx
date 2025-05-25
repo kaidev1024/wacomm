@@ -1,6 +1,6 @@
 import { ElementType } from 'react';
-import { ZeroFunc, ZeroFuncType } from 'pujs';
-import { SvgSize } from 'psvg';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
+import { SvgSize } from 'wasvg';
 import Tooltip from './Tooltip';
 
 interface IconProps {

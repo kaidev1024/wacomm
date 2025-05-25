@@ -1,6 +1,6 @@
 import SvgTag from 'src/SvgTag';
-import { ZeroFunc, ZeroFuncType } from 'pujs';
-import { SvgSize, TeamSvg } from 'psvg';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
+import { SvgSize, TeamSvg } from 'wasvg';
 
 interface TeamTagProps {
   label?: string;

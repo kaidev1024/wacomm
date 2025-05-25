@@ -1,6 +1,6 @@
 import SvgTag from 'src/SvgTag';
-import { ZeroFunc, ZeroFuncType } from 'pujs';
-import { ImageSvg, SvgSize } from 'psvg';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
+import { ImageSvg, SvgSize } from 'wasvg';
 
 interface ImageTagProps {
   label?: string;

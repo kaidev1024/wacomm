@@ -1,4 +1,4 @@
-import { ZeroFunc, ZeroFuncType, twcn } from 'pujs';
+import { ZeroFunc, ZeroFuncType, twcn } from 'waujs';
 
 interface ColumnProps {
   children: any;

@@ -1,6 +1,6 @@
 import SvgTag from 'src/SvgTag';
-import { ExploreSvg } from 'psvg';
-import { ZeroFuncType } from 'pujs';
+import { ExploreSvg } from 'wasvg';
+import { ZeroFuncType } from 'waujs';
 
 interface ExploreTagProps {
   isHighlighted: boolean;

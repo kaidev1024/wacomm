@@ -1,5 +1,5 @@
-import { twcn, ZeroFunc, ZeroFuncType } from 'pujs';
-import { CloseSvg, SvgSize } from 'psvg';
+import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
+import { CloseSvg, SvgSize } from 'wasvg';
 
 interface CloseIconProps {
   onClick?: ZeroFuncType;

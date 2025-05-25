@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import 'psvg/dist/psvg.css';
+@import 'wasvg/dist/wasvg.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

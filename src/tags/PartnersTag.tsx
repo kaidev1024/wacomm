@@ -1,6 +1,6 @@
 import SvgTag from 'src/SvgTag';
-import { ZeroFunc, ZeroFuncType } from 'pujs';
-import { PartnersSvg } from 'psvg';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
+import { PartnersSvg } from 'wasvg';
 
 interface PartnersTagProps {
   isHighlighted?: boolean;

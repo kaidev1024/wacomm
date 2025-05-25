@@ -1,4 +1,4 @@
-import { ZeroFuncType } from 'pujs';
+import { ZeroFuncType } from 'waujs';
 import Button from './Button';
 
 interface StyledButtonProps {

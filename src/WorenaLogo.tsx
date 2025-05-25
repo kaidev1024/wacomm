@@ -1,6 +1,6 @@
 import SvgTag from './SvgTag';
-import { SvgSize, WorenaLogoSvg } from 'psvg';
-import { ZeroFuncType } from 'pujs';
+import { SvgSize, WorenaLogoSvg } from 'wasvg';
+import { ZeroFuncType } from 'waujs';
 
 interface WorenaLogoProps {
   onClick: ZeroFuncType;

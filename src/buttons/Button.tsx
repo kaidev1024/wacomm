@@ -1,4 +1,4 @@
-import { twcn } from 'pujs';
+import { twcn } from 'waujs';
 import { LoadingIndicator } from 'src/loadingIndicator';
 
 interface ButtonProps {

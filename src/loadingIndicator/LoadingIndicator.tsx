@@ -1,4 +1,4 @@
-import { twcn } from 'pujs';
+import { twcn } from 'waujs';
 import LoadingIcon from './loading.gif';
 import Img from '../Img';
 

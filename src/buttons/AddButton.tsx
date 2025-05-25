@@ -1,5 +1,5 @@
-import { AddSvg } from 'psvg';
-import { ZeroFuncType } from 'pujs';
+import { AddSvg } from 'wasvg';
+import { ZeroFuncType } from 'waujs';
 import SvgButton from './SvgButton';
 
 interface ControlButtonProps {

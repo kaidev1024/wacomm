@@ -1,4 +1,4 @@
-import { twcn, ZeroFunc, ZeroFuncType } from 'pujs';
+import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
 import { Row } from 'src/containers';
 import { LoadingIndicator } from 'src/loadingIndicator';
 

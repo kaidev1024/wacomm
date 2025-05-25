@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { ZeroFuncType } from 'pujs';
+import { ZeroFuncType } from 'waujs';
 
 interface AlertWrapProps {
   count: number;

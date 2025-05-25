@@ -1,6 +1,6 @@
 import SvgTag from 'src/SvgTag';
-import { ZeroFunc, ZeroFuncType } from 'pujs';
-import { CoachSvg, SvgSize } from 'psvg';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
+import { CoachSvg, SvgSize } from 'wasvg';
 
 interface CoachTagProps {
   label: string;

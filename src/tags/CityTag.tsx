@@ -1,5 +1,5 @@
 import SvgTag from 'src/SvgTag';
-import { CitySvg } from 'psvg';
+import { CitySvg } from 'wasvg';
 
 interface CityTagProps {
   label: string;

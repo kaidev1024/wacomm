@@ -1,5 +1,5 @@
-import { ZeroFunc, ZeroFuncType } from 'pujs';
-import { CalendarEventSvg, SvgSize } from 'psvg';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
+import { CalendarEventSvg, SvgSize } from 'wasvg';
 import SvgTag from 'src/SvgTag';
 
 interface CalendarEventTagProps {

@@ -1,4 +1,4 @@
-import { ZeroFunc, ZeroFuncType } from 'pujs';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
 import SubmitButton from './SubmitButton';
 import { Button } from 'src/buttons';
 import { Row } from 'src/containers';

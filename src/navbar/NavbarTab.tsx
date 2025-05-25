@@ -1,4 +1,4 @@
-import { twcn } from 'pujs';
+import { twcn } from 'waujs';
 
 interface NavbarTabProps {
   isHighlighted: boolean;

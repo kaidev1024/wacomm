@@ -1,6 +1,6 @@
 import { ReactElement, ReactNode } from 'react';
 import ReactModal from 'react-modal';
-import { ZeroFuncType } from 'pujs';
+import { ZeroFuncType } from 'waujs';
 import H1 from './H1';
 import { CloseIcon } from './icons';
 import { Row } from './containers';

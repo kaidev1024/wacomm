@@ -1,6 +1,6 @@
 import SvgTag from 'src/SvgTag';
-import { HomeSvg } from 'psvg';
-import { ZeroFuncType } from 'pujs';
+import { HomeSvg } from 'wasvg';
+import { ZeroFuncType } from 'waujs';
 
 interface HomeTagProps {
   isHighlighted: boolean;

@@ -1,5 +1,5 @@
-import { twcn, ZeroFunc, ZeroFuncType } from 'pujs';
-import { EditSvg, SvgSize } from 'psvg';
+import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
+import { EditSvg, SvgSize } from 'wasvg';
 
 interface EditIconProps {
   onClick?: ZeroFuncType;

@@ -1,6 +1,6 @@
 import SvgTag from 'src/SvgTag';
-import { ZeroFunc, ZeroFuncType } from 'pujs';
-import { CollectionSvg, SvgSize } from 'psvg';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
+import { CollectionSvg, SvgSize } from 'wasvg';
 
 interface CreateCollectionTagProps {
   label?: string;

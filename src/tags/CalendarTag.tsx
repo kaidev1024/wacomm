@@ -1,6 +1,6 @@
 import SvgTag from 'src/SvgTag';
-import { ZeroFunc, ZeroFuncType } from 'pujs';
-import { CalendarSvg, SvgSize } from 'psvg';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
+import { CalendarSvg, SvgSize } from 'wasvg';
 
 interface CalendarTagProps {
   isHighlighted?: boolean;

@@ -1,4 +1,4 @@
-import { MapSvg } from 'psvg';
+import { MapSvg } from 'wasvg';
 import SvgTag from 'src/SvgTag';
 
 interface MapTagProps {

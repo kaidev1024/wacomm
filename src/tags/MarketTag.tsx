@@ -1,6 +1,6 @@
 import SvgTag from 'src/SvgTag';
-import { ZeroFunc, ZeroFuncType } from 'pujs';
-import { SvgSize, MarketSvg } from 'psvg';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
+import { SvgSize, MarketSvg } from 'wasvg';
 
 interface MarketTagProps {
   label?: string;

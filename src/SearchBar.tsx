@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { KeyboardEvent, useState } from 'react';
-import { twcn } from 'pujs';
+import { twcn } from 'waujs';
 
 interface SearchBarProps {
   placeholder?: string;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ZeroFunc, ZeroFuncType } from 'pujs';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
 
 interface ImgProps {
   src: string;

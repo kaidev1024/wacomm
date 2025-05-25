@@ -1,5 +1,5 @@
 import SvgTag from 'src/SvgTag';
-import { SvgSize, UserSvg } from 'psvg';
+import { SvgSize, UserSvg } from 'wasvg';
 
 interface UserTagProps {
   label: string;

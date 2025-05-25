@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import { formatDateTimeRange } from "./dateTimeFormatter";
-import { twcn } from 'pujs';
+import { twcn } from 'waujs';
 
 interface DateRangeProps {
   startDate: dayjs.Dayjs;

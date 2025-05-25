@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import Switch from 'react-switch';
-import { twcn } from 'pujs';
+import { twcn } from 'waujs';
 import { Row } from 'src/containers';
 
 interface ToggleButtonProps {

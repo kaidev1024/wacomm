@@ -1,4 +1,4 @@
-import { twcn } from "pujs";
+import { twcn } from "waujs";
 import { Row } from "src/containers";
 import H1 from "src/H1";
 

@@ -1,4 +1,4 @@
-import { twcn } from 'pujs';
+import { twcn } from 'waujs';
 import { useRef } from 'react';
 import List from './List';
 

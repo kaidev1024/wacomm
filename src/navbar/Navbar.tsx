@@ -1,4 +1,4 @@
-import { twcn } from 'pujs';
+import { twcn } from 'waujs';
 import List from "../List";
 import NavbarTab from "./NavbarTab";
 

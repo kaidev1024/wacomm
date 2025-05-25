@@ -1,5 +1,5 @@
 import SvgTag from 'src/SvgTag';
-import { PrivateSvg } from 'psvg';
+import { PrivateSvg } from 'wasvg';
 
 function PrivateTag() {
   return (

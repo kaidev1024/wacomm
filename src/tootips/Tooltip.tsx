@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { ReactNode } from 'react';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
-import { ZeroFunc, ZeroFuncType, twcn } from 'pujs';
+import { ZeroFunc, ZeroFuncType, twcn } from 'waujs';
 
 export enum TooltipPosition {
   top = 'top',

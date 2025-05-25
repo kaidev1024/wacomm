@@ -1,6 +1,6 @@
-import { twConcat, twcn } from 'pujs';
+import { twConcat, twcn } from 'waujs';
 import { ElementType } from 'react';
-import { SvgSize } from 'psvg';
+import { SvgSize } from 'wasvg';
 import { LoadingIndicator } from '../loadingIndicator';
 import { Container } from 'src/containers';
 

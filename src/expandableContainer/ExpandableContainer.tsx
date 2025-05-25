@@ -1,5 +1,5 @@
 import { ReactNode, useState } from 'react';
-import { twcn } from 'pujs';
+import { twcn } from 'waujs';
 import ExpandableContainerHeader from './ExpandableContainerHeader';
 import { Column } from 'src/containers';
 

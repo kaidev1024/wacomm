@@ -1,4 +1,4 @@
-import { twcn, ZeroFunc, ZeroFuncType } from 'pujs';
+import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
 
 interface H1Props {
   label: string;

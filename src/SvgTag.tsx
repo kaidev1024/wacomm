@@ -1,6 +1,6 @@
-import { twcn, ZeroFunc, ZeroFuncType } from 'pujs';
+import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
 import { ElementType } from 'react';
-import { SvgSize } from 'psvg';
+import { SvgSize } from 'wasvg';
 import { Container } from './containers';
 
 export interface IconProps {

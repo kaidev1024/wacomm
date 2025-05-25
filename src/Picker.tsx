@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { ReactNode } from 'react';
 import ReactSelect from 'react-select';
-import { twcn } from 'pujs';
+import { twcn } from 'waujs';
 
 export interface PickerOptionProps {
   value: any;

@@ -1,6 +1,6 @@
 import SvgTag from 'src/SvgTag';
-import { ZeroFunc, ZeroFuncType } from 'pujs';
-import { ArenaSvg, SvgSize } from 'psvg';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
+import { ArenaSvg, SvgSize } from 'wasvg';
 
 interface CreateArenaTagProps {
   label?: string;

@@ -1,4 +1,4 @@
-import { ZeroFunc, ZeroFuncType } from 'pujs';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
 import { Column, Row } from '.';
 
 interface ContainerProps {

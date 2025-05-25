@@ -1,4 +1,4 @@
-import { ZeroFuncType } from 'pujs';
+import { ZeroFuncType } from 'waujs';
 import StyledButton from "./StyledButton";
 import { Row } from 'src/containers';
 

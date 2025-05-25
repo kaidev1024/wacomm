@@ -1,6 +1,6 @@
 import SvgTag from 'src/SvgTag';
-import { ZeroFunc, ZeroFuncType } from 'pujs';
-import { NewsfeedSvg } from 'psvg';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
+import { NewsfeedSvg } from 'wasvg';
 
 interface NewsfeedTagProps {
   isHighlighted?: boolean;

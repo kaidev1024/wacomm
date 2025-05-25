@@ -1,5 +1,5 @@
-import { AddSvg, SvgSize, CollapseSvg } from 'psvg';
-import { ZeroFuncType } from 'pujs';
+import { AddSvg, SvgSize, CollapseSvg } from 'wasvg';
+import { ZeroFuncType } from 'waujs';
 import { Row } from 'src/containers';
 import H1 from 'src/H1';
 

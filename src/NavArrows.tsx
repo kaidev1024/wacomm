@@ -4,8 +4,8 @@ import {
   twcn,
   ZeroFuncType,
   useOutsideClick
-} from 'pujs';
-import { LeftArrowSvg, RightArrowSvg } from 'psvg';
+} from 'waujs';
+import { LeftArrowSvg, RightArrowSvg } from 'wasvg';
 import { Row } from './containers';
 
 interface NavArrowsProps {

@@ -1,5 +1,5 @@
-import { ArenaSvg, SvgSize } from 'psvg';
-import { ZeroFunc, ZeroFuncType } from 'pujs';
+import { ArenaSvg, SvgSize } from 'wasvg';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
 import SvgTag from 'src/SvgTag';
 
 interface ArenaTagProps {

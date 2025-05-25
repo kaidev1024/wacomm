@@ -1,6 +1,6 @@
 import SvgTag from 'src/SvgTag';
-import { ZeroFunc, ZeroFuncType } from 'pujs';
-import { TextPostSvg, SvgSize } from 'psvg';
+import { ZeroFunc, ZeroFuncType } from 'waujs';
+import { TextPostSvg, SvgSize } from 'wasvg';
 
 interface TextPostTagProps {
   isHighlighted?: boolean;

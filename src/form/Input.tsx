@@ -1,5 +1,5 @@
 import { FieldValues, FieldErrors, UseFormRegister } from 'react-hook-form';
-import { twcn } from 'pujs';
+import { twcn } from 'waujs';
 
 interface InputProps {
   name: string;

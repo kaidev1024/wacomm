@@ -1,5 +1,5 @@
 import { ElementType, ReactNode, useState } from 'react';
-import { ZeroFuncType } from 'pujs';
+import { ZeroFuncType } from 'waujs';
 import { CloseIcon, EditIcon } from './icons';
 import { Column, Row } from './containers';
 
