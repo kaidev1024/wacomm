@@ -1,18 +1,18 @@
 {
-  "name": "pcom",
+  "name": "wacomm",
   "version": "1.0.0",
-  "main": "dist/pcom.cjs.js",
-  "module": "dist/pcom.es.js",
+  "main": "dist/wacomm.cjs.js",
+  "module": "dist/wacomm.es.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "import": "./dist/pcom.es.js",
-      "require": "./dist/pcom.cjs.js"
+      "import": "./dist/wacomm.es.js",
+      "require": "./dist/wacomm.cjs.js"
     },
-    "./dist/pcom.css": "./dist/pcom.css"
+    "./dist/wacomm.css": "./dist/wacomm.css"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -28,8 +28,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'src/index.js',
-      name: 'pcom',
-      fileName: (format) => `pcom.${format}.js`,
+      name: 'wacomm',
+      fileName: (format) => `wacomm.${format}.js`,
       formats: ['es', 'cjs'],
     },
     rollupOptions: {

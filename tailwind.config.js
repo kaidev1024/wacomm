@@ -18,7 +18,7 @@ module.exports = {
     'index.html',
     './src/**/*.{tsx,ts}',
     // './node_modules/psvg/dist/*.{js,ts,jsx,tsx}',
-    // './node_modules/pcom/dist/*.{js,ts,jsx,tsx}',
+    // './node_modules/wacomm/dist/*.{js,ts,jsx,tsx}',
   ],
   safelist: [
     ...tops,
