@@ -1,7 +1,7 @@
 import { twcn, ZeroFunc, ZeroFuncType } from 'pujs';
 import { ElementType } from 'react';
 import { SvgSize } from 'psvg';
-import Container from './Container';
+import { Container } from './containers';
 
 export interface IconProps {
   Svg: ElementType;

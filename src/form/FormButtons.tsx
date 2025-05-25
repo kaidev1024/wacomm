@@ -1,7 +1,7 @@
 import { ZeroFunc, ZeroFuncType } from 'pujs';
-import Row from 'src/Row';
 import SubmitButton from './SubmitButton';
 import { Button } from 'src/buttons';
+import { Row } from 'src/containers';
 
 interface FormButtonsProps {
   cancelEdit?: ZeroFuncType;

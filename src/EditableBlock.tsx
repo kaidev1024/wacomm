@@ -1,8 +1,7 @@
 import { ElementType, ReactNode, useState } from 'react';
 import { ZeroFuncType } from 'pujs';
-import Column from './Column';
-import Row from './Row';
 import { CloseIcon, EditIcon } from './icons';
+import { Column, Row } from './containers';
 
 interface EditableBlockProps {
   Edit: ElementType;

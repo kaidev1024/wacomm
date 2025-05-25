@@ -1,6 +1,6 @@
 import { ZeroFuncType } from 'pujs';
-import Row from 'src/Row';
 import StyledButton from "./StyledButton";
+import { Row } from 'src/containers';
 
 interface YesNoButtonsProps {
   yesLabel: string;

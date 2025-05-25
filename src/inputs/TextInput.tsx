@@ -1,6 +1,6 @@
 import { twcn } from 'pujs';
+import { Row } from 'src/containers';
 import H1 from 'src/H1';
-import Row from 'src/Row';
 
 export interface TextInputProps {
   title?: string;

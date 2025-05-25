@@ -6,7 +6,7 @@ import {
   useOutsideClick
 } from 'pujs';
 import { LeftArrowSvg, RightArrowSvg } from 'psvg';
-import Row from './Row';
+import { Row } from './containers';
 
 interface NavArrowsProps {
   handlePrev: ZeroFuncType;

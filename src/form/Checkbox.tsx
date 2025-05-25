@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { FieldValues, UseFormRegister } from 'react-hook-form';
-import Row from 'src/Row';
+import { Row } from 'src/containers';
 
 interface CheckboxProps {
   label: ReactNode;

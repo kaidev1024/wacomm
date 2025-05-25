@@ -1,7 +1,7 @@
 import { ReactNode, useState } from 'react';
 import { twcn } from 'pujs';
 import ExpandableContainerHeader from './ExpandableContainerHeader';
-import Column from 'src/Column';
+import { Column } from 'src/containers';
 
 export interface ExpandableContainerProps {
   title: string;
