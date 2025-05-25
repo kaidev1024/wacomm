@@ -12,7 +12,7 @@ export interface NumberInputProps {
 }
 
 export default function NumberInput({
-  title,
+  title = '',
   placeholder = '',
   className = '',
   value = 1,

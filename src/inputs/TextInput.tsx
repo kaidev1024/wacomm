@@ -12,7 +12,7 @@ export interface TextInputProps {
 }
 
 export default function TextInput({
-  title,
+  title = '',
   placeholder = '',
   className = '',
   value = '',

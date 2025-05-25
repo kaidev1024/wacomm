@@ -29,6 +29,7 @@ export * from './navbar';
 export * from './tags';
 export * from './icons';
 export * from './inputs';
+export * from './containers';
 export type {
   EditableBlockEditProps,
   EditableBlockDisplayProps
