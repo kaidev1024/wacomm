@@ -19,8 +19,6 @@ export { default as Tabs } from './Tabs';
 export { default as Copyright } from './Copyright';
 export { default as NavArrows } from './NavArrows';
 export { default as WorenaLogo } from './WorenaLogo';
-export { default as EditIcon } from './EditIcon';
-export { default as CloseIcon } from './CloseIcon';
 export { default as NotFound } from './NotFound';
 export { default as TextInput } from './TextInput';
 export { default as H1 } from './H1';
@@ -34,6 +32,7 @@ export * from './form';
 export * from './tootips';
 export * from './navbar';
 export * from './tags';
+export * from './icons';
 export type {
   EditableBlockEditProps,
   EditableBlockDisplayProps

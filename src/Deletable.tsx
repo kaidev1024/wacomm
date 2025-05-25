@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import Row from './Row';
-import CloseIcon from './CloseIcon';
+import { CloseIcon } from './icons';
 
 interface DeletableProps {
   content: ReactNode;
