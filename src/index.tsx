@@ -5,7 +5,6 @@ export { default as Picker } from './Picker';
 export { default as Row } from './Row';
 export { default as Column } from './Column';
 export { default as Tag, TagColor, TagLabelSize } from './Tag';
-export { default as Container } from './Container';
 export { default as SvgTag } from './SvgTag';
 export { default as List } from './List';
 export { default as Deletable } from './Deletable';
