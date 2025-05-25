@@ -1,5 +1,5 @@
 import { ExpandableContainer } from './expandableContainer';
-import TextUpdater, { TextUpdaterProps } from './TextUpdater';
+import TextUpdater, { TextUpdaterProps } from './inputs/TextUpdater';
 
 interface ExpandableTextUpdaterProps extends TextUpdaterProps {
   title: string;

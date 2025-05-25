@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { FieldValues, useForm } from 'react-hook-form';
 import { twcn, ZeroFuncType } from 'pujs';
-import { FormButtons, Textarea } from './form';
+import { FormButtons, Textarea } from '../form';
 
 export interface TextUpdaterProps {
   content: string;
