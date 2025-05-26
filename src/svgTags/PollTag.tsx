@@ -1,8 +1,8 @@
-import SvgTag from 'src/SvgTag';
+import SvgTag from './SvgTag';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
-import { SvgSize, TeamSvg } from 'wasvg';
+import { PollSvg, SvgSize } from 'wasvg';
 
-interface CreateTeamTagProps {
+interface PollTagProps {
   label?: string;
   isHighlighted?: boolean;
   onClick?: ZeroFuncType;
@@ -10,23 +10,27 @@ interface CreateTeamTagProps {
   svgSize?: SvgSize;
 }
 
-function CreateTeamTag({
+function PollTag({
   label = '',
   isHighlighted = false,
   onClick = ZeroFunc,
   className = '',
   svgSize = SvgSize.md,
-}: CreateTeamTagProps) {
+}: PollTagProps) {
+
   return (
     <SvgTag
-      label={label || 'Team'}
-      icon={{ Svg: TeamSvg, size: svgSize }}
+      label={label || 'Polls'}
+      icon={{
+        Svg: PollSvg,
+        size: svgSize,
+        className: isHighlighted ? 'stroke-blue-500 fill-none' : 'stroke-gray-600 fill-none',
+      }}
       onClick={onClick}
       className={className}
       isHighlighted={isHighlighted}
-      isVertical={false}
     />
   );
 }
 
-export default CreateTeamTag;
+export default PollTag;

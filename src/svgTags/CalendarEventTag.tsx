@@ -1,40 +1,42 @@
-import SvgTag from 'src/SvgTag';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
-import { CalendarSvg, SvgSize } from 'wasvg';
+import { CalendarEventSvg, SvgSize } from 'wasvg';
+import SvgTag from './SvgTag';
 
-interface CalendarTagProps {
+interface CalendarEventTagProps {
+  label?: string;
   isHighlighted?: boolean;
   onClick?: ZeroFuncType;
-  isVertical?: boolean;
+  className?: string;
+  svgSize?: SvgSize;
   labelClassName?: string;
   svgClassName?: string;
-  label?: string;
-  svgSize?: SvgSize;
 }
 
-function CalendarTag({
+function CalendarEventTag({
+  label = '',
   isHighlighted = false,
   onClick = ZeroFunc,
-  isVertical = false,
-  label = '',
+  className = '',
+  svgSize = SvgSize.md,
   labelClassName = '',
   svgClassName = '',
-  svgSize = SvgSize.md,
-}: CalendarTagProps) {
+}: CalendarEventTagProps) {
+
   return (
     <SvgTag
-      label={label}
+      label={label || 'Event'}
       icon={{
-        Svg: CalendarSvg,
+        Svg: CalendarEventSvg,
         size: svgSize,
         className: svgClassName,
       }}
       onClick={onClick}
+      className={className}
       isHighlighted={isHighlighted}
-      isVertical={isVertical}
+      isVertical={false}
       labelClassName={labelClassName}
     />
   );
 }
 
-export default CalendarTag;
+export default CalendarEventTag;

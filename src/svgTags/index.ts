@@ -21,3 +21,4 @@ export { default as CreateTeamTag } from './CreateTeamTag';
 export { default as PrivateTag } from './PrivateTag';
 export { default as CalendarEventTag } from './CalendarEventTag';
 export { default as MarketTag } from './MarketTag';
+export { default as WorenaLogo } from './WorenaLogo';

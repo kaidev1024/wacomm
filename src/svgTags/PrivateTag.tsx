@@ -1,4 +1,4 @@
-import SvgTag from 'src/SvgTag';
+import SvgTag from './SvgTag';
 import { PrivateSvg } from 'wasvg';
 
 function PrivateTag() {

@@ -1,5 +1,5 @@
 import { MapSvg } from 'wasvg';
-import SvgTag from 'src/SvgTag';
+import SvgTag from './SvgTag';
 
 interface MapTagProps {
   isHighlighted?: boolean;

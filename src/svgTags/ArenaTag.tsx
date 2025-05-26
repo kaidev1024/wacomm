@@ -1,32 +1,37 @@
-import SvgTag from 'src/SvgTag';
+import { ArenaSvg, SvgSize } from 'wasvg';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
-import { CollectionSvg, SvgSize } from 'wasvg';
+import SvgTag from './SvgTag';
 
-interface CreateCollectionTagProps {
+interface ArenaTagProps {
   label?: string;
   isHighlighted?: boolean;
   onClick?: ZeroFuncType;
   className?: string;
+  svgClassName?: string;
+  labelClassName?: string;
   svgSize?: SvgSize;
 }
 
-function CreateCollectionTag({
+function ArenaTag({
   label = '',
   isHighlighted = false,
   onClick = ZeroFunc,
   className = '',
+  svgClassName = '',
   svgSize = SvgSize.md,
-}: CreateCollectionTagProps) {
+  labelClassName = '',
+}: ArenaTagProps) {
+
   return (
     <SvgTag
-      label={label || 'Collection'}
-      icon={{ Svg: CollectionSvg, size: svgSize }}
+      label={label}
+      icon={{ Svg: ArenaSvg, size: svgSize, className: svgClassName }}
       onClick={onClick}
       className={className}
       isHighlighted={isHighlighted}
-      isVertical={false}
+      labelClassName={labelClassName}
     />
   );
 }
 
-export default CreateCollectionTag;
+export default ArenaTag;

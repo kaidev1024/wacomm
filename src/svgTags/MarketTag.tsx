@@ -1,8 +1,8 @@
-import SvgTag from 'src/SvgTag';
+import SvgTag from './SvgTag';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
-import { SvgSize, CollectionSvg } from 'wasvg';
+import { SvgSize, MarketSvg } from 'wasvg';
 
-interface CollectionsTagProps {
+interface MarketTagProps {
   label?: string;
   isHighlighted?: boolean;
   onClick?: ZeroFuncType;
@@ -12,30 +12,25 @@ interface CollectionsTagProps {
   svgClassName?: string;
 }
 
-function CollectionsTag({
+function MarketTag({
   label = '',
   isHighlighted = false,
   onClick = ZeroFunc,
   className = '',
+  svgSize = SvgSize.md,
   labelClassName = '',
   svgClassName = '',
-  svgSize = SvgSize.md,
-}: CollectionsTagProps) {
-
+}: MarketTagProps) {
   return (
     <SvgTag
       label={label}
-      icon={{
-        Svg: CollectionSvg,
-        size: svgSize,
-        className: svgClassName,
-      }}
+      icon={{ Svg: MarketSvg, size: svgSize, className: svgClassName }}
       onClick={onClick}
       className={className}
-      labelClassName={labelClassName}
       isHighlighted={isHighlighted}
+      labelClassName={labelClassName}
     />
   );
 }
 
-export default CollectionsTag;
+export default MarketTag;

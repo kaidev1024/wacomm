@@ -1,4 +1,4 @@
-import SvgTag from 'src/SvgTag';
+import SvgTag from './SvgTag';
 import { HomeSvg } from 'wasvg';
 import { ZeroFuncType } from 'waujs';
 

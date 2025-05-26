@@ -1,32 +1,31 @@
-import SvgTag from 'src/SvgTag';
+import SvgTag from './SvgTag';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
-import { CreatePostSvg, SvgSize } from 'wasvg';
+import { TextPostSvg, SvgSize } from 'wasvg';
 
-interface CreatePostTagProps {
-  label?: string;
+interface TextPostTagProps {
   isHighlighted?: boolean;
   onClick?: ZeroFuncType;
   className?: string;
   svgSize?: SvgSize;
+  label?: string;
 }
 
-function CreatePostTag({
-  label = '',
+function TextPostTag({
   isHighlighted = false,
   onClick = ZeroFunc,
   className = '',
   svgSize = SvgSize.md,
-}: CreatePostTagProps) {
+  label = '',
+}: TextPostTagProps) {
   return (
     <SvgTag
-      label={label}
-      icon={{ Svg: CreatePostSvg, size: svgSize }}
+      label={label || 'Text'}
+      icon={{ Svg: TextPostSvg, size: svgSize }}
       onClick={onClick}
       className={className}
       isHighlighted={isHighlighted}
-      isVertical
     />
   );
 }
 
-export default CreatePostTag;
+export default TextPostTag;
