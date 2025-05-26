@@ -1,8 +1,8 @@
-import SvgTag from './SvgTag';
+import SvgTag from '../SvgTag';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
-import { CollectionSvg, SvgSize } from 'wasvg';
+import { CreatePostSvg, SvgSize } from 'wasvg';
 
-interface CreateCollectionTagProps {
+interface CreatePostTagProps {
   label?: string;
   isHighlighted?: boolean;
   onClick?: ZeroFuncType;
@@ -10,23 +10,23 @@ interface CreateCollectionTagProps {
   svgSize?: SvgSize;
 }
 
-function CreateCollectionTag({
+function CreatePostTag({
   label = '',
   isHighlighted = false,
   onClick = ZeroFunc,
   className = '',
   svgSize = SvgSize.md,
-}: CreateCollectionTagProps) {
+}: CreatePostTagProps) {
   return (
     <SvgTag
-      label={label || 'Collection'}
-      icon={{ Svg: CollectionSvg, size: svgSize }}
+      label={label}
+      icon={{ Svg: CreatePostSvg, size: svgSize }}
       onClick={onClick}
       className={className}
       isHighlighted={isHighlighted}
-      isVertical={false}
+      isVertical
     />
   );
 }
 
-export default CreateCollectionTag;
+export default CreatePostTag;

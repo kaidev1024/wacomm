@@ -1,4 +1,4 @@
-import SvgTag from './SvgTag';
+import SvgTag from '../SvgTag';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
 import { SvgSize, TeamSvg } from 'wasvg';
 

@@ -1,8 +1,8 @@
-import SvgTag from './SvgTag';
+import SvgTag from '../SvgTag';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
-import { SvgSize, TeamSvg } from 'wasvg';
+import { SvgSize, CollectionSvg } from 'wasvg';
 
-interface TeamTagProps {
+interface CollectionsTagProps {
   label?: string;
   isHighlighted?: boolean;
   onClick?: ZeroFuncType;
@@ -12,25 +12,30 @@ interface TeamTagProps {
   svgClassName?: string;
 }
 
-function TeamTag({
+function CollectionsTag({
   label = '',
   isHighlighted = false,
   onClick = ZeroFunc,
   className = '',
-  svgSize = SvgSize.md,
   labelClassName = '',
   svgClassName = '',
-}: TeamTagProps) {
+  svgSize = SvgSize.md,
+}: CollectionsTagProps) {
+
   return (
     <SvgTag
       label={label}
-      icon={{ Svg: TeamSvg, size: svgSize, className: svgClassName }}
+      icon={{
+        Svg: CollectionSvg,
+        size: svgSize,
+        className: svgClassName,
+      }}
       onClick={onClick}
       className={className}
-      isHighlighted={isHighlighted}
       labelClassName={labelClassName}
+      isHighlighted={isHighlighted}
     />
   );
 }
 
-export default TeamTag;
+export default CollectionsTag;

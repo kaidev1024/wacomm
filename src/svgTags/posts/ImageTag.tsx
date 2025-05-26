@@ -1,8 +1,8 @@
-import SvgTag from './SvgTag';
+import SvgTag from '../SvgTag';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
-import { ArenaSvg, SvgSize } from 'wasvg';
+import { ImageSvg, SvgSize } from 'wasvg';
 
-interface CreateArenaTagProps {
+interface ImageTagProps {
   label?: string;
   isHighlighted?: boolean;
   onClick?: ZeroFuncType;
@@ -10,24 +10,23 @@ interface CreateArenaTagProps {
   svgSize?: SvgSize;
 }
 
-function CreateArenaTag({
+function ImageTag({
   label = '',
   isHighlighted = false,
   onClick = ZeroFunc,
   className = '',
   svgSize = SvgSize.md,
-}: CreateArenaTagProps) {
+}: ImageTagProps) {
 
   return (
     <SvgTag
-      label={label || 'Arena'}
-      icon={{ Svg: ArenaSvg, size: svgSize }}
+      label={label || 'Images'}
+      icon={{ Svg: ImageSvg, size: svgSize }}
       onClick={onClick}
       className={className}
       isHighlighted={isHighlighted}
-      isVertical={false}
     />
   );
 }
 
-export default CreateArenaTag;
+export default ImageTag;

@@ -1,31 +1,28 @@
-import { ArenaSvg, SvgSize } from 'wasvg';
+import SvgTag from '../SvgTag';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
-import SvgTag from './SvgTag';
+import { CoachSvg, SvgSize } from 'wasvg';
 
-interface ArenaTagProps {
-  label?: string;
+interface CoachTagProps {
+  label: string;
   isHighlighted?: boolean;
   onClick?: ZeroFuncType;
   className?: string;
-  svgClassName?: string;
   labelClassName?: string;
   svgSize?: SvgSize;
 }
 
-function ArenaTag({
-  label = '',
+function CoachTag({
+  label,
   isHighlighted = false,
   onClick = ZeroFunc,
   className = '',
-  svgClassName = '',
   svgSize = SvgSize.md,
   labelClassName = '',
-}: ArenaTagProps) {
-
+}: CoachTagProps) {
   return (
     <SvgTag
       label={label}
-      icon={{ Svg: ArenaSvg, size: svgSize, className: svgClassName }}
+      icon={{ Svg: CoachSvg, size: svgSize, className: 'fill-blue-500' }}
       onClick={onClick}
       className={className}
       isHighlighted={isHighlighted}
@@ -34,4 +31,4 @@ function ArenaTag({
   );
 }
 
-export default ArenaTag;
+export default CoachTag;

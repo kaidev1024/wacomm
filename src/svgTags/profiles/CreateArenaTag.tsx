@@ -1,31 +1,33 @@
-import SvgTag from './SvgTag';
+import SvgTag from '../SvgTag';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
-import { TextPostSvg, SvgSize } from 'wasvg';
+import { ArenaSvg, SvgSize } from 'wasvg';
 
-interface TextPostTagProps {
+interface CreateArenaTagProps {
+  label?: string;
   isHighlighted?: boolean;
   onClick?: ZeroFuncType;
   className?: string;
   svgSize?: SvgSize;
-  label?: string;
 }
 
-function TextPostTag({
+function CreateArenaTag({
+  label = '',
   isHighlighted = false,
   onClick = ZeroFunc,
   className = '',
   svgSize = SvgSize.md,
-  label = '',
-}: TextPostTagProps) {
+}: CreateArenaTagProps) {
+
   return (
     <SvgTag
-      label={label || 'Text'}
-      icon={{ Svg: TextPostSvg, size: svgSize }}
+      label={label || 'Arena'}
+      icon={{ Svg: ArenaSvg, size: svgSize }}
       onClick={onClick}
       className={className}
       isHighlighted={isHighlighted}
+      isVertical={false}
     />
   );
 }
 
-export default TextPostTag;
+export default CreateArenaTag;

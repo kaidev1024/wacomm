@@ -1,32 +1,36 @@
-import SvgTag from './SvgTag';
+import SvgTag from '../SvgTag';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
-import { CreatePostSvg, SvgSize } from 'wasvg';
+import { SvgSize, MarketSvg } from 'wasvg';
 
-interface CreatePostTagProps {
+interface MarketTagProps {
   label?: string;
   isHighlighted?: boolean;
   onClick?: ZeroFuncType;
   className?: string;
   svgSize?: SvgSize;
+  labelClassName?: string;
+  svgClassName?: string;
 }
 
-function CreatePostTag({
+function MarketTag({
   label = '',
   isHighlighted = false,
   onClick = ZeroFunc,
   className = '',
   svgSize = SvgSize.md,
-}: CreatePostTagProps) {
+  labelClassName = '',
+  svgClassName = '',
+}: MarketTagProps) {
   return (
     <SvgTag
       label={label}
-      icon={{ Svg: CreatePostSvg, size: svgSize }}
+      icon={{ Svg: MarketSvg, size: svgSize, className: svgClassName }}
       onClick={onClick}
       className={className}
       isHighlighted={isHighlighted}
-      isVertical
+      labelClassName={labelClassName}
     />
   );
 }
 
-export default CreatePostTag;
+export default MarketTag;

@@ -1,8 +1,8 @@
-import SvgTag from './SvgTag';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
-import { SvgSize, MarketSvg } from 'wasvg';
+import { CalendarEventSvg, SvgSize } from 'wasvg';
+import SvgTag from '../SvgTag';
 
-interface MarketTagProps {
+interface CalendarEventTagProps {
   label?: string;
   isHighlighted?: boolean;
   onClick?: ZeroFuncType;
@@ -12,7 +12,7 @@ interface MarketTagProps {
   svgClassName?: string;
 }
 
-function MarketTag({
+function CalendarEventTag({
   label = '',
   isHighlighted = false,
   onClick = ZeroFunc,
@@ -20,17 +20,23 @@ function MarketTag({
   svgSize = SvgSize.md,
   labelClassName = '',
   svgClassName = '',
-}: MarketTagProps) {
+}: CalendarEventTagProps) {
+
   return (
     <SvgTag
-      label={label}
-      icon={{ Svg: MarketSvg, size: svgSize, className: svgClassName }}
+      label={label || 'Event'}
+      icon={{
+        Svg: CalendarEventSvg,
+        size: svgSize,
+        className: svgClassName,
+      }}
       onClick={onClick}
       className={className}
       isHighlighted={isHighlighted}
+      isVertical={false}
       labelClassName={labelClassName}
     />
   );
 }
 
-export default MarketTag;
+export default CalendarEventTag;

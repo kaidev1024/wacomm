@@ -1,8 +1,8 @@
-import SvgTag from './SvgTag';
+import SvgTag from '../SvgTag';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
-import { PollSvg, SvgSize } from 'wasvg';
+import { CollectionSvg, SvgSize } from 'wasvg';
 
-interface PollTagProps {
+interface CreateCollectionTagProps {
   label?: string;
   isHighlighted?: boolean;
   onClick?: ZeroFuncType;
@@ -10,27 +10,23 @@ interface PollTagProps {
   svgSize?: SvgSize;
 }
 
-function PollTag({
+function CreateCollectionTag({
   label = '',
   isHighlighted = false,
   onClick = ZeroFunc,
   className = '',
   svgSize = SvgSize.md,
-}: PollTagProps) {
-
+}: CreateCollectionTagProps) {
   return (
     <SvgTag
-      label={label || 'Polls'}
-      icon={{
-        Svg: PollSvg,
-        size: svgSize,
-        className: isHighlighted ? 'stroke-blue-500 fill-none' : 'stroke-gray-600 fill-none',
-      }}
+      label={label || 'Collection'}
+      icon={{ Svg: CollectionSvg, size: svgSize }}
       onClick={onClick}
       className={className}
       isHighlighted={isHighlighted}
+      isVertical={false}
     />
   );
 }
 
-export default PollTag;
+export default CreateCollectionTag;

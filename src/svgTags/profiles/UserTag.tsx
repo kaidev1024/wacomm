@@ -1,4 +1,4 @@
-import SvgTag from './SvgTag';
+import SvgTag from '../SvgTag';
 import { SvgSize, UserSvg } from 'wasvg';
 
 interface UserTagProps {

@@ -1,7 +1,7 @@
 import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
 import { ElementType } from 'react';
 import { SvgSize } from 'wasvg';
-import { Container } from './containers';
+import { Container } from 'src/containers';
 
 export interface IconProps {
   Svg: ElementType;

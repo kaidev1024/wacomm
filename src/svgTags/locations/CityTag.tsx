@@ -1,4 +1,4 @@
-import SvgTag from './SvgTag';
+import SvgTag from '../SvgTag';
 import { CitySvg } from 'wasvg';
 
 interface CityTagProps {
