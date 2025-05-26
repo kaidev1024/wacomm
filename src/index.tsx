@@ -18,6 +18,7 @@ export { default as WorenaLogo } from './WorenaLogo';
 export { default as NotFound } from './NotFound';
 export { default as H1 } from './H1';
 export { default as Autocomplete } from './Autocomplete';
+export { SvgSize } from 'wasvg';
 export * from './expandableContainer';
 export * from './loadingIndicator';
 export * from './buttons';
