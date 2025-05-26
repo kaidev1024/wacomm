@@ -9,6 +9,7 @@ export { default as PrivateTag } from './PrivateTag';
 export { default as WorenaLogo } from './WorenaLogo';
 export { default as LogoutTag } from './LogoutTag';
 export { default as ChatTag } from './ChatTag';
+export { default as NotificationTag } from './NotificationTag';
 export * from './profiles';
 export * from './posts';
 export * from './locations';
