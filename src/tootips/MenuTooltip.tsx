@@ -12,7 +12,7 @@ export default function MenuTooltip({
 }: MenuTooltipProps) {
   return (
     <SvgTooltip
-      icon={{ Svg: MenuSvg, className: 'fill-gray-600', size: SvgSize.lg }}
+      icon={<MenuSvg className='fill-gray-600' size={SvgSize.lg} />}
       onClick={onClick}
       label={label}
     />

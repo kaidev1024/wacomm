@@ -1,17 +1,11 @@
-import { ElementType } from 'react';
+import { ReactElement } from 'react';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
-import { SvgSize } from 'wasvg';
 import Tooltip from './Tooltip';
 
-interface IconProps {
-  Svg: ElementType;
-  size?: SvgSize;
-  className?: string;
-}
 export interface SvgTooltipProps {
   className?: string;
   onClick?: ZeroFuncType;
-  icon: IconProps;
+  icon: ReactElement;
   label: string;
 }
 
@@ -21,7 +15,6 @@ function SvgTooltip({
   icon,
   label,
 }: SvgTooltipProps) {
-  const { Svg, size, className: svgClassName } = icon;
   return (
     <Tooltip
       onClick={onClick}
@@ -29,7 +22,7 @@ function SvgTooltip({
       label={label}
       name={label}
     >
-      <Svg size={size} className={svgClassName} />
+      {icon}
     </Tooltip>
   );
 }
