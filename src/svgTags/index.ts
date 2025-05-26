@@ -8,6 +8,7 @@ export { default as MapTag } from './MapTag';
 export { default as PrivateTag } from './PrivateTag';
 export { default as WorenaLogo } from './WorenaLogo';
 export { default as LogoutTag } from './LogoutTag';
+export { default as ChatTag } from './ChatTag';
 export * from './profiles';
 export * from './posts';
 export * from './locations';
