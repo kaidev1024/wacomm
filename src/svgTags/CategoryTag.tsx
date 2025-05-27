@@ -19,7 +19,7 @@ export default function CategoryTag({
 }: CategoryTagProps) {
   return (
     <Row
-      className={twcn("gap-0 rounded-full border border-gray-300 px-1 py-0", className)}
+      className={twcn(`${isHighlighted ? 'bg-blue-100 border-blue-500' : 'border-gray-300'} gap-0 rounded-full border px-1 py-0`, className)}
       onClick={onClick}
     >
       <CategorySvg
