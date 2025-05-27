@@ -21,7 +21,7 @@ export default function InterestTag({
 }: InterestTagProps) {
   return (
     <Row
-      className={twcn("gap-0 rounded-full border border-gray-300 px-1 py-0", className)}
+      className={twcn(`${isHighlighted ? 'bg-blue-100 border-blue-500' : 'border-gray-300'} gap-0 rounded-full border px-1 py-0`, className)}
       onClick={onClick}
     >
       <InterestSvg
@@ -30,7 +30,7 @@ export default function InterestTag({
         size={SvgSize.xs}
         className={isHighlighted ? 'fill-blue-500 text-blue-500' : 'fill-gray-600'}
       />
-      <div className={isHighlighted ? ' text-blue-500' : 'text-gray-600'}>
+      <div className={isHighlighted ? 'text-blue-500' : 'text-gray-600'}>
         {label}
       </div>
     </Row>
