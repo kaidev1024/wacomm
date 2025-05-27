@@ -27,7 +27,7 @@ export default function InterestIconTooltip({
           categorySeq={categorySeq}
           interestSeq={interestSeq}
           size={SvgSize.lg}
-          className={isHighlighted ? 'fill-blue-500 text-blue-500' : 'fill-gray-600'}
+          className={isHighlighted ? 'fill-blue-500 text-blue-500 bg-blue-100 rounded-full p-1' : 'fill-gray-600 p-1'}
         />
       )}
       onClick={onClick}

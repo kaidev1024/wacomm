@@ -1,6 +1,6 @@
 import { ZeroFunc, ZeroFuncType } from 'waujs';
 import SvgTag from '../SvgTag';
-import { CitySvg } from 'wasvg';
+import { CitySvg, SvgSize } from 'wasvg';
 
 interface CityTagProps {
   label: string;
@@ -16,7 +16,8 @@ function CityTag({
       label={label}
       icon={{
         Svg: CitySvg,
-        className: "fill-gray-500"
+        className: "fill-gray-500",
+        size: SvgSize.sm
       }}
       isVertical={false}
       onClick={onClick}
