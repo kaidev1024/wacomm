@@ -12,6 +12,7 @@ export { default as ChatTag } from './ChatTag';
 export { default as UpArrowTag } from './UpArrowTag';
 export { default as NotificationTag } from './NotificationTag';
 export { default as InterestTag } from './InterestTag';
+export { default as CategoryTag } from './CategoryTag';
 export * from './profiles';
 export * from './posts';
 export * from './locations';
