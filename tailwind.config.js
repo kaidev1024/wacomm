@@ -17,8 +17,6 @@ module.exports = {
   content: [
     'index.html',
     './src/**/*.{tsx,ts}',
-    // './node_modules/wasvg/dist/*.{js,ts,jsx,tsx}',
-    // './node_modules/wacomm/dist/*.{js,ts,jsx,tsx}',
   ],
   safelist: [
     ...tops,
