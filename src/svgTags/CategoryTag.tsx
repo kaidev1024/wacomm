@@ -6,7 +6,7 @@ interface CategoryTagProps {
   isHighlighted: boolean;
   onClick?: ZeroFuncType;
   className?: string;
-  categorySeq: number;
+  seq: number;
   label: string;
 }
 
@@ -14,7 +14,7 @@ export default function CategoryTag({
   isHighlighted,
   onClick = ZeroFunc,
   className = '',
-  categorySeq,
+  seq,
   label
 }: CategoryTagProps) {
   return (
@@ -23,7 +23,7 @@ export default function CategoryTag({
       onClick={onClick}
     >
       <CategorySvg
-        categorySeq={categorySeq}
+        seq={seq}
         size={SvgSize.xs}
         className={isHighlighted ? 'fill-blue-500 text-blue-500' : 'fill-gray-600'}
       />
