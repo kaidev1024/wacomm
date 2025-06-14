@@ -7,7 +7,7 @@ interface InterestTagProps {
   onClick?: ZeroFuncType;
   className?: string;
   categorySeq: number;
-  interestSeq: number;
+  seq: number;
   label: string;
 }
 
@@ -16,7 +16,7 @@ export default function InterestTag({
   onClick = ZeroFunc,
   className = '',
   categorySeq,
-  interestSeq,
+  seq,
   label
 }: InterestTagProps) {
   return (
@@ -25,7 +25,7 @@ export default function InterestTag({
       onClick={onClick}
     >
       <InterestSvg
-        interestSeq={interestSeq}
+        seq={seq}
         categorySeq={categorySeq}
         size={SvgSize.xs}
         className={isHighlighted ? 'fill-blue-500 text-blue-500' : 'fill-gray-600'}

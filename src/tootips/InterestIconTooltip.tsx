@@ -5,7 +5,7 @@ import { ZeroFuncType } from "waujs";
 interface InterestIconTooltipProps {
   isHighlighted?: boolean;
   categorySeq: number;
-  interestSeq: number;
+  seq: number;
   onClick: ZeroFuncType;
   label: string;
   className?: string;
@@ -16,7 +16,7 @@ export default function InterestIconTooltip({
   onClick,
   label,
   categorySeq,
-  interestSeq,
+  seq,
   className = ''
 }: InterestIconTooltipProps) {
 
@@ -25,7 +25,7 @@ export default function InterestIconTooltip({
       icon={(
         <InterestSvg
           categorySeq={categorySeq}
-          interestSeq={interestSeq}
+          seq={seq}
           size={SvgSize.lg}
           className={isHighlighted ? 'fill-blue-500 text-blue-500 bg-blue-100 rounded-full p-1' : 'fill-gray-600 p-1'}
         />
