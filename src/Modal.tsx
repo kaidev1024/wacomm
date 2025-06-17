@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode } from 'react';
+import { ReactElement, ReactNode, useEffect } from 'react';
 import ReactModal from 'react-modal';
 import { ZeroFuncType } from 'waujs';
 import H1 from './H1';
@@ -80,8 +80,6 @@ const mergeModalStyles = (style: ModalStyleProps) => {
   };
 };
 
-ReactModal.setAppElement('#root');
-
 function Modal({
   isOpen,
   onClose,
@@ -92,6 +90,20 @@ function Modal({
   isCloseIconHidden = false,
   style = undefined,
 }: ModalProps) {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const rootEl =
+        document.getElementById('__next') || document.getElementById('root');
+
+      if (rootEl) {
+        ReactModal.setAppElement(rootEl);
+      } else {
+        console.warn(
+          'No root element found for ReactModal (expected #__next or #root).'
+        );
+      }
+    }
+  }, []);
   return (
     <ReactModal
       isOpen={isOpen}
@@ -100,13 +112,10 @@ function Modal({
       shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
       onRequestClose={onClose}
     >
-      <Row className="justify-between items-center w-full h-fit border-b border-gray-300 border-dashed pb-2 mb-2">
+      <Row className='justify-between items-center w-full h-fit border-b border-gray-300 border-dashed pb-2 mb-2'>
         <H1 label={title} />
         {!isCloseIconHidden && (
-          <CloseIcon
-            className="right-1 text-gray-600"
-            onClick={onClose}
-          />
+          <CloseIcon className='right-1 text-gray-600' onClick={onClose} />
         )}
       </Row>
       {content}
