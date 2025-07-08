@@ -19,7 +19,6 @@ export default function InterestIconTooltip({
   seq,
   className = ''
 }: InterestIconTooltipProps) {
-
   return (
     <SvgTooltip
       icon={(

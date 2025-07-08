@@ -21,7 +21,6 @@ function ArenaTag({
   svgSize = SvgSize.md,
   labelClassName = '',
 }: ArenaTagProps) {
-
   return (
     <SvgTag
       label={label}
