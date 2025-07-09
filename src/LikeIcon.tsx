@@ -4,16 +4,24 @@ import { Row } from './containers';
 interface LikeIconProps {
   isLiked: boolean;
   count: number;
-  onClick: ZeroFuncType
+  onLike: ZeroFuncType;
+  onUnlike: ZeroFuncType;
 }
 
 function LikeIcon({
   isLiked,
   count,
-  onClick
+  onLike,
+  onUnlike,
 }:LikeIconProps) {
+
+  const handleClick = () => {
+    if (isLiked) onUnlike();
+    else onLike();
+  }
+
   return (
-    <Row onClick={onClick}>
+    <Row onClick={handleClick}>
       {isLiked ? '❤️' : '🤍'}<span>{count}</span>
     </Row>
   )
