@@ -1,9 +1,10 @@
+import { ZeroFuncType } from 'waujs';
 import { Row } from './containers';
 
 interface LikeIconProps {
   isLiked: boolean;
   count: number;
-  onClick: (isLiked:boolean) => void;
+  onClick: ZeroFuncType;
 }
 
 function LikeIcon({
@@ -11,10 +12,10 @@ function LikeIcon({
   count,
   onClick,
 }:LikeIconProps) {
-
   return (
-    <Row onClick={() => onClick(isLiked)}>
-      {isLiked ? '❤️' : '🤍'}<span>{count}</span>
+    <Row onClick={onClick}>
+      {isLiked ? '❤️' : '🤍'}
+      {count > 0 && <span>{count}</span>}
     </Row>
   )
 }
