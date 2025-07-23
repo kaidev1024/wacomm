@@ -16,6 +16,7 @@ export { default as NavArrows } from './NavArrows';
 export { default as NotFound } from './NotFound';
 export { default as H1 } from './H1';
 export { default as Autocomplete } from './Autocomplete';
+export { default as TextSender} from './TextSender';
 export { SvgSize } from 'wasvg';
 export * from './expandableContainer';
 export * from './loadingIndicator';

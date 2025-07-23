@@ -31,7 +31,6 @@ function TextUpdater({
   const onSubmit = (data: FieldValues) => {
     onSave(data.content, cancelEdit);
   };
-
   return (isEditing && editable) ? (
     <form onSubmit={handleSubmit(onSubmit)} className={twcn('TextUpdater', classNameEdit)}>
       <Textarea
