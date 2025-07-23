@@ -14,7 +14,7 @@ function SendIcon({
 }: SendIconProps) {
   return (
     <div className={className} onClick={onClick}>
-      <SendSvg size={SvgSize.xs} className={isHighlighted ? 'fill-blue-600' : 'fill-gray-100'} />
+      <SendSvg size={SvgSize.xs} className={isHighlighted ? 'fill-blue-600' : 'fill-gray-300'} />
     </div>
   );
 }
