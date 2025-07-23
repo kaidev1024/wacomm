@@ -1,5 +1,5 @@
 import { ZeroFuncType } from 'waujs';
-import { Row } from './containers';
+import { Row } from '../containers';
 
 interface LikeIconProps {
   isLiked: boolean;
