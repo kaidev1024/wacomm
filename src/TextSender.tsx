@@ -3,12 +3,14 @@ import { SendIcon } from 'src/icons';
 
 interface TextSenderProps {
   onClick: (text: string) => void;
+  placeholder?: string;
   className?: string;
   rows?: number;
 }
 
 export default function TextSender({
   onClick,
+  placeholder = 'Type your message...',
   className = '',
   rows = 2,
 }:TextSenderProps) {
@@ -28,7 +30,7 @@ export default function TextSender({
         value={text}
         onChange={(e) => setText(e.target.value)}
         rows={rows}
-        placeholder="Type your message..."
+        placeholder={placeholder}
       />
       <div className="absolute right-2 top-1/2">
         <SendIcon
