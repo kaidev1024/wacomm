@@ -3,11 +3,13 @@ import { CommentSvg, SvgSize } from 'wasvg';
 import { ZeroFuncType } from 'waujs';
 
 interface CommentTagProps {
-  label: string;
+  label?: string;
   onClick: ZeroFuncType;
 }
 
-function CommentTag({ label, onClick }: CommentTagProps) {
+function CommentTag({ 
+  label = 'Comment',
+  onClick }: CommentTagProps) {
   return (
     <SvgTag
       label={label}
