@@ -17,6 +17,7 @@ export { default as NotFound } from './NotFound';
 export { default as H1 } from './H1';
 export { default as Autocomplete } from './Autocomplete';
 export { default as TextSender} from './TextSender';
+export { default as Separator} from './Separator';
 export { SvgSize } from 'wasvg';
 export * from './expandableContainer';
 export * from './loadingIndicator';
