@@ -2,20 +2,20 @@ import { ZeroFuncType } from 'waujs';
 import { Row } from '../containers';
 
 interface LikeIconProps {
-  isLiked: boolean;
-  count: number;
+  isHighlited?: boolean;
+  label?: string;
   onClick: ZeroFuncType;
 }
 
 function LikeIcon({
-  isLiked,
-  count,
+  isHighlited = false,
+  label = 'like',
   onClick,
 }:LikeIconProps) {
   return (
     <Row onClick={onClick}>
-      {isLiked ? '❤️' : '🤍'}
-      {count > 0 && <span>{count}</span>}
+      {isHighlited ? '❤️' : '🤍'}
+      <span className={`${isHighlited ? 'text-blue-600' : 'text-gray-600'}`}>{label}</span>
     </Row>
   )
 }
