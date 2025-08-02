@@ -15,17 +15,17 @@ interface SubjectReactionProps {
 export default function SubjectReactionSection({
   type,
   className = '',
-  textClassName = 'text-gray-300',
+  textClassName = 'text-gray-500 text-sm',
   count = 0,
   onClick
 }: SubjectReactionProps) {
   const labels = SubjectReactionLabels[type];
   return (
     <Row className={className} onClick={onClick}>
-      <span>{labels.Single}</span>
+      <span className={textClassName}>{labels.Single}</span>
       {count > 0 && (
         <>
-          <MiddleDot className={textClassName} />
+          <MiddleDot className="text-gray-300" />
           <SubjectReactionsCount
             singleLabel={labels.Single}
             pluralLabel={labels.Plural}
