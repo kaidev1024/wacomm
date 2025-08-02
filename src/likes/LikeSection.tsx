@@ -20,7 +20,7 @@ export default function LikeSection({
 }: LikeSectionProps) {
   return (
     <Row className={className}>
-      <span onClick={onLike} className={`${isHighlighted ? 'text-blue-600' : textClassName}`}>
+      <span onClick={onLike} className={`${isHighlighted ? 'text-blue-500' : textClassName}`}>
         Like
       </span>
       {count > 0 && (

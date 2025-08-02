@@ -4,17 +4,19 @@ interface LikesCountProps {
   count?: number;
   onClick: ZeroFuncType;
   className?: string;
+  textClassName?: string;
 }
 
 export default function LikesCount({
   count = 0,
   onClick,
-  className = 'text-gray-300'
+  className = '',
+  textClassName = 'text-gray-300'
 }: LikesCountProps) {
   return (
-    <div onClick={onClick}>
-      <span>'❤️'</span>
-      <span className={className}>{count}</span>
+    <div className={className} onClick={onClick}>
+      <span>❤️&nbsp;</span>
+      <span className={textClassName}>{count}</span>
     </div>
   );
 }
