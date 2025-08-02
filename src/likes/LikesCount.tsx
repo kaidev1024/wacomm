@@ -11,7 +11,7 @@ export default function LikesCount({
   count = 0,
   onClick,
   className = '',
-  textClassName = 'text-gray-300'
+  textClassName = 'text-gray-500'
 }: LikesCountProps) {
   return (
     <div className={className} onClick={onClick}>
