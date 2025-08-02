@@ -13,7 +13,7 @@ export default function SubjectReactionsCount({
   pluralLabel,
   count = 0,
   onClick,
-  className = 'text-gray-300'
+  className = 'text-gray-500 text-sm'
 }: SubjectReactionsCountProps) {
   return (
     <div onClick={onClick}>

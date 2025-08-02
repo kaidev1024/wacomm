@@ -13,7 +13,7 @@ interface LikeSectionProps {
 
 export default function LikeSection({
   className = '',
-  textClassName = 'text-gray-300',
+  textClassName = 'text-gray-300 text-sm',
   count = 0,
   isHighlighted = false,
   onLike
