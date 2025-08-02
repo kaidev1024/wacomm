@@ -27,7 +27,7 @@ function EditableBlock({
   title,
   defaultValues = {},
   editable = false,
-  optionalMenu = null,
+  optionalMenu = null
 }: EditableBlockProps) {
   const [isEditting, setIsEditting] = useState(false);
   const cancelEdit = () => setIsEditting(false);
@@ -49,9 +49,11 @@ function EditableBlock({
         <CloseIcon hidden={!isEditting} onClick={cancelEdit} />
         <EditIcon hidden={isEditting} onClick={() => setIsEditting(true)} />
       </div>
-      {isEditting
-        ? <Edit cancelEdit={cancelEdit} defaultValues={defaultValues} />
-        : <Display defaultValues={{ ...defaultValues, editable }} />}
+      {isEditting ? (
+        <Edit cancelEdit={cancelEdit} defaultValues={defaultValues} />
+      ) : (
+        <Display defaultValues={{ ...defaultValues, editable }} />
+      )}
     </div>
   );
 }

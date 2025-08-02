@@ -21,17 +21,19 @@ function TextUpdater({
   editable,
   placeholder = 'A brief introduction...',
   classNameEdit = '',
-  classNameDisplay = '',
+  classNameDisplay = ''
 }: TextUpdaterProps) {
   const {
-    handleSubmit, register, formState: { errors },
+    handleSubmit,
+    register,
+    formState: { errors }
   } = useForm();
   const [isEditing, setIsEditing] = useState(false);
   const cancelEdit = () => setIsEditing(false);
   const onSubmit = (data: FieldValues) => {
     onSave(data.content, cancelEdit);
   };
-  return (isEditing && editable) ? (
+  return isEditing && editable ? (
     <form onSubmit={handleSubmit(onSubmit)} className={twcn('TextUpdater', classNameEdit)}>
       <Textarea
         row={5}
@@ -42,16 +44,15 @@ function TextUpdater({
         defaultValue={content}
         disabled={isLoading}
       />
-      <FormButtons
-        cancelEdit={cancelEdit}
-        isLoading={isLoading}
-        submitLabel="Save"
-      />
+      <FormButtons cancelEdit={cancelEdit} isLoading={isLoading} submitLabel="Save" />
     </form>
   ) : (
     <p
       onClick={() => setIsEditing(editable)}
-      className={twcn('TextUpdater text-sm bg-gray-50 text-gray-600 p-1 rounded-lg mt-1', classNameDisplay)}
+      className={twcn(
+        'TextUpdater text-sm bg-gray-50 text-gray-600 p-1 rounded-lg mt-1',
+        classNameDisplay
+      )}
     >
       {content || placeholder}
     </p>

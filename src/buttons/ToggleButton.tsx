@@ -17,13 +17,13 @@ function ToggleButton({
   checked,
   onChange,
   className = '',
-  disabled = false,
+  disabled = false
 }: ToggleButtonProps) {
   return (
     <Row className={twcn('w-full p-1', className)}>
       {label}
       <Switch
-        className='z-1'
+        className="z-1"
         onColor="#3b82f6"
         offColor="#888888"
         onChange={onChange}

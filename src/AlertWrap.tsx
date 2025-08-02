@@ -7,11 +7,7 @@ interface AlertWrapProps {
   onClick: ZeroFuncType;
 }
 
-function AlertWrap({
-  count,
-  content,
-  onClick,
-}: AlertWrapProps) {
+function AlertWrap({ count, content, onClick }: AlertWrapProps) {
   return (
     <div onClick={onClick} className="relative">
       {content}

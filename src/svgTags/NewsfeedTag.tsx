@@ -11,11 +11,11 @@ interface NewsfeedTagProps {
 function NewsfeedTag({
   isHighlighted = false,
   onClick = ZeroFunc,
-  className = '',
+  className = ''
 }: NewsfeedTagProps) {
   return (
     <SvgTag
-      label='Newsfeed'
+      label="Newsfeed"
       icon={{ Svg: NewsfeedSvg }}
       onClick={onClick}
       className={className}

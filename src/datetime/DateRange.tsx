@@ -1,5 +1,5 @@
-import dayjs from "dayjs";
-import { formatDateTimeRange } from "./dateTimeFormatter";
+import dayjs from 'dayjs';
+import { formatDateTimeRange } from './dateTimeFormatter';
 import { twcn } from 'waujs';
 
 interface DateRangeProps {
@@ -8,13 +8,11 @@ interface DateRangeProps {
   className?: string;
 }
 
-function DateRange({
-  startDate,
-  endDate,
-  className = '',
-}: DateRangeProps) {
+function DateRange({ startDate, endDate, className = '' }: DateRangeProps) {
   return (
-    <div className={twcn("text-gray-600 text-sm", className)}>{formatDateTimeRange(startDate, endDate)}</div>
+    <div className={twcn('text-gray-600 text-sm', className)}>
+      {formatDateTimeRange(startDate, endDate)}
+    </div>
   );
 }
 

@@ -9,19 +9,12 @@ module.exports = {
       colors: {
         gray: {
           666: '#666666',
-          888: '#888888',
-        },
-      },
-    },
+          888: '#888888'
+        }
+      }
+    }
   },
-  content: [
-    'index.html',
-    './src/**/*.{tsx,ts}',
-  ],
-  safelist: [
-    ...tops,
-  ],
-  plugins: [
-    forms,
-  ],
+  content: ['index.html', './src/**/*.{tsx,ts}'],
+  safelist: [...tops],
+  plugins: [forms]
 };

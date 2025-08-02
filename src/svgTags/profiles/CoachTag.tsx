@@ -17,7 +17,7 @@ function CoachTag({
   onClick = ZeroFunc,
   className = '',
   svgSize = SvgSize.md,
-  labelClassName = '',
+  labelClassName = ''
 }: CoachTagProps) {
   return (
     <SvgTag

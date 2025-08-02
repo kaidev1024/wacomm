@@ -1,11 +1,11 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
 export enum MapStyle {
-  SV11 = "mapbox://styles/mapbox/streets-v11",
-};
+  SV11 = 'mapbox://styles/mapbox/streets-v11'
+}
 
 export enum NavigationControlPosition {
-  TR = "top-right",
+  TR = 'top-right'
 }
 
 export interface MapboxLocationProps {

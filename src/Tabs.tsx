@@ -24,21 +24,15 @@ interface TabsProps {
   pickedTab: any;
 }
 
-function Tabs({
-  tabs,
-  classNames,
-  onClick,
-  pickedTab,
-}: TabsProps) {
+function Tabs({ tabs, classNames, onClick, pickedTab }: TabsProps) {
   const nTabs = useRef(tabs.length);
 
   const itemRenderer = ({ label, value }: TabProps, i: number) => {
     let className = 'w-16 h-fit  text-center py-0 px-2 border border-gray-300 w-fit text-center';
-    if (pickedTab === value) className = twcn(className, 'bg-blue-200 text-blue-500', classNames?.picked);
+    if (pickedTab === value)
+      className = twcn(className, 'bg-blue-200 text-blue-500', classNames?.picked);
     if (classNames) {
-      const {
-        tab, left, mid, right,
-      } = classNames;
+      const { tab, left, mid, right } = classNames;
       if (tab) className = twcn(className, tab);
       if (i === 0) {
         className = twcn(className, 'rounded-l-lg border-r-0');

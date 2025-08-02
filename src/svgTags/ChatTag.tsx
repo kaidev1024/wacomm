@@ -1,5 +1,5 @@
-import { ChatSvg } from "wasvg";
-import SvgTag from "./SvgTag";
+import { ChatSvg } from 'wasvg';
+import SvgTag from './SvgTag';
 
 interface ChatTagProps {
   label: string;
@@ -7,11 +7,7 @@ interface ChatTagProps {
   isHighlighted: boolean;
 }
 
-export default function ChatTag({
-  label,
-  isHighlighted,
-  isLabelHidden
-}: ChatTagProps) {
+export default function ChatTag({ label, isHighlighted, isLabelHidden }: ChatTagProps) {
   return (
     <SvgTag
       label={label}

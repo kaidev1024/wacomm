@@ -9,11 +9,7 @@ interface SearchBarProps {
   isLoading: boolean;
 }
 
-function SearchBar({
-  placeholder = '',
-  className = '',
-  onSubmit,
-}: SearchBarProps) {
+function SearchBar({ placeholder = '', className = '', onSubmit }: SearchBarProps) {
   const [value, setValue] = useState('');
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     e.preventDefault();

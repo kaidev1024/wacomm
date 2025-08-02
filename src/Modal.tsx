@@ -49,7 +49,7 @@ const defaultStyle = {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+    backgroundColor: 'rgba(0, 0, 0, 0.1)'
   },
   content: {
     top: '30%',
@@ -62,8 +62,8 @@ const defaultStyle = {
     height: 'fit-content',
     boxShadow: '3px 3px 2px grey',
     padding: '10px 15px',
-    overflow: 'visible',
-  },
+    overflow: 'visible'
+  }
 };
 
 const mergeModalStyles = (style: ModalStyleProps) => {
@@ -71,12 +71,12 @@ const mergeModalStyles = (style: ModalStyleProps) => {
   return {
     overlay: {
       ...defaultStyle.overlay,
-      ...style.overlay,
+      ...style.overlay
     },
     content: {
       ...defaultStyle.content,
-      ...style.content,
-    },
+      ...style.content
+    }
   };
 };
 
@@ -88,19 +88,16 @@ function Modal({
   shouldCloseOnEsc = true,
   shouldCloseOnOverlayClick = true,
   isCloseIconHidden = false,
-  style = undefined,
+  style = undefined
 }: ModalProps) {
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const rootEl =
-        document.getElementById('__next') || document.getElementById('root');
+      const rootEl = document.getElementById('__next') || document.getElementById('root');
 
       if (rootEl) {
         ReactModal.setAppElement(rootEl);
       } else {
-        console.warn(
-          'No root element found for ReactModal (expected #__next or #root).'
-        );
+        console.warn('No root element found for ReactModal (expected #__next or #root).');
       }
     }
   }, []);
@@ -112,11 +109,9 @@ function Modal({
       shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
       onRequestClose={onClose}
     >
-      <Row className='justify-between items-center w-full h-fit border-b border-gray-300 border-dashed pb-2 mb-2'>
+      <Row className="justify-between items-center w-full h-fit border-b border-gray-300 border-dashed pb-2 mb-2">
         <H1 label={title} />
-        {!isCloseIconHidden && (
-          <CloseIcon className='right-1 text-gray-600' onClick={onClose} />
-        )}
+        {!isCloseIconHidden && <CloseIcon className="right-1 text-gray-600" onClick={onClose} />}
       </Row>
       {content}
     </ReactModal>

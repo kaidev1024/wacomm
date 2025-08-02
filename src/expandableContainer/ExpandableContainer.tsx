@@ -14,7 +14,7 @@ function ExpandableContainer({
   title,
   isExpandable = true,
   className = '',
-  children = undefined,
+  children = undefined
 }: ExpandableContainerProps) {
   const [isShown, setIsShown] = useState(true);
   const onClick = () => setIsShown((prev) => !prev);

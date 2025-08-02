@@ -1,6 +1,6 @@
-import { Row } from "src/containers";
-import { InterestSvg, SvgSize } from "wasvg";
-import { twcn, ZeroFunc, ZeroFuncType } from "waujs";
+import { Row } from 'src/containers';
+import { InterestSvg, SvgSize } from 'wasvg';
+import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
 
 interface InterestTagProps {
   isHighlighted: boolean;
@@ -21,7 +21,10 @@ export default function InterestTag({
 }: InterestTagProps) {
   return (
     <Row
-      className={twcn(`${isHighlighted ? 'bg-blue-100 border-blue-500' : 'border-gray-300'} gap-0 rounded-full border px-1 py-0`, className)}
+      className={twcn(
+        `${isHighlighted ? 'bg-blue-100 border-blue-500' : 'border-gray-300'} gap-0 rounded-full border px-1 py-0`,
+        className
+      )}
       onClick={onClick}
     >
       <InterestSvg

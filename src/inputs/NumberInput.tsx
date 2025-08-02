@@ -1,6 +1,6 @@
-import { twcn } from "waujs";
-import { Row } from "src/containers";
-import H1 from "src/H1";
+import { twcn } from 'waujs';
+import { Row } from 'src/containers';
+import H1 from 'src/H1';
 
 export interface NumberInputProps {
   title?: string;
@@ -17,14 +17,14 @@ export default function NumberInput({
   className = '',
   value = 1,
   disabled = false,
-  onChange,
+  onChange
 }: NumberInputProps) {
   return (
     <Row>
-      {title && <H1 label={title} className='w-10' />}
+      {title && <H1 label={title} className="w-10" />}
       <input
         className={twcn('Input border border-gray-300 rounded px-1 py-0 text-gray-600', className)}
-        type='number'
+        type="number"
         value={value}
         min={1}
         max={127}

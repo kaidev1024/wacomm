@@ -19,7 +19,7 @@ function TeamTag({
   className = '',
   svgSize = SvgSize.md,
   labelClassName = '',
-  svgClassName = '',
+  svgClassName = ''
 }: TeamTagProps) {
   return (
     <SvgTag

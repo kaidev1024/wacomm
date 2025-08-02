@@ -42,14 +42,10 @@ function SvgTag({
   isVertical = false,
   isHighlighted = false,
   className = '',
-  icon: {
-    Svg,
-    className: svgClassName = '',
-    size: svgSize = SvgSize.lg,
-  },
+  icon: { Svg, className: svgClassName = '', size: svgSize = SvgSize.lg },
   labelClassName = '',
   isLabelHidden = false,
-  onClick = ZeroFunc,
+  onClick = ZeroFunc
 }: SvgTagProps) {
   return (
     <Container
@@ -57,7 +53,13 @@ function SvgTag({
       isVertical={isVertical}
       onClick={onClick}
     >
-      <Svg className={twcn(`${isHighlighted ? 'fill-blue-500 text-blue-500' : 'fill-gray-600'}`, svgClassName)} size={svgSize} />
+      <Svg
+        className={twcn(
+          `${isHighlighted ? 'fill-blue-500 text-blue-500' : 'fill-gray-600'}`,
+          svgClassName
+        )}
+        size={svgSize}
+      />
       {!isLabelHidden && label && (
         <div className={twcn(getLabelClassName(isVertical!, isHighlighted!), labelClassName)}>
           {label}

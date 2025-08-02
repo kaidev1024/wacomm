@@ -12,8 +12,8 @@ export default function TextSender({
   onClick,
   placeholder = 'Type your message...',
   className = '',
-  rows = 2,
-}:TextSenderProps) {
+  rows = 2
+}: TextSenderProps) {
   const [text, setText] = useState('');
 
   const handleClick = () => {
@@ -33,11 +33,7 @@ export default function TextSender({
         placeholder={placeholder}
       />
       <div className="absolute right-2 top-1/2">
-        <SendIcon
-          onClick={handleClick}
-          isHighlighted={!!text.trim()}
-          className="cursor-pointer"
-        />
+        <SendIcon onClick={handleClick} isHighlighted={!!text.trim()} className="cursor-pointer" />
       </div>
     </div>
   );

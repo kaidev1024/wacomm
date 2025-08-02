@@ -19,7 +19,7 @@ function ArenaTag({
   className = '',
   svgClassName = '',
   svgSize = SvgSize.md,
-  labelClassName = '',
+  labelClassName = ''
 }: ArenaTagProps) {
   return (
     <SvgTag

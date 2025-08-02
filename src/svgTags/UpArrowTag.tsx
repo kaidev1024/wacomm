@@ -6,15 +6,8 @@ interface UpArrowTagProps {
   onClick: ZeroFuncType;
 }
 
-function UpArrowTag({
-  onClick,
-}: UpArrowTagProps) {
-  return (
-    <SvgTag
-      icon={{ Svg: UpArrowSvg }}
-      onClick={onClick}
-    />
-  );
+function UpArrowTag({ onClick }: UpArrowTagProps) {
+  return <SvgTag icon={{ Svg: UpArrowSvg }} onClick={onClick} />;
 }
 
 export default UpArrowTag;

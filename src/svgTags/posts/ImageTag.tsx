@@ -15,9 +15,8 @@ function ImageTag({
   isHighlighted = false,
   onClick = ZeroFunc,
   className = '',
-  svgSize = SvgSize.md,
+  svgSize = SvgSize.md
 }: ImageTagProps) {
-
   return (
     <SvgTag
       label={label || 'Images'}

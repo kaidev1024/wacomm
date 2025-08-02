@@ -8,11 +8,7 @@ interface HomeTagProps {
   label: string;
 }
 
-function HomeTag({
-  isHighlighted,
-  onClick,
-  label,
-}: HomeTagProps) {
+function HomeTag({ isHighlighted, onClick, label }: HomeTagProps) {
   return (
     <SvgTag
       label={label}

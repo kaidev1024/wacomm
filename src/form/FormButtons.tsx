@@ -20,7 +20,7 @@ function FormButtons({
   isCancelable = true,
   formID = undefined,
   submitLabel = undefined,
-  cancelLabel = undefined,
+  cancelLabel = undefined
 }: FormButtonsProps) {
   let optional = {};
   // formID is used in case submit button is outside form tag
@@ -44,7 +44,6 @@ function FormButtons({
           disabled={isLoading || disabled}
         />
       )}
-
     </Row>
   );
 }

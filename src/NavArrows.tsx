@@ -1,10 +1,5 @@
 import { useState } from 'react';
-import {
-  twConcat,
-  twcn,
-  ZeroFuncType,
-  useOutsideClick
-} from 'waujs';
+import { twConcat, twcn, ZeroFuncType, useOutsideClick } from 'waujs';
 import { LeftArrowSvg, RightArrowSvg } from 'wasvg';
 import { Row } from './containers';
 
@@ -16,15 +11,17 @@ interface NavArrowsProps {
 enum Arrow {
   Prev = -1,
   None = 0,
-  Next = 1,
+  Next = 1
 }
 
 const getArrowStype = (v: number) => {
-  const commonStyle = 'flex items-center justify-center rounded-full h-6 w-6 mx-1 my-0.5 border-0 p-1.5';
+  const commonStyle =
+    'flex items-center justify-center rounded-full h-6 w-6 mx-1 my-0.5 border-0 p-1.5';
   if (v === 0) return commonStyle;
-  return v === 1 ? twConcat(commonStyle, 'bg-gray-300') : twConcat(commonStyle, 'hover:bg-gray-200');
+  return v === 1
+    ? twConcat(commonStyle, 'bg-gray-300')
+    : twConcat(commonStyle, 'hover:bg-gray-200');
 };
-
 
 function NavArrows({ handleNext, handlePrev }: NavArrowsProps) {
   const [clickedArrow, setClickedArrow] = useState(Arrow.None);
@@ -39,21 +36,23 @@ function NavArrows({ handleNext, handlePrev }: NavArrowsProps) {
     handleNext();
   };
 
-  const ref = useOutsideClick(() => { setClickedArrow(Arrow.None); });
+  const ref = useOutsideClick(() => {
+    setClickedArrow(Arrow.None);
+  });
 
   return (
     <div ref={ref}>
-      <Row className="NavArrows gap-0" >
+      <Row className="NavArrows gap-0">
         <div
-          className={twcn(getArrowStype(clickedArrow * Arrow.Prev), 'mx-2 rounded-full text-center pl-2 pr-1 py-0')}
+          className={twcn(
+            getArrowStype(clickedArrow * Arrow.Prev),
+            'mx-2 rounded-full text-center pl-2 pr-1 py-0'
+          )}
           onClick={onClickPrev}
         >
           <LeftArrowSvg className="fill-gray-600" />
         </div>
-        <div
-          className={getArrowStype(clickedArrow * Arrow.Next)}
-          onClick={onClickNext}
-        >
+        <div className={getArrowStype(clickedArrow * Arrow.Next)} onClick={onClickNext}>
           <RightArrowSvg className="fill-gray-600" />
         </div>
       </Row>

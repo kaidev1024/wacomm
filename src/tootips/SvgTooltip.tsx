@@ -9,19 +9,9 @@ export interface SvgTooltipProps {
   label: string;
 }
 
-function SvgTooltip({
-  className = '',
-  onClick = ZeroFunc,
-  icon,
-  label,
-}: SvgTooltipProps) {
+function SvgTooltip({ className = '', onClick = ZeroFunc, icon, label }: SvgTooltipProps) {
   return (
-    <Tooltip
-      onClick={onClick}
-      className={className}
-      label={label}
-      name={label}
-    >
+    <Tooltip onClick={onClick} className={className} label={label} name={label}>
       {icon}
     </Tooltip>
   );

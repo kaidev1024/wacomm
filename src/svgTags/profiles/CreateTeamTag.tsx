@@ -15,7 +15,7 @@ function CreateTeamTag({
   isHighlighted = false,
   onClick = ZeroFunc,
   className = '',
-  svgSize = SvgSize.md,
+  svgSize = SvgSize.md
 }: CreateTeamTagProps) {
   return (
     <SvgTag

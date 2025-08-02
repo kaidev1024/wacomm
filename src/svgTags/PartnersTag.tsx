@@ -11,7 +11,7 @@ interface PartnersTagProps {
 function PartnersTag({
   isHighlighted = false,
   onClick = ZeroFunc,
-  className = '',
+  className = ''
 }: PartnersTagProps) {
   return (
     <SvgTag

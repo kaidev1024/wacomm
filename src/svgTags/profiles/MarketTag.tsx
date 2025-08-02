@@ -19,7 +19,7 @@ function MarketTag({
   className = '',
   svgSize = SvgSize.md,
   labelClassName = '',
-  svgClassName = '',
+  svgClassName = ''
 }: MarketTagProps) {
   return (
     <SvgTag

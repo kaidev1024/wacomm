@@ -15,8 +15,8 @@ interface InputProps {
 export enum InputType {
   Text = 'text',
   Email = 'email',
-  Password = 'password',
-};
+  Password = 'password'
+}
 
 function Input({
   name,
@@ -26,14 +26,17 @@ function Input({
   errors,
   className = '',
   defaultValue = '',
-  disabled = false,
+  disabled = false
 }: InputProps) {
   const errorMessage = errors[name]?.message as string;
 
   return (
     <>
       <input
-        className={twcn('Input border border-gray-300 rounded px-1 py-0 w-full text-gray-600 border-gray-300', className)}
+        className={twcn(
+          'Input border border-gray-300 rounded px-1 py-0 w-full text-gray-600 border-gray-300',
+          className
+        )}
         type={type}
         placeholder={placeholder}
         {...register(name, { value: defaultValue })}

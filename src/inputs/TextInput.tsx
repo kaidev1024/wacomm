@@ -17,14 +17,17 @@ export default function TextInput({
   className = '',
   value = '',
   disabled = false,
-  onChange,
+  onChange
 }: TextInputProps) {
   return (
     <Row>
-      {title && <H1 label={title} className='w-10' />}
+      {title && <H1 label={title} className="w-10" />}
       <input
-        className={twcn('Input border border-gray-300 rounded px-1 py-0 text-gray-600 border-gray-300', className)}
-        type='text'
+        className={twcn(
+          'Input border border-gray-300 rounded px-1 py-0 text-gray-600 border-gray-300',
+          className
+        )}
+        type="text"
         value={value}
         placeholder={placeholder}
         disabled={disabled}

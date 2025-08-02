@@ -1,5 +1,5 @@
 import { ZeroFuncType } from 'waujs';
-import StyledButton from "./StyledButton";
+import StyledButton from './StyledButton';
 import { Row } from 'src/containers';
 
 interface YesNoButtonsProps {
@@ -16,17 +16,9 @@ export default function YesNoButtons({
   handleNo
 }: YesNoButtonsProps) {
   return (
-    <Row className='items-start'>
-      <StyledButton
-        isHighlighted={true}
-        label={yesLabel}
-        onClick={handleYes}
-      />
-      <StyledButton
-        isHighlighted={false}
-        label={noLabel}
-        onClick={handleNo}
-      />
+    <Row className="items-start">
+      <StyledButton isHighlighted={true} label={yesLabel} onClick={handleYes} />
+      <StyledButton isHighlighted={false} label={noLabel} onClick={handleNo} />
     </Row>
   );
 }

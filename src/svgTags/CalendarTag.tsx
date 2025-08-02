@@ -19,7 +19,7 @@ function CalendarTag({
   label = '',
   labelClassName = '',
   svgClassName = '',
-  svgSize = SvgSize.md,
+  svgSize = SvgSize.md
 }: CalendarTagProps) {
   return (
     <SvgTag
@@ -27,7 +27,7 @@ function CalendarTag({
       icon={{
         Svg: CalendarSvg,
         size: svgSize,
-        className: svgClassName,
+        className: svgClassName
       }}
       onClick={onClick}
       isHighlighted={isHighlighted}

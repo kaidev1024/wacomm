@@ -7,7 +7,7 @@ export enum TooltipPosition {
   top = 'top',
   bottom = 'bottom',
   left = 'left',
-  right = 'right',
+  right = 'right'
 }
 
 interface TooltipProps {
@@ -27,7 +27,7 @@ function Tooltip({
   position = TooltipPosition.top,
   onClick = ZeroFunc,
   className = '',
-  tooltipStyle = { color: 'white', backgroundColor: '#2563EB', zIndex: 100 },
+  tooltipStyle = { color: 'white', backgroundColor: '#2563EB', zIndex: 100 }
 }: TooltipProps) {
   const id = `${name}${Math.random().toFixed(10).toString()}`;
   return (

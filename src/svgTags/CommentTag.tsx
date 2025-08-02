@@ -7,9 +7,7 @@ interface CommentTagProps {
   onClick: ZeroFuncType;
 }
 
-function CommentTag({ 
-  label = 'Comment',
-  onClick }: CommentTagProps) {
+function CommentTag({ label = 'Comment', onClick }: CommentTagProps) {
   return (
     <SvgTag
       label={label}

@@ -15,9 +15,8 @@ function CreateArenaTag({
   isHighlighted = false,
   onClick = ZeroFunc,
   className = '',
-  svgSize = SvgSize.md,
+  svgSize = SvgSize.md
 }: CreateArenaTagProps) {
-
   return (
     <SvgTag
       label={label || 'Arena'}

@@ -1,9 +1,9 @@
 import { twcn } from 'waujs';
-import List from "../List";
-import NavbarTab from "./NavbarTab";
+import List from '../List';
+import NavbarTab from './NavbarTab';
 
 interface NavbarProps {
-  tabs: TabItemProps[],
+  tabs: TabItemProps[];
   onPick: (name: any) => void;
   pickedTabName: string;
   className?: string;
@@ -22,7 +22,7 @@ function Navbar({
   pickedTabName,
   className = '',
   tabClassName = '',
-  tabHighlightedClassName = '',
+  tabHighlightedClassName = ''
 }: NavbarProps) {
   const itemRenderer = ({ name, label }: TabItemProps) => {
     return (

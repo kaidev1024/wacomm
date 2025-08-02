@@ -10,14 +10,9 @@ export interface CacheButtonProps {
   isHighlighted: boolean;
 }
 
-const cache: { [key: string]: boolean; } = {};
+const cache: { [key: string]: boolean } = {};
 
-function CacheButton({
-  id,
-  onClick,
-  label,
-  isHighlighted,
-}: CacheButtonProps) {
+function CacheButton({ id, onClick, label, isHighlighted }: CacheButtonProps) {
   const [isLoading, setIsLoading] = useState(cache[id]);
 
   useEffect(() => {

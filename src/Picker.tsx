@@ -8,8 +8,7 @@ export interface PickerOptionProps {
   label: ReactNode;
 }
 
-export type onChangeType =
-  (option: PickerOptionProps) => void;
+export type onChangeType = (option: PickerOptionProps) => void;
 
 interface PickerProps {
   isSearchable?: boolean;
@@ -26,9 +25,8 @@ function Picker({
   onChange,
   isSearchable = false,
   className = '',
-  disabled = false,
+  disabled = false
 }: PickerProps) {
-
   return (
     <div className={twcn('w-full', className)}>
       <ReactSelect

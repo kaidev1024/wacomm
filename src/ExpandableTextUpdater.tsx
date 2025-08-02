@@ -15,7 +15,7 @@ function ExpandableTextUpdater({
   classNameDisplay,
   title,
   editable,
-  isExpandable = true,
+  isExpandable = true
 }: ExpandableTextUpdaterProps) {
   return (
     <ExpandableContainer title={title} className="p-1" isExpandable={isExpandable}>

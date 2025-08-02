@@ -15,7 +15,7 @@ function CreateCollectionTag({
   isHighlighted = false,
   onClick = ZeroFunc,
   className = '',
-  svgSize = SvgSize.md,
+  svgSize = SvgSize.md
 }: CreateCollectionTagProps) {
   return (
     <SvgTag

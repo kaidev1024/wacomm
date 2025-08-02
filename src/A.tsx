@@ -12,13 +12,11 @@ interface AProps {
   children: ReactNode;
 }
 
-function A({
-  target = ATarget.self,
-  href,
-  children,
-}:AProps) {
+function A({ target = ATarget.self, href, children }: AProps) {
   return (
-    <a href={href} target={target}>{children}</a>
+    <a href={href} target={target}>
+      {children}
+    </a>
   );
 }
 

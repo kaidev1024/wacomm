@@ -15,7 +15,7 @@ function TextPostTag({
   onClick = ZeroFunc,
   className = '',
   svgSize = SvgSize.md,
-  label = '',
+  label = ''
 }: TextPostTagProps) {
   return (
     <SvgTag

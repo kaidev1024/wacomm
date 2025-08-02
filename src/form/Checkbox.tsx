@@ -10,13 +10,7 @@ interface CheckboxProps {
   register: UseFormRegister<FieldValues>;
 }
 
-function Checkbox({
-  label,
-  name,
-  register,
-  className = '',
-  disabled = false,
-}: CheckboxProps) {
+function Checkbox({ label, name, register, className = '', disabled = false }: CheckboxProps) {
   return (
     <Row className={className}>
       <input

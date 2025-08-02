@@ -7,21 +7,18 @@ interface CityTagProps {
   onClick?: ZeroFuncType;
 }
 
-function CityTag({
-  label,
-  onClick = ZeroFunc
-}: CityTagProps) {
+function CityTag({ label, onClick = ZeroFunc }: CityTagProps) {
   return (
     <SvgTag
       label={label}
       icon={{
         Svg: CitySvg,
-        className: "fill-gray-500",
+        className: 'fill-gray-500',
         size: SvgSize.sm
       }}
       isVertical={false}
       onClick={onClick}
-      labelClassName='text-sm'
+      labelClassName="text-sm"
     />
   );
 }

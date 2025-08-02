@@ -8,11 +8,7 @@ interface ExploreTagProps {
   label: string;
 }
 
-function ExploreTag({
-  isHighlighted,
-  onClick,
-  label,
-}: ExploreTagProps) {
+function ExploreTag({ isHighlighted, onClick, label }: ExploreTagProps) {
   return (
     <SvgTag
       label={label}

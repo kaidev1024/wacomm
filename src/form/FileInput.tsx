@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
-import {
-  FieldValues, FieldErrors, UseFormRegister, UseFormWatch,
-} from 'react-hook-form';
+import { FieldValues, FieldErrors, UseFormRegister, UseFormWatch } from 'react-hook-form';
 
 interface FileInputProps {
   name: string;
@@ -11,13 +9,7 @@ interface FileInputProps {
   watch: UseFormWatch<FieldValues>;
 }
 
-function FileInput({
-  name,
-  url,
-  register,
-  errors,
-  watch,
-}:FileInputProps) {
+function FileInput({ name, url, register, errors, watch }: FileInputProps) {
   const [imageUrl, setImageUrl] = useState(url);
 
   const fileInput = watch(name);
@@ -29,13 +21,7 @@ function FileInput({
   return (
     <label htmlFor={name}>
       <img src={imageUrl} alt={name} />
-      <input
-        id={name}
-        type="file"
-        accept="image/*"
-        hidden
-        {...register(name)}
-      />
+      <input id={name} type="file" accept="image/*" hidden {...register(name)} />
       <p className="pl-3 text-red-600">{errors[name]?.message as string}</p>
     </label>
   );

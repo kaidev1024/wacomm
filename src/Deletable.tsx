@@ -8,11 +8,7 @@ interface DeletableProps {
   className?: string;
 }
 
-function Deletable({
-  content,
-  onDelete,
-  className = '',
-}: DeletableProps) {
+function Deletable({ content, onDelete, className = '' }: DeletableProps) {
   return (
     <Row className={className}>
       <CloseIcon onClick={onDelete} />

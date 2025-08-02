@@ -12,7 +12,7 @@ function WorenaLogo({ onClick }: WorenaLogoProps) {
       icon={{
         Svg: WorenaLogoSvg,
         className: 'fill-blue-500',
-        size: SvgSize.xl,
+        size: SvgSize.xl
       }}
       onClick={onClick}
     />

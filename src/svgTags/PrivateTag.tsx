@@ -6,7 +6,7 @@ function PrivateTag() {
     <SvgTag
       icon={{
         Svg: PrivateSvg,
-        className: 'fill-blue-500',
+        className: 'fill-blue-500'
       }}
     />
   );

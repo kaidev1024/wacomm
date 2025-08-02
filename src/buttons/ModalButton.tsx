@@ -12,16 +12,8 @@ function ModalButton({ label, content }: ModalButtonProps) {
 
   return (
     <>
-      <StyledButton
-        label={label}
-        onClick={() => setIsOpen(true)}
-      />
-      <Modal
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        content={content}
-        title={label}
-      />
+      <StyledButton label={label} onClick={() => setIsOpen(true)} />
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} content={content} title={label} />
     </>
   );
 }

@@ -26,7 +26,7 @@ function StyledButton({
   isHighlighted = false,
   isLoading = false,
   onClick,
-  label,
+  label
 }: StyledButtonProps) {
   return (
     <Button

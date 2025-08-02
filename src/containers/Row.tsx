@@ -6,16 +6,9 @@ interface RowProps {
   onClick?: ZeroFuncType;
 }
 
-function Row({
-  children,
-  className = '',
-  onClick = ZeroFunc,
-}: RowProps) {
+function Row({ children, className = '', onClick = ZeroFunc }: RowProps) {
   return (
-    <div
-      className={twcn('flex flex-row gap-2 items-center', className)}
-      onClick={onClick}
-    >
+    <div className={twcn('flex flex-row gap-2 items-center', className)} onClick={onClick}>
       {children}
     </div>
   );

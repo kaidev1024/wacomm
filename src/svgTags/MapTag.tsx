@@ -6,13 +6,10 @@ interface MapTagProps {
   onClick: () => void;
 }
 
-function MapTag({
-  isHighlighted = false,
-  onClick,
-}: MapTagProps) {
+function MapTag({ isHighlighted = false, onClick }: MapTagProps) {
   return (
     <SvgTag
-      label='Map'
+      label="Map"
       icon={{ Svg: MapSvg }}
       onClick={onClick}
       isVertical

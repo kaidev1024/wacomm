@@ -18,7 +18,7 @@ function Input({
   errors,
   className,
   defaultValue = '',
-  placeholder = '',
+  placeholder = ''
 }: InputProps) {
   return (
     <>
@@ -30,7 +30,9 @@ function Input({
         {...register(name, { value: defaultValue })}
       />
       <datalist id="options">
-        {options.map((option: string) => <option>{option}</option>)}
+        {options.map((option: string) => (
+          <option>{option}</option>
+        ))}
       </datalist>
       <p className="pl-3 text-red-600">{errors[name]?.message as string}</p>
     </>

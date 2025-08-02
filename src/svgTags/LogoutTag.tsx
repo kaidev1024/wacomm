@@ -8,16 +8,12 @@ interface LogoutTagProps {
   className?: string;
 }
 
-function LogoutTag({
-  label,
-  onClick,
-  className = ''
-}: LogoutTagProps) {
+function LogoutTag({ label, onClick, className = '' }: LogoutTagProps) {
   return (
     <SvgTag
       icon={{
         Svg: LogoutSvg,
-        className: 'fill-gray-600',
+        className: 'fill-gray-600'
       }}
       label={label}
       onClick={onClick}

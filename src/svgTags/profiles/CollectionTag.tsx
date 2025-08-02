@@ -19,16 +19,15 @@ function CollectionsTag({
   className = '',
   labelClassName = '',
   svgClassName = '',
-  svgSize = SvgSize.md,
+  svgSize = SvgSize.md
 }: CollectionsTagProps) {
-
   return (
     <SvgTag
       label={label}
       icon={{
         Svg: CollectionSvg,
         size: svgSize,
-        className: svgClassName,
+        className: svgClassName
       }}
       onClick={onClick}
       className={className}

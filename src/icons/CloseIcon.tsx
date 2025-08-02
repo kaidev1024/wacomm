@@ -7,13 +7,12 @@ interface CloseIconProps {
   hidden?: boolean;
 }
 
-function CloseIcon({
-  onClick = ZeroFunc,
-  className = '',
-  hidden = false,
-}: CloseIconProps) {
+function CloseIcon({ onClick = ZeroFunc, className = '', hidden = false }: CloseIconProps) {
   return (
-    <div className={twcn(`w-5 hover:cursor-pointer ${hidden && 'hidden'}`, className)} onClick={onClick}>
+    <div
+      className={twcn(`w-5 hover:cursor-pointer ${hidden && 'hidden'}`, className)}
+      onClick={onClick}
+    >
       <CloseSvg size={SvgSize.sm} className={twcn('fill-gray-600', className)} />
     </div>
   );

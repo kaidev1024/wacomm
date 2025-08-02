@@ -19,16 +19,15 @@ function CalendarEventTag({
   className = '',
   svgSize = SvgSize.md,
   labelClassName = '',
-  svgClassName = '',
+  svgClassName = ''
 }: CalendarEventTagProps) {
-
   return (
     <SvgTag
       label={label || 'Event'}
       icon={{
         Svg: CalendarEventSvg,
         size: svgSize,
-        className: svgClassName,
+        className: svgClassName
       }}
       onClick={onClick}
       className={className}

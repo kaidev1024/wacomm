@@ -1,12 +1,8 @@
-import { useEffect, useRef, useState } from "react";
-import Map, { Marker, NavigationControl, MapRef } from "react-map-gl";
-import "mapbox-gl/dist/mapbox-gl.css";
-import {
-  MapboxLocationProps,
-  MapStyle,
-  NavigationControlPosition
-} from "./util";
-import MapboxMarkerList from "./MapboxMarkerList";
+import { useEffect, useRef, useState } from 'react';
+import Map, { Marker, NavigationControl, MapRef } from 'react-map-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import { MapboxLocationProps, MapStyle, NavigationControlPosition } from './util';
+import MapboxMarkerList from './MapboxMarkerList';
 
 interface navigationControlProps {
   isDisplayed: boolean;
@@ -28,13 +24,13 @@ const MapboxMap = ({
   locations = [],
   mapboxToken,
   mapStyle,
-  navigationControl,
+  navigationControl
 }: MapboxMapProps) => {
   const mapRef = useRef<MapRef>(null);
   const [viewState, setViewState] = useState({
     longitude,
     latitude,
-    zoom: 10,
+    zoom: 10
   });
   useEffect(() => {
     if (mapRef.current) {
@@ -52,7 +48,7 @@ const MapboxMap = ({
       {...viewState}
       mapboxAccessToken={mapboxToken}
       mapStyle={mapStyle}
-      style={{ width: "100%", height: "100%" }}
+      style={{ width: '100%', height: '100%' }}
       onMove={(evt) => setViewState(evt.viewState)}
     >
       <Marker longitude={longitude} latitude={latitude}>

@@ -9,34 +9,32 @@ interface MonthPickerProps {
   setValue: SetDateTime;
 }
 
-function MonthPicker({
-  value,
-  setValue
-}: MonthPickerProps) {
+function MonthPicker({ value, setValue }: MonthPickerProps) {
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs} >
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DatePicker
         value={value}
         onChange={setValue}
-        views={["year", "month"]}
+        views={['year', 'month']}
         format="MM/YYYY"
         openTo="month"
         minDate={dayjs()}
         slotProps={{
           textField: {
             sx: {
-              height: 30, "& .MuiInputBase-root": {
+              height: 30,
+              '& .MuiInputBase-root': {
                 height: 30,
-                "& .MuiInputBase-input": {
-                  padding: "2px 16px",
-                  fontSize: "12px"
-                },
+                '& .MuiInputBase-input': {
+                  padding: '2px 16px',
+                  fontSize: '12px'
+                }
               }
-            },
-          },
+            }
+          }
         }}
       />
-    </LocalizationProvider >
+    </LocalizationProvider>
   );
 }
 

@@ -23,7 +23,7 @@ export enum TagLabelSize {
   Lg = 'text-lg',
   Sm = 'text-sm',
   Xs = 'text-xs',
-  Base = 'text-base',
+  Base = 'text-base'
 }
 
 function Tag({
@@ -31,12 +31,13 @@ function Tag({
   onClick = ZeroFunc,
   className = '',
   labelSize = TagLabelSize.Base,
-  color = TagColor.Blue,
+  color = TagColor.Blue
 }: TagProps) {
   return (
     <div
       onClick={onClick}
-      className={twcn('w-fit h-fit px-1 rounded-full', className, labelSize, color)}>
+      className={twcn('w-fit h-fit px-1 rounded-full', className, labelSize, color)}
+    >
       {label}
     </div>
   );

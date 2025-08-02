@@ -10,24 +10,25 @@ interface TimePickerProps {
 
 function TimePicker({ value, setValue }: TimePickerProps) {
   return (
-    < LocalizationProvider dateAdapter={AdapterDayjs} >
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
       <MuiTimePicker
         value={value}
         onChange={setValue}
         slotProps={{
           textField: {
             sx: {
-              height: 30, "& .MuiInputBase-root": {
+              height: 30,
+              '& .MuiInputBase-root': {
                 height: 30,
-                "& .MuiInputBase-input": {
-                  padding: "0px 16px",
-                },
+                '& .MuiInputBase-input': {
+                  padding: '0px 16px'
+                }
               }
-            },
-          },
+            }
+          }
         }}
       />
-    </LocalizationProvider >
+    </LocalizationProvider>
   );
 }
 

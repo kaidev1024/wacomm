@@ -13,7 +13,7 @@ function ExpandableContainerHeader({
   isShown,
   onClick,
   title,
-  isExpandable = true,
+  isExpandable = true
 }: ExpandableContainerHeaderProps) {
   return (
     <Row className="text-blue-500 justify-between py-0.5">
@@ -21,19 +21,12 @@ function ExpandableContainerHeader({
       {isExpandable && (
         <div onClick={onClick}>
           {isShown ? (
-            <CollapseSvg
-              size={SvgSize.sm}
-              className="fill-gray-888"
-            />
+            <CollapseSvg size={SvgSize.sm} className="fill-gray-888" />
           ) : (
-            <AddSvg
-              size={SvgSize.sm}
-              className="fill-gray-888"
-            />
+            <AddSvg size={SvgSize.sm} className="fill-gray-888" />
           )}
         </div>
       )}
-
     </Row>
   );
 }

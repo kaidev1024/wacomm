@@ -22,14 +22,17 @@ function Textarea({
   defaultValue = '',
   className = '',
   row = 3,
-  disabled = false,
+  disabled = false
 }: InputProps) {
   return (
     <>
       <textarea
         disabled={disabled}
         id={id}
-        className={twcn('Textarea border border-gray-300 rounded w-full px-1 py-0 h-fit border-gray-300 text-gray-600', className)}
+        className={twcn(
+          'Textarea border border-gray-300 rounded w-full px-1 py-0 h-fit border-gray-300 text-gray-600',
+          className
+        )}
         placeholder={placeholder}
         rows={row}
         {...register(name, { value: defaultValue })}

@@ -1,5 +1,5 @@
-import { NotificationSvg, SvgSize } from "wasvg";
-import SvgTag from "./SvgTag";
+import { NotificationSvg, SvgSize } from 'wasvg';
+import SvgTag from './SvgTag';
 
 interface NotificationTagProps {
   label: string;

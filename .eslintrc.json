@@ -1,0 +1,40 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "no-plusplus": "off",
+    "no-shadow": "off",
+    "camelcase": "off",
+    "import/extensions": "off",
+    "react/no-array-index-key": "off",
+    "react/no-unused-prop-types": "off",
+    "@typescript-eslint/no-shadow": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "import/no-unresolved": "off",
+    "no-use-before-define": "off",
+    "no-param-reassign": "off",
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "import/no-extraneous-dependencies": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/require-default-props": "off",
+    "import/prefer-default-export": "off",
+    "comma-dangle": ["error", "only-multiline"], // or "never" to disable
+    "jsx-quotes": ["error", "prefer-double"] // enforce double quotes
+  }
+}

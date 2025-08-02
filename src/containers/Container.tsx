@@ -12,23 +12,17 @@ function Container({
   children,
   className = '',
   isVertical = false,
-  onClick = ZeroFunc,
+  onClick = ZeroFunc
 }: ContainerProps) {
   if (isVertical) {
     return (
-      <Column
-        className={className}
-        onClick={onClick}
-      >
+      <Column className={className} onClick={onClick}>
         {children}
       </Column>
     );
   }
   return (
-    <Row
-      className={className}
-      onClick={onClick}
-    >
+    <Row className={className} onClick={onClick}>
       {children}
     </Row>
   );

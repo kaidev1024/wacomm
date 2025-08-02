@@ -46,13 +46,9 @@ function SvgButton({
   isVertical = false,
   isHighlighted = false,
   labelClassName = '',
-  label = '',
+  label = ''
 }: SvgButtonProps) {
-  const {
-    Svg,
-    size: svgSize,
-    className: svgClassName,
-  } = icon;
+  const { Svg, size: svgSize, className: svgClassName } = icon;
 
   return (
     <button
@@ -62,7 +58,12 @@ function SvgButton({
       onClick={onClick}
     >
       <Container isVertical={isVertical} className="items-center gap-0">
-        {Svg && <Svg size={svgSize} className={twcn(`${isHighlighted ? 'fill-blue-500' : 'fill-gray-600'}`, svgClassName)} />}
+        {Svg && (
+          <Svg
+            size={svgSize}
+            className={twcn(`${isHighlighted ? 'fill-blue-500' : 'fill-gray-600'}`, svgClassName)}
+          />
+        )}
         <div className={getLabelClassName(isHighlighted!, disabled!, labelClassName)}>{label}</div>
       </Container>
       {isLoading && <LoadingIndicator />}

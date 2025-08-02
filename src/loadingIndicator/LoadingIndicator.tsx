@@ -6,15 +6,9 @@ interface LoadingIndicatorProps {
   className?: string;
 }
 
-function LoadingIndicator({
-  className = '',
-}: LoadingIndicatorProps) {
+function LoadingIndicator({ className = '' }: LoadingIndicatorProps) {
   return (
-    <Img
-      src={LoadingIcon}
-      alt="loading"
-      className={twcn('LoadingIndicator w-5', className)}
-    />
+    <Img src={LoadingIcon} alt="loading" className={twcn('LoadingIndicator w-5', className)} />
   );
 }
 

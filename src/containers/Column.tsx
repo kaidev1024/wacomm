@@ -6,16 +6,9 @@ interface ColumnProps {
   onClick?: ZeroFuncType;
 }
 
-function Column({
-  children,
-  className = '',
-  onClick = ZeroFunc,
-}: ColumnProps) {
+function Column({ children, className = '', onClick = ZeroFunc }: ColumnProps) {
   return (
-    <div
-      className={twcn('flex flex-col gap-2', className)}
-      onClick={onClick}
-    >
+    <div className={twcn('flex flex-col gap-2', className)} onClick={onClick}>
       {children}
     </div>
   );

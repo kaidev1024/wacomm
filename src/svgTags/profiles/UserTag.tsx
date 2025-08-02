@@ -12,7 +12,7 @@ function UserTag({
   label,
   svgSize = SvgSize.md,
   labelClassName = '',
-  svgClassName = '',
+  svgClassName = ''
 }: UserTagProps) {
   return (
     <SvgTag
@@ -20,7 +20,7 @@ function UserTag({
       icon={{
         Svg: UserSvg,
         size: svgSize,
-        className: svgClassName,
+        className: svgClassName
       }}
       isVertical={false}
       labelClassName={labelClassName}
