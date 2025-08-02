@@ -1,21 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { SendIcon } from 'src/icons';
 
-interface TextSenderProps {
+interface CommentEditorProps {
   onClick: (text: string) => void;
   placeholder?: string;
   className?: string;
   rows?: number;
 }
 
-export default function TextSender({
+export default function CommentEditor({
   onClick,
   placeholder = 'Type your message...',
   className = '',
   rows = 2
-}: TextSenderProps) {
-  const [text, setText] = useState('');
+}: CommentEditorProps) {
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  useEffect(() => {
+    textareaRef.current?.focus();
+  }, []);
 
+  const [text, setText] = useState('');
   const handleClick = () => {
     if (text.trim()) {
       onClick(text);
@@ -26,6 +30,7 @@ export default function TextSender({
   return (
     <div className={`relative w-full ${className}`}>
       <textarea
+        ref={textareaRef}
         className="w-full border rounded px-2 py-1 pr-10"
         value={text}
         onChange={(e) => setText(e.target.value)}
