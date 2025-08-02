@@ -23,14 +23,18 @@ export default function SubjectReactionSection({
   return (
     <Row className={className} onClick={onClick}>
       <span>{labels.Single}</span>
-      <MiddleDot className={textClassName} />
-      <SubjectReactionsCount
-        singleLabel={labels.Single}
-        pluralLabel={labels.Plural}
-        count={count}
-        onClick={ZeroFunc}
-        className={textClassName}
-      />
+      {count > 0 && (
+        <>
+          <MiddleDot className={textClassName} />
+          <SubjectReactionsCount
+            singleLabel={labels.Single}
+            pluralLabel={labels.Plural}
+            count={count}
+            onClick={ZeroFunc}
+            className={textClassName}
+          />
+        </>
+      )}
     </Row>
   );
 }

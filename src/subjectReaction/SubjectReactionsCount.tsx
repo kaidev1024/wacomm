@@ -15,9 +15,9 @@ export default function SubjectReactionsCount({
   onClick,
   className = 'text-gray-300'
 }: SubjectReactionsCountProps) {
-  return count > 0 ? (
+  return (
     <div onClick={onClick}>
       <span className={className}>{`${count} ${count === 1 ? singleLabel : pluralLabel}`}</span>
     </div>
-  ) : null;
+  );
 }

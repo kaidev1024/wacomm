@@ -23,8 +23,12 @@ export default function LikeSection({
       <span onClick={onLike} className={`${isHighlighted ? 'text-blue-600' : textClassName}`}>
         Like
       </span>
-      <MiddleDot className={textClassName} />
-      <LikesCount count={count} onClick={ZeroFunc} className={textClassName} />
+      {count > 0 && (
+        <>
+          <MiddleDot className={textClassName} />
+          <LikesCount count={count} onClick={ZeroFunc} className={textClassName} />
+        </>
+      )}
     </Row>
   );
 }

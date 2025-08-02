@@ -11,10 +11,10 @@ export default function LikesCount({
   onClick,
   className = 'text-gray-300'
 }: LikesCountProps) {
-  return count > 0 ? (
+  return (
     <div onClick={onClick}>
       <span>'❤️'</span>
       <span className={className}>{count}</span>
     </div>
-  ) : null;
+  );
 }
