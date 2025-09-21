@@ -110,7 +110,11 @@ function Modal({
       onRequestClose={onClose}
     >
       <Row className="justify-between items-center w-full h-fit border-b border-gray-300 border-dashed pb-2 mb-2">
-        <H1 label={title} />
+        {typeof title === 'string' ? (
+          <H1 label={title} />
+        ) : (
+          title
+        )}
         {!isCloseIconHidden && <CloseIcon className="right-1 text-gray-600" onClick={onClose} />}
       </Row>
       {content}

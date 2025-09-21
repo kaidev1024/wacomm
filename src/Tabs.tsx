@@ -30,7 +30,7 @@ function Tabs({ tabs, classNames, onClick, pickedTab }: TabsProps) {
   const itemRenderer = ({ label, value }: TabProps, i: number) => {
     let className = 'w-16 h-fit  text-center py-0 px-2 border border-gray-300 w-fit text-center';
     if (pickedTab === value)
-      className = twcn(className, 'bg-blue-200 text-blue-500', classNames?.picked);
+      className = twcn(className, 'bg-blue-200 text-blue-500', classNames?.picked || '');
     if (classNames) {
       const { tab, left, mid, right } = classNames;
       if (tab) className = twcn(className, tab);
@@ -56,7 +56,7 @@ function Tabs({ tabs, classNames, onClick, pickedTab }: TabsProps) {
 
   return (
     <List
-      className={twcn('flex flex-row overflow-y-scroll w-fit', classNames?.tabs)}
+      className={twcn('flex flex-row overflow-y-scroll w-fit', classNames?.tabs || '')}
       items={tabs}
       itemRenderer={itemRenderer}
     />

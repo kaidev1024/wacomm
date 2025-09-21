@@ -23,7 +23,7 @@ function Input({
   return (
     <>
       <input
-        className={twcn('Input rounded-lg w-full', className)}
+        className={twcn('Input rounded-lg w-full', className || '')}
         type="text"
         placeholder={placeholder}
         list="options"

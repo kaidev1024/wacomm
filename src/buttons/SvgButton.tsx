@@ -27,14 +27,14 @@ const getClassName = (isHighlighted: boolean, disabled: boolean, className?: str
   let ret = 'flex flex-row items-center justify-center rounded-lg w-full bg-white py-1';
   if (isHighlighted) ret = twConcat(ret, 'bg-blue-200 border-0');
   if (disabled) ret = twConcat(ret, 'bg-gray-200');
-  return twcn(ret, className);
+  return twcn(ret, className || '');
 };
 
 const getLabelClassName = (isHighlighted: boolean, disabled: boolean, className?: string) => {
   let ret = 'text-gray-600';
   if (isHighlighted) ret = twConcat(ret, 'text-blue-500');
   if (disabled) ret = twConcat(ret, 'text-gray-888');
-  return twcn(ret, className);
+  return twcn(ret, className || '');
 };
 
 function SvgButton({
@@ -61,7 +61,7 @@ function SvgButton({
         {Svg && (
           <Svg
             size={svgSize}
-            className={twcn(`${isHighlighted ? 'fill-blue-500' : 'fill-gray-600'}`, svgClassName)}
+            className={twcn(`${isHighlighted ? 'fill-blue-500' : 'fill-gray-600'}`, svgClassName || '')}
           />
         )}
         <div className={getLabelClassName(isHighlighted!, disabled!, labelClassName)}>{label}</div>

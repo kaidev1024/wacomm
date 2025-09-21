@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { ReactNode } from 'react';
-import ReactSelect from 'react-select';
+import ReactSelect, { SingleValue, ActionMeta } from 'react-select';
 import { twcn } from 'waujs';
 
 export interface PickerOptionProps {
@@ -27,6 +27,15 @@ function Picker({
   className = '',
   disabled = false
 }: PickerProps) {
+  const handleChange = (
+    newValue: SingleValue<PickerOptionProps>,
+    actionMeta: ActionMeta<PickerOptionProps>
+  ) => {
+    // Only call your onChange if there's actually a value
+    if (newValue) {
+      onChange(newValue);
+    }
+  };
   return (
     <div className={twcn('w-full', className)}>
       <ReactSelect
@@ -35,7 +44,7 @@ function Picker({
         isMulti={false}
         defaultValue={defaultOption}
         options={options}
-        onChange={onChange} // TODO: fix type
+        onChange={handleChange} // TODO: fix type
         isDisabled={disabled}
       />
     </div>
