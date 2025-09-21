@@ -36,3 +36,6 @@ types/
 
 *storybook.log
 storybook-static
+
+# Coverage
+coverage
