@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import SvgButton from './SvgButton';
+import { SvgSize } from 'wasvg';
 
 // Mock SVG component for storybook
 const MockSvg = ({ size, className }: { size?: string; className?: string }) => (
@@ -57,7 +58,6 @@ export const Default: Story = {
   args: {
     icon: {
       Svg: MockSvg,
-      size: '16',
     },
     label: 'SVG Button',
   },
@@ -67,7 +67,6 @@ export const Highlighted: Story = {
   args: {
     icon: {
       Svg: MockSvg,
-      size: '16',
     },
     label: 'Highlighted SVG Button',
     isHighlighted: true,
@@ -78,7 +77,6 @@ export const Disabled: Story = {
   args: {
     icon: {
       Svg: MockSvg,
-      size: '16',
     },
     label: 'Disabled SVG Button',
     disabled: true,
@@ -89,7 +87,6 @@ export const Loading: Story = {
   args: {
     icon: {
       Svg: MockSvg,
-      size: '16',
     },
     label: 'Loading SVG Button',
     isLoading: true,
@@ -100,7 +97,6 @@ export const Vertical: Story = {
   args: {
     icon: {
       Svg: MockSvg,
-      size: '20',
     },
     label: 'Vertical Layout',
     isVertical: true,
@@ -111,7 +107,6 @@ export const IconOnly: Story = {
   args: {
     icon: {
       Svg: MockSvg,
-      size: '20',
     },
     label: '',
   },
@@ -121,7 +116,7 @@ export const LargeIcon: Story = {
   args: {
     icon: {
       Svg: MockSvg,
-      size: '24',
+      size: SvgSize.lg,
     },
     label: 'Large Icon',
   },
@@ -131,7 +126,6 @@ export const CustomStyling: Story = {
   args: {
     icon: {
       Svg: MockSvg,
-      size: '16',
       className: 'fill-green-600',
     },
     label: 'Custom Styled',
