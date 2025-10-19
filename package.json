@@ -1,6 +1,6 @@
 {
   "name": "wacomm",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "main": "dist/wacomm.cjs.js",
   "module": "dist/wacomm.es.js",
   "types": "dist/index.d.ts",
@@ -81,6 +81,6 @@
     "tiny-invariant": "^1.3.3",
     "wacomm": "^1.6.3",
     "wasvg": "^1.1.0",
-    "waujs": "^1.0.0"
+    "waujs": "^1.3.0"
   }
 }

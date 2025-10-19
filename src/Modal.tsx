@@ -1,6 +1,6 @@
-import { ReactElement, ReactNode, useEffect } from 'react';
+import { ReactElement, ReactNode, useEffect, useState } from 'react';
 import ReactModal from 'react-modal';
-import { ZeroFuncType } from 'waujs';
+import { useIsMobile, CUTOFF_WIDTH_SM, ZeroFuncType } from 'waujs';
 import H1 from './H1';
 import { CloseIcon } from './icons';
 import { Row } from './containers';
@@ -54,11 +54,10 @@ const defaultStyle = {
   content: {
     top: '30%',
     left: '50%',
-    transform: 'translate(-50%, -50%)',
+    transform: 'translate(-50%, 0%)',
     border: '1px solid #ccc',
     background: '#fff',
     borderRadius: '4px',
-    width: 'fit-content',
     height: 'fit-content',
     boxShadow: '3px 3px 2px grey',
     padding: '10px 15px',
@@ -66,16 +65,17 @@ const defaultStyle = {
   }
 };
 
-const mergeModalStyles = (style: ModalStyleProps) => {
+const mergeModalStyles = (style: ModalStyleProps, width: number) => {
   if (!style) return defaultStyle;
   return {
     overlay: {
       ...defaultStyle.overlay,
-      ...style.overlay
+      ...(style.overlay || {})
     },
     content: {
+      width: `${width}px`,
       ...defaultStyle.content,
-      ...style.content
+      ...(style.content || {})
     }
   };
 };
@@ -88,12 +88,13 @@ function Modal({
   shouldCloseOnEsc = true,
   shouldCloseOnOverlayClick = true,
   isCloseIconHidden = false,
-  style = undefined
+  style = {}
 }: ModalProps) {
+  const [width, setWidth] = useState(CUTOFF_WIDTH_SM);
+  const isMobile = useIsMobile();
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const rootEl = document.getElementById('__next') || document.getElementById('root');
-
       if (rootEl) {
         ReactModal.setAppElement(rootEl);
       } else {
@@ -101,20 +102,26 @@ function Modal({
       }
     }
   }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(isMobile ? window.innerWidth : CUTOFF_WIDTH_SM);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isMobile]);
+
   return (
     <ReactModal
       isOpen={isOpen}
-      style={mergeModalStyles(style!)}
+      style={mergeModalStyles(style, width)}
       shouldCloseOnEsc={shouldCloseOnEsc}
       shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
       onRequestClose={onClose}
     >
       <Row className="justify-between items-center w-full h-fit border-b border-gray-300 border-dashed pb-2 mb-2">
-        {typeof title === 'string' ? (
-          <H1 label={title} />
-        ) : (
-          title
-        )}
+        {typeof title === 'string' ? <H1 label={title} /> : title}
         {!isCloseIconHidden && <CloseIcon className="right-1 text-gray-600" onClick={onClose} />}
       </Row>
       {content}
