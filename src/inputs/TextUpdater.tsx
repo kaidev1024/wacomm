@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FieldValues, useForm } from 'react-hook-form';
-import { twcn, ZeroFuncType } from 'waujs';
+import { twcn, useEscKeydown, ZeroFuncType } from 'waujs';
 import { FormButtons, Textarea } from '../form';
 
 export interface TextUpdaterProps {
@@ -33,6 +33,11 @@ function TextUpdater({
   const onSubmit = (data: FieldValues) => {
     onSave(data.content, cancelEdit);
   };
+  useEscKeydown(() => {
+    if (isEditing) {
+      cancelEdit();
+    }
+  });
   return isEditing && editable ? (
     <form onSubmit={handleSubmit(onSubmit)} className={twcn('TextUpdater', classNameEdit)}>
       <Textarea
