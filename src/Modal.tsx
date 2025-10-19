@@ -90,8 +90,8 @@ function Modal({
   isCloseIconHidden = false,
   style = {}
 }: ModalProps) {
-  const [width, setWidth] = useState(window.innerWidth);
   const isMobile = useIsMobile();
+  const [width, setWidth] = useState(isMobile ? window.innerWidth : CUTOFF_WIDTH_SM);
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const rootEl = document.getElementById('__next') || document.getElementById('root');
