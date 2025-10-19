@@ -1,16 +1,36 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useRef } from 'react';
 
 interface ListProps {
   items: any[];
   // eslint-disable-next-line no-unused-vars
   itemRenderer: (...args: any[]) => ReactNode;
   className?: string;
-  fallback?: ReactNode;
+  fallback?: any;
+  autoScroll?: boolean;
 }
 
-function List({ items, itemRenderer, className = '', fallback = null }: ListProps) {
+function List({
+  items,
+  itemRenderer,
+  className = '',
+  fallback = undefined,
+  autoScroll = false
+}: ListProps) {
   if (!items || items.length === 0) return fallback;
-  return <ul className={className}>{items.map(itemRenderer)}</ul>;
+
+  const listRef = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    if (autoScroll) {
+      listRef.current?.lastElementChild?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [items, autoScroll]);
+
+  return (
+    <ul className={className} ref={listRef}>
+      {items.map(itemRenderer)}
+    </ul>
+  );
 }
 
 export default List;
