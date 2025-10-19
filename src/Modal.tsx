@@ -52,7 +52,7 @@ const defaultStyle = {
     backgroundColor: 'rgba(0, 0, 0, 0.1)'
   },
   content: {
-    top: '20%',
+    top: '15%',
     left: '50%',
     transform: 'translate(-50%, 0%)',
     border: '1px solid #ccc',
@@ -90,7 +90,7 @@ function Modal({
   isCloseIconHidden = false,
   style = {}
 }: ModalProps) {
-  const [width, setWidth] = useState(CUTOFF_WIDTH_SM);
+  const [width, setWidth] = useState(window.innerWidth);
   const isMobile = useIsMobile();
   useEffect(() => {
     if (typeof window !== 'undefined') {
