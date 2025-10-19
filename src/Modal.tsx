@@ -52,7 +52,7 @@ const defaultStyle = {
     backgroundColor: 'rgba(0, 0, 0, 0.1)'
   },
   content: {
-    top: '30%',
+    top: '20%',
     left: '50%',
     transform: 'translate(-50%, 0%)',
     border: '1px solid #ccc',
