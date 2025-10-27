@@ -4,6 +4,7 @@ import H1 from 'src/H1';
 
 export interface TextInputProps {
   title?: string;
+  titleClassName?: string;
   placeholder?: string;
   className?: string;
   value: string;
@@ -13,6 +14,7 @@ export interface TextInputProps {
 
 export default function TextInput({
   title = '',
+  titleClassName = '',
   placeholder = '',
   className = '',
   value = '',
@@ -21,7 +23,7 @@ export default function TextInput({
 }: TextInputProps) {
   return (
     <Row>
-      {title && <H1 label={title} className="w-10" />}
+      {title && <H1 label={title} className={twcn('w-10', titleClassName)} />}
       <input
         className={twcn(
           'Input border border-gray-300 rounded px-1 py-0 text-gray-600 border-gray-300',
