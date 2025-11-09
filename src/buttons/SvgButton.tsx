@@ -1,7 +1,7 @@
 import { twConcat, twcn } from 'waujs';
 import { ElementType } from 'react';
 import { SvgSize } from 'wasvg';
-import { LoadingIndicator } from '../loadingIndicator';
+import { LoadingIcon } from '../loading';
 import { Container } from 'src/containers';
 
 export interface IconProps {
@@ -61,12 +61,15 @@ function SvgButton({
         {Svg && (
           <Svg
             size={svgSize}
-            className={twcn(`${isHighlighted ? 'fill-blue-500' : 'fill-gray-600'}`, svgClassName || '')}
+            className={twcn(
+              `${isHighlighted ? 'fill-blue-500' : 'fill-gray-600'}`,
+              svgClassName || ''
+            )}
           />
         )}
         <div className={getLabelClassName(isHighlighted!, disabled!, labelClassName)}>{label}</div>
       </Container>
-      {isLoading && <LoadingIndicator />}
+      {isLoading && <LoadingIcon />}
     </button>
   );
 }

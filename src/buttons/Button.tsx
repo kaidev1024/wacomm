@@ -1,5 +1,5 @@
 import { twcn } from 'waujs';
-import { LoadingIndicator } from 'src/loadingIndicator';
+import { LoadingIcon } from 'src/loading';
 
 interface ButtonProps {
   // eslint-disable-next-line no-unused-vars
@@ -46,7 +46,7 @@ function Button({
       onClick={onClick}
     >
       <div className={getLabelClassName(isHighlighted!, disabled!, labelClassName)}>{label}</div>
-      {isLoading && <LoadingIndicator />}
+      {isLoading && <LoadingIcon />}
     </button>
   );
 }

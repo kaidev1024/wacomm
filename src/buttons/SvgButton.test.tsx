@@ -33,35 +33,28 @@ describe('SvgButton', () => {
         labelClassName="custom-label-class"
       />
     );
-    
+
     const button = screen.getByRole('button');
     expect(button).toBeInTheDocument();
     expect(button).toHaveTextContent('Test Button');
     expect(button).toHaveClass('bg-white', 'custom-button-class');
     expect(screen.getByTestId('mock-svg')).toBeInTheDocument();
-    
+
     const svg = screen.getByTestId('mock-svg');
     expect(svg).toHaveClass('fill-gray-600');
-    
+
     const labelDiv = screen.getByText('Test Button');
     expect(labelDiv).toHaveClass('text-gray-600', 'custom-label-class');
   });
 
   test('calls onClick when clicked', () => {
-    render(
-      <SvgButton
-        icon={{ Svg: MockSvg }}
-        onClick={mockOnClick}
-        label="Click Me"
-      />
-    );
-    
+    render(<SvgButton icon={{ Svg: MockSvg }} onClick={mockOnClick} label="Click Me" />);
+
     const button = screen.getByRole('button');
     fireEvent.click(button);
-    
+
     expect(mockOnClick).toHaveBeenCalledTimes(1);
   });
-
 
   test('applies highlighted styling correctly', () => {
     render(
@@ -72,66 +65,51 @@ describe('SvgButton', () => {
         isHighlighted={true}
       />
     );
-    
+
     const button = screen.getByRole('button');
     expect(button).toHaveClass('bg-blue-200', 'border-0');
-    
+
     const svg = screen.getByTestId('mock-svg');
     expect(svg).toHaveClass('fill-blue-500');
-    
+
     const labelDiv = screen.getByText('Highlighted');
     expect(labelDiv).toHaveClass('text-blue-500');
   });
 
   test('applies disabled state correctly', () => {
     render(
-      <SvgButton
-        icon={{ Svg: MockSvg }}
-        onClick={mockOnClick}
-        label="Disabled"
-        disabled={true}
-      />
+      <SvgButton icon={{ Svg: MockSvg }} onClick={mockOnClick} label="Disabled" disabled={true} />
     );
-    
+
     const button = screen.getByRole('button');
     expect(button).toBeDisabled();
     expect(button).toHaveClass('bg-gray-200');
-    
+
     const labelDiv = screen.getByText('Disabled');
     expect(labelDiv).toHaveClass('text-gray-888');
-    
+
     fireEvent.click(button);
     expect(mockOnClick).not.toHaveBeenCalled();
   });
 
   test('applies loading state correctly', () => {
     render(
-      <SvgButton
-        icon={{ Svg: MockSvg }}
-        onClick={mockOnClick}
-        label="Loading"
-        isLoading={true}
-      />
+      <SvgButton icon={{ Svg: MockSvg }} onClick={mockOnClick} label="Loading" isLoading={true} />
     );
-    
+
     const button = screen.getByRole('button');
     expect(button).toBeDisabled();
-    
-    const loadingIndicator = screen.getByAltText('loading');
-    expect(loadingIndicator).toBeInTheDocument();
-    
+
+    const LoadingIcon = screen.getByAltText('loading');
+    expect(LoadingIcon).toBeInTheDocument();
+
     fireEvent.click(button);
     expect(mockOnClick).not.toHaveBeenCalled();
   });
 
   test('renders without label (icon only)', () => {
-    render(
-      <SvgButton
-        icon={{ Svg: MockSvg }}
-        onClick={mockOnClick}
-      />
-    );
-    
+    render(<SvgButton icon={{ Svg: MockSvg }} onClick={mockOnClick} />);
+
     const button = screen.getByRole('button');
     expect(button).toBeInTheDocument();
     expect(button).toHaveTextContent('');
@@ -140,19 +118,13 @@ describe('SvgButton', () => {
 
   test('applies vertical layout correctly', () => {
     render(
-      <SvgButton
-        icon={{ Svg: MockSvg }}
-        onClick={mockOnClick}
-        label="Vertical"
-        isVertical={true}
-      />
+      <SvgButton icon={{ Svg: MockSvg }} onClick={mockOnClick} label="Vertical" isVertical={true} />
     );
-    
+
     const button = screen.getByRole('button');
     expect(button).toBeInTheDocument();
     expect(button).toHaveTextContent('Vertical');
   });
-
 
   test('combines highlighted and disabled states', () => {
     render(
@@ -164,11 +136,11 @@ describe('SvgButton', () => {
         disabled={true}
       />
     );
-    
+
     const button = screen.getByRole('button');
     expect(button).toBeDisabled();
     expect(button).toHaveClass('bg-gray-200');
-    
+
     const labelDiv = screen.getByText('Highlighted Disabled');
     expect(labelDiv).toHaveClass('text-gray-888');
   });
@@ -183,15 +155,15 @@ describe('SvgButton', () => {
         isLoading={true}
       />
     );
-    
+
     const button = screen.getByRole('button');
     expect(button).toBeDisabled();
     expect(button).toHaveClass('bg-blue-200', 'border-0');
-    
+
     const svg = screen.getByTestId('mock-svg');
     expect(svg).toHaveClass('fill-blue-500');
-    
-    const loadingIndicator = screen.getByAltText('loading');
-    expect(loadingIndicator).toBeInTheDocument();
+
+    const LoadingIcon = screen.getByAltText('loading');
+    expect(LoadingIcon).toBeInTheDocument();
   });
 });

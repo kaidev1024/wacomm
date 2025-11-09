@@ -1,6 +1,6 @@
 import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
 import { Row } from 'src/containers';
-import { LoadingIndicator } from 'src/loadingIndicator';
+import { LoadingIcon } from 'src/loading';
 
 interface SubmitButtonProps {
   className?: string;
@@ -35,7 +35,7 @@ function SubmitButton({
     >
       <Row>
         <div className="w-full text-sm">{label}</div>
-        {isLoading && <LoadingIndicator />}
+        {isLoading && <LoadingIcon />}
       </Row>
     </button>
   );

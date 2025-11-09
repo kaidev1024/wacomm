@@ -20,7 +20,7 @@ export { default as CommentEditor } from './CommentEditor';
 export { default as TextareaAutosize } from './TextareaAutosize';
 export { SvgSize } from 'wasvg';
 export * from './expandableContainer';
-export * from './loadingIndicator';
+export * from './loading';
 export * from './buttons';
 export * from './datetime';
 export * from './mapbox';
