@@ -1,6 +1,6 @@
 {
   "name": "wacomm",
-  "version": "1.8.6",
+  "version": "1.9.0",
   "main": "dist/wacomm.cjs.js",
   "module": "dist/wacomm.es.js",
   "types": "dist/index.d.ts",
