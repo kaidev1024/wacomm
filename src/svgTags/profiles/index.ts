@@ -8,3 +8,5 @@ export { default as CalendarEventTag } from './CalendarEventTag';
 export { default as MarketTag } from './MarketTag';
 export { default as UserTag } from './UserTag';
 export { default as CoachTag } from './CoachTag';
+export { default as GameTag } from './GameTag';
+export { default as LeaderboardTag } from './LeaderboardTag';
