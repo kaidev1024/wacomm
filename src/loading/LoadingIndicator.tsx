@@ -7,12 +7,12 @@ interface LoadingIndicatorProps {
   className?: string;
   imgClassName?: string;
   labelClassName?: string;
-  label: string;
+  label?: string;
 }
 
 function LoadingIndicator({
   className = '',
-  label,
+  label = 'Loading...',
   imgClassName = '',
   labelClassName = ''
 }: LoadingIndicatorProps) {
