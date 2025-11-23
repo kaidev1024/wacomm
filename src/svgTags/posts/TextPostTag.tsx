@@ -6,6 +6,7 @@ interface TextPostTagProps {
   isHighlighted?: boolean;
   onClick?: ZeroFuncType;
   className?: string;
+  svgClassName?: string;
   labelClassName?: string;
   svgSize?: SvgSize;
   label?: string;
@@ -16,13 +17,14 @@ function TextPostTag({
   onClick = ZeroFunc,
   className = '',
   labelClassName = '',
+  svgClassName = '',
   svgSize = SvgSize.md,
   label = ''
 }: TextPostTagProps) {
   return (
     <SvgTag
       label={label || 'Text'}
-      icon={{ Svg: TextPostSvg, size: svgSize }}
+      icon={{ Svg: TextPostSvg, size: svgSize, className: svgClassName }}
       onClick={onClick}
       className={className}
       labelClassName={labelClassName}
