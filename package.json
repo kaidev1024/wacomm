@@ -81,7 +81,7 @@
     "tailwind-merge": "^3.3.0",
     "tiny-invariant": "^1.3.3",
     "wacomm": "^1.6.3",
-    "wasvg": "^1.4.0",
+    "wasvg": "^1.5.2",
     "waujs": "^1.3.0"
   }
 }

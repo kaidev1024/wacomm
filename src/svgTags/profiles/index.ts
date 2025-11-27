@@ -4,7 +4,7 @@ export { default as CollectionTag } from './CollectionTag';
 export { default as CreateArenaTag } from './CreateArenaTag';
 export { default as CreateCollectionTag } from './CreateCollectionTag';
 export { default as CreateTeamTag } from './CreateTeamTag';
-export { default as CalendarEventTag } from './CalendarEventTag';
+export { default as EventTag } from './EventTag';
 export { default as MarketTag } from './MarketTag';
 export { default as UserTag } from './UserTag';
 export { default as CoachTag } from './CoachTag';
