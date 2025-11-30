@@ -39,3 +39,4 @@ export type { ModalStyleProps } from './Modal';
 export type { PickerOptionProps, onChangeType } from './Picker';
 export type { ExpandableContainerProps } from './expandableContainer/ExpandableContainer';
 import './tailwind.css';
+export { default as LetterAvatar } from './LetterAvatar';
