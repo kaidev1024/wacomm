@@ -1,15 +1,15 @@
 import { twcn } from 'waujs';
 
 interface LetterAvatarProps {
-  letter: string;
+  letter?: string;
   className?: string;
 }
 
-function LetterAvatar({ letter = 'A', className = 'w-10 h-10' }: LetterAvatarProps) {
+function LetterAvatar({ letter = 'A', className = 'w-full h-full' }: LetterAvatarProps) {
   return (
     <div
       className={twcn(
-        'flex items-center justify-center p-1rounded-full bg-gray-300 text-white font-bold',
+        'flex items-center justify-center rounded-full bg-blue-300 text-white font-bold',
         className
       )}
     >
