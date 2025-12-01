@@ -2,16 +2,16 @@ import { List } from 'wacomm';
 import { ReactNode, useState } from 'react';
 import Checkbox from './Checkbox';
 
-interface ItemProps {
+export interface CheckboxGroupItemProps {
   label: ReactNode;
   value: any;
 }
 
 interface CheckboxGroupProps {
-  name: string;
-  items: ItemProps[];
+  items: CheckboxGroupItemProps[];
   // eslint-disable-next-line no-unused-vars
   toggle: (values: string[]) => void;
+  name?: string;
   maxSelect?: number;
   className?: string;
   itemClassName?: string;
@@ -19,9 +19,9 @@ interface CheckboxGroupProps {
 }
 
 function CheckboxGroup({
-  name,
   items,
   toggle,
+  name = 'checkbox-group',
   maxSelect = 0,
   className = '',
   itemClassName = '',
@@ -38,7 +38,7 @@ function CheckboxGroup({
     setSelectedNumber(selectedValues.length);
   };
 
-  const itemRenderer = ({ label, value }: ItemProps) => {
+  const itemRenderer = ({ label, value }: CheckboxGroupItemProps) => {
     const isSelected = selectedItems[value];
     return (
       <li key={value}>
