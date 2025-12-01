@@ -40,3 +40,4 @@ export type { PickerOptionProps, onChangeType } from './Picker';
 export type { ExpandableContainerProps } from './expandableContainer/ExpandableContainer';
 import './tailwind.css';
 export { default as LetterAvatar } from './LetterAvatar';
+export { default as CheckboxGroup } from './checkboxGroup/CheckboxGroup';
