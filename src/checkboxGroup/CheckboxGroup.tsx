@@ -1,9 +1,9 @@
 import { List } from 'wacomm';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import Checkbox from './Checkbox';
 
 interface ItemProps {
-  label: string;
+  label: ReactNode;
   value: any;
 }
 
@@ -56,13 +56,7 @@ function CheckboxGroup({
     );
   };
 
-  return (
-    <List
-      className={className}
-      items={items}
-      itemRenderer={itemRenderer}
-    />
-  );
+  return <List className={className} items={items} itemRenderer={itemRenderer} />;
 }
 
 export default CheckboxGroup;

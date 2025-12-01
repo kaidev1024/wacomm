@@ -1,9 +1,9 @@
-import { ChangeEvent } from 'react';
+import { ChangeEvent, ReactNode } from 'react';
 import { twcn } from 'waujs';
 
 interface CheckboxProps {
   name: string;
-  label: string;
+  label: ReactNode;
   value: any;
   isSelected: boolean;
   // eslint-disable-next-line no-unused-vars
@@ -23,9 +23,8 @@ function Checkbox({
   className = '',
   labelClassName = ''
 }: CheckboxProps) {
-  const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
-    const { checked } = e.target;
-    toggle(value, checked);
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    toggle(value, e.target.checked);
   };
 
   return (
