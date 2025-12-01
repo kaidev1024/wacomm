@@ -41,3 +41,4 @@ export type { ExpandableContainerProps } from './expandableContainer/ExpandableC
 import './tailwind.css';
 export { default as LetterAvatar } from './LetterAvatar';
 export { default as CheckboxGroup } from './checkboxGroup/CheckboxGroup';
+export { default as TextInput } from './TextInput';
