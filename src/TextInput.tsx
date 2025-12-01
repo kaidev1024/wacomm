@@ -1,14 +1,16 @@
 import { twcn } from 'waujs';
 
 interface TextInputProps {
+  onChange: (value: string, name?: string) => void;
+  value: string;
   name?: string;
   placeholder?: string;
   className?: string;
   disabled?: boolean;
-  onChange: (value: string, name?: string) => void;
 }
 
 function TextInput({
+  value,
   name = '',
   placeholder = '',
   className = '',
@@ -21,6 +23,7 @@ function TextInput({
 
   return (
     <input
+      value={value}
       onChange={handleChange}
       name={name}
       className={twcn(
