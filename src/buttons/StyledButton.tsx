@@ -4,6 +4,7 @@ import Button from './Button';
 interface StyledButtonProps {
   isHighlighted?: boolean | null;
   isLoading?: boolean;
+  disabled?: boolean;
   onClick: ZeroFuncType;
   label: string;
 }
@@ -25,6 +26,7 @@ interface StyledButtonProps {
 function StyledButton({
   isHighlighted = false,
   isLoading = false,
+  disabled = false,
   onClick,
   label
 }: StyledButtonProps) {
@@ -35,6 +37,7 @@ function StyledButton({
       isLoading={isLoading}
       label={label}
       onClick={onClick}
+      disabled={disabled}
     />
   );
 }
