@@ -80,7 +80,6 @@
     "react-tooltip": "^5.28.1",
     "tailwind-merge": "^3.3.0",
     "tiny-invariant": "^1.3.3",
-    "wacomm": "^1.6.3",
     "wasvg": "^1.6.0",
     "waujs": "^1.3.0"
   }

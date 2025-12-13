@@ -1,6 +1,6 @@
-import { List } from 'wacomm';
 import { ReactNode, useState } from 'react';
 import Checkbox from './Checkbox';
+import List from 'src/List';
 
 export interface CheckboxGroupItemProps {
   label: ReactNode;
