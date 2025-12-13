@@ -1,5 +1,6 @@
 import { ReactElement, ReactNode, useEffect, useState } from 'react';
 import ReactModal from 'react-modal';
+import { useLocation } from 'react-router-dom';
 import { useIsMobile, CUTOFF_WIDTH_SM, ZeroFuncType } from 'waujs';
 import H1 from './H1';
 import { CloseIcon } from './icons';
@@ -91,6 +92,7 @@ function Modal({
   style = {}
 }: ModalProps) {
   const isMobile = useIsMobile();
+  const { pathname } = useLocation();
   const [width, setWidth] = useState(isMobile ? window.innerWidth : CUTOFF_WIDTH_SM);
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -111,6 +113,12 @@ function Modal({
       window.removeEventListener('resize', handleResize);
     };
   }, [isMobile]);
+
+  useEffect(() => {
+    if (isOpen) {
+      onClose();
+    }
+  }, [pathname]);
 
   return (
     <ReactModal
