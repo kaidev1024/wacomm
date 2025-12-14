@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode, useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import ReactModal from 'react-modal';
 import { useIsMobile, CUTOFF_WIDTH_SM, ZeroFuncType } from 'waujs';
 import H1 from './H1';
@@ -8,7 +8,7 @@ import { Row } from './containers';
 interface ModalProps {
   isOpen: boolean;
   onClose: ZeroFuncType;
-  title: string | ReactElement;
+  title: ReactNode;
   content: ReactNode;
   shouldCloseOnEsc?: boolean;
   shouldCloseOnOverlayClick?: boolean;
