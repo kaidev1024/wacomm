@@ -4,7 +4,7 @@ import ExpandableContainerHeader from './ExpandableContainerHeader';
 import { Column } from 'src/containers';
 
 export interface ExpandableContainerProps {
-  title: string;
+  title: ReactNode;
   children?: ReactNode;
   isExpandable?: boolean;
   className?: string;
