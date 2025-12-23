@@ -5,4 +5,4 @@ export { default as CacheButton } from './CacheButton';
 export { default as ModalButton } from './ModalButton';
 export { default as StyledButton } from './StyledButton';
 export { default as AddButton } from './AddButton';
-export { default as YesNoButtons } from './YesNoButtons';
+export { default as SaveCancelButtons } from './SaveCancelButtons';

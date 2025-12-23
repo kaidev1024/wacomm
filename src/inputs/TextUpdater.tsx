@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useEscKeydown } from 'waujs';
 import TextareaAutosize from 'src/TextareaAutosize';
 import { Row } from 'src/containers';
-import { P, YesNoButtons } from 'src';
+import { P, SaveCancelButtons } from 'src';
 
 export interface TextUpdaterProps {
   value: string;
@@ -39,16 +39,16 @@ function TextUpdater({
         value={value}
         onChange={setValue}
       />
-      <YesNoButtons
-        yesLabel="Save"
-        noLabel="Cancel"
-        handleYes={() => {
+      <SaveCancelButtons
+        saveLabel="Save"
+        cancelLabel="Cancel"
+        onSave={() => {
           onSave(value);
           cancelEdit();
         }}
-        handleNo={cancelEdit}
-        isYesDisabled={value.length === 0 || isLoading}
-        isNoDisabled={isLoading}
+        onCancel={cancelEdit}
+        isSaveDisabled={value.length === 0 || isLoading}
+        isCancelDisabled={isLoading}
       />
     </Row>
   ) : (
