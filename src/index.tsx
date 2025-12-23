@@ -7,7 +7,6 @@ export { default as List } from './List';
 export { default as Deletable } from './Deletable';
 export { default as ErrorMessage } from './ErrorMessage';
 export { default as Img } from './Img';
-export { default as ExpandableTextUpdater } from './ExpandableTextUpdater';
 export { default as SearchBar } from './SearchBar';
 export { default as AlertWrap } from './AlertWrap';
 export { default as Tabs } from './Tabs';
