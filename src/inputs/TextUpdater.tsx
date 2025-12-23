@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useEscKeydown } from 'waujs';
 import TextareaAutosize from 'src/TextareaAutosize';
-import { Row } from 'src/containers';
-import { P, SaveCancelButtons } from 'src';
+import { Column, Row } from 'src/containers';
+import { EditIcon, P, SaveCancelButtons } from 'src';
 
 export interface TextUpdaterProps {
   value: string;
@@ -23,15 +23,15 @@ function TextUpdater({
   placeholder = 'A brief introduction...'
 }: TextUpdaterProps) {
   const [isEditing, setIsEditing] = useState(false);
-  const cancelEdit = () => setIsEditing(false);
+  const handleCancelEdit = () => setIsEditing(false);
   const [value, setValue] = useState(valueInit);
   useEscKeydown(() => {
     if (isEditing) {
-      cancelEdit();
+      handleCancelEdit();
     }
   });
   return isEditing && editable ? (
-    <Row>
+    <Column className="TextUpdaterEditing w-full gap-2">
       <TextareaAutosize
         minRows={3}
         maxRows={6}
@@ -44,15 +44,18 @@ function TextUpdater({
         cancelLabel="Cancel"
         onSave={() => {
           onSave(value);
-          cancelEdit();
+          handleCancelEdit();
         }}
-        onCancel={cancelEdit}
+        onCancel={handleCancelEdit}
         isSaveDisabled={value.length === 0 || isLoading}
         isCancelDisabled={isLoading}
       />
-    </Row>
+    </Column>
   ) : (
-    <P value={value || placeholder} />
+    <Row className="TextUpdaterNonEditing w-full gap-2 items-start">
+      <P value={value || placeholder} />
+      <EditIcon className="cursor-pointer text-blue-500" onClick={() => setIsEditing(true)} />
+    </Row>
   );
 }
 
