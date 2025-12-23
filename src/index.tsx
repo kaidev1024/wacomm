@@ -43,3 +43,4 @@ export { default as LetterAvatar } from './LetterAvatar';
 export { default as CheckboxGroup } from './checkboxGroup/CheckboxGroup';
 export type { CheckboxGroupItemProps } from './checkboxGroup/CheckboxGroup';
 export { default as TextInput } from './TextInput';
+export { default as P } from './P';

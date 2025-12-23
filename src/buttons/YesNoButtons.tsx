@@ -7,18 +7,32 @@ interface YesNoButtonsProps {
   noLabel: string;
   handleYes: ZeroFuncType;
   handleNo: ZeroFuncType;
+  isYesDisabled: boolean;
+  isNoDisabled: boolean;
 }
 
 export default function YesNoButtons({
   yesLabel,
   noLabel,
   handleYes,
-  handleNo
+  handleNo,
+  isYesDisabled,
+  isNoDisabled
 }: YesNoButtonsProps) {
   return (
     <Row className="items-start">
-      <StyledButton isHighlighted={true} label={yesLabel} onClick={handleYes} />
-      <StyledButton isHighlighted={false} label={noLabel} onClick={handleNo} />
+      <StyledButton
+        isHighlighted={true}
+        label={yesLabel}
+        onClick={handleYes}
+        disabled={isYesDisabled}
+      />
+      <StyledButton
+        isHighlighted={false}
+        label={noLabel}
+        onClick={handleNo}
+        disabled={isNoDisabled}
+      />
     </Row>
   );
 }

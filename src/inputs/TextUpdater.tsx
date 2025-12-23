@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import { FieldValues, useForm } from 'react-hook-form';
-import { twcn, useEscKeydown, ZeroFuncType } from 'waujs';
-import { FormButtons, Textarea } from '../form';
+import { useEscKeydown } from 'waujs';
+import TextareaAutosize from 'src/TextareaAutosize';
+import { Row } from 'src/containers';
+import { P, YesNoButtons } from 'src';
 
 export interface TextUpdaterProps {
-  content: string;
+  value: string;
   // eslint-disable-next-line no-unused-vars
-  onSave: (v: string, cancelEdit: ZeroFuncType) => void;
+  onSave: (v: string) => void;
   isLoading: boolean;
   editable: boolean;
   placeholder?: string;
@@ -15,52 +16,43 @@ export interface TextUpdaterProps {
 }
 
 function TextUpdater({
-  content,
+  value: valueInit,
   onSave,
   isLoading,
   editable,
-  placeholder = 'A brief introduction...',
-  classNameEdit = '',
-  classNameDisplay = ''
+  placeholder = 'A brief introduction...'
 }: TextUpdaterProps) {
-  const {
-    handleSubmit,
-    register,
-    formState: { errors }
-  } = useForm();
   const [isEditing, setIsEditing] = useState(false);
   const cancelEdit = () => setIsEditing(false);
-  const onSubmit = (data: FieldValues) => {
-    onSave(data.content, cancelEdit);
-  };
+  const [value, setValue] = useState(valueInit);
   useEscKeydown(() => {
     if (isEditing) {
       cancelEdit();
     }
   });
   return isEditing && editable ? (
-    <form onSubmit={handleSubmit(onSubmit)} className={twcn('TextUpdater', classNameEdit)}>
-      <Textarea
-        row={5}
-        name="content"
+    <Row>
+      <TextareaAutosize
+        minRows={3}
+        maxRows={6}
         placeholder={placeholder!}
-        errors={errors}
-        register={register}
-        defaultValue={content}
-        disabled={isLoading}
+        value={value}
+        onChange={setValue}
       />
-      <FormButtons cancelEdit={cancelEdit} isLoading={isLoading} submitLabel="Save" />
-    </form>
+      <YesNoButtons
+        yesLabel="Save"
+        noLabel="Cancel"
+        handleYes={() => {
+          onSave(value);
+          cancelEdit();
+        }}
+        handleNo={cancelEdit}
+        isYesDisabled={value.length === 0 || isLoading}
+        isNoDisabled={isLoading}
+      />
+    </Row>
   ) : (
-    <p
-      onClick={() => setIsEditing(editable)}
-      className={twcn(
-        'TextUpdater text-sm bg-gray-50 text-gray-600 p-1 rounded-lg mt-1',
-        classNameDisplay
-      )}
-    >
-      {content || placeholder}
-    </p>
+    <P value={value || placeholder} />
   );
 }
 
