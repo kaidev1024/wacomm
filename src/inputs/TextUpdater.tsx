@@ -9,6 +9,8 @@ export interface TextUpdaterProps {
   onSave: (v: string) => void;
   isLoading: boolean;
   isEditing: boolean;
+  minRows?: number;
+  maxRows?: number;
   setIsEditing: (v: boolean) => void;
   placeholder?: string;
   classNameEditing?: string;
@@ -20,6 +22,8 @@ function TextUpdater({
   onSave,
   isLoading,
   isEditing,
+  minRows = 1,
+  maxRows = 1,
   setIsEditing,
   placeholder = 'A brief introduction...',
   classNameEditing = '',
@@ -35,8 +39,8 @@ function TextUpdater({
   return isEditing ? (
     <Column className={twcn('TextUpdaterEditing w-full gap-2', classNameEditing)}>
       <TextareaAutosize
-        minRows={3}
-        maxRows={6}
+        minRows={minRows}
+        maxRows={maxRows}
         placeholder={placeholder!}
         value={value}
         onChange={setValue}
