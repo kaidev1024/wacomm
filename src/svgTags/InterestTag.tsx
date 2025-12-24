@@ -1,13 +1,14 @@
 import { Row } from 'src/containers';
 import { InterestSvg, SvgSize } from 'wasvg';
 import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
+import { CategoryName, InterestName } from 'wenum';
 
 interface InterestTagProps {
   isHighlighted: boolean;
   onClick?: ZeroFuncType;
   className?: string;
-  categorySeq: number;
-  seq: number;
+  categoryName: CategoryName;
+  interestName: InterestName;
   label: string;
 }
 
@@ -15,8 +16,8 @@ export default function InterestTag({
   isHighlighted,
   onClick = ZeroFunc,
   className = '',
-  categorySeq,
-  seq,
+  categoryName,
+  interestName,
   label
 }: InterestTagProps) {
   return (
@@ -28,8 +29,8 @@ export default function InterestTag({
       onClick={onClick}
     >
       <InterestSvg
-        seq={seq}
-        categorySeq={categorySeq}
+        interestName={interestName}
+        categoryName={categoryName}
         size={SvgSize.xs}
         className={isHighlighted ? 'fill-blue-500 text-blue-500' : 'fill-gray-600'}
       />

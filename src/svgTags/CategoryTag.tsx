@@ -1,12 +1,13 @@
 import { Row } from 'src/containers';
 import { CategorySvg, SvgSize } from 'wasvg';
 import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
+import { CategoryName } from 'wenum';
 
 interface CategoryTagProps {
   isHighlighted: boolean;
   onClick?: ZeroFuncType;
   className?: string;
-  seq: number;
+  categoryName: CategoryName;
   label: string;
 }
 
@@ -14,7 +15,7 @@ export default function CategoryTag({
   isHighlighted,
   onClick = ZeroFunc,
   className = '',
-  seq,
+  categoryName,
   label
 }: CategoryTagProps) {
   return (
@@ -26,7 +27,7 @@ export default function CategoryTag({
       onClick={onClick}
     >
       <CategorySvg
-        seq={seq}
+        categoryName={categoryName}
         size={SvgSize.xs}
         className={isHighlighted ? 'fill-emerald-300 text-emerald-300' : 'fill-gray-600'}
       />
