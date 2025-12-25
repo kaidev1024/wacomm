@@ -1,11 +1,12 @@
 import { InterestSvg, SvgSize } from 'wasvg';
 import SvgTooltip from './SvgTooltip';
 import { ZeroFuncType } from 'waujs';
+import { CategoryName, InterestName } from 'wenum';
 
 interface InterestIconTooltipProps {
   isHighlighted?: boolean;
-  categorySeq: number;
-  seq: number;
+  categoryName: CategoryName;
+  interestName: InterestName;
   onClick: ZeroFuncType;
   label: string;
   className?: string;
@@ -15,16 +16,16 @@ export default function InterestIconTooltip({
   isHighlighted = false,
   onClick,
   label,
-  categorySeq,
-  seq,
+  categoryName,
+  interestName,
   className = ''
 }: InterestIconTooltipProps) {
   return (
     <SvgTooltip
       icon={
         <InterestSvg
-          categorySeq={categorySeq}
-          seq={seq}
+          categoryName={categoryName}
+          interestName={interestName}
           size={SvgSize.lg}
           className={
             isHighlighted
