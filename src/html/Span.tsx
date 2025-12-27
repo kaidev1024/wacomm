@@ -6,7 +6,7 @@ interface SpanProps {
 }
 
 function Span({ className = '', text }: SpanProps) {
-  return <p className={twcn('text-gray-600 p-1 rounded-lg', className)}>{text}</p>;
+  return <span className={twcn('text-gray-600', className)}>{text}</span>;
 }
 
 export default Span;
