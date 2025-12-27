@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { twcn, useEscKeydown } from 'waujs';
-import TextareaAutosize from 'src/TextareaAutosize';
+import TextareaAutosize from './TextareaAutosize';
 import { Column, Row } from 'src/containers';
-import { EditIcon, P, SaveCancelButtons } from 'src';
+import { EditIcon, SaveCancelButtons, Textarea } from 'src';
 
 export interface TextUpdaterProps {
-  value: string;
+  text: string;
   onSave: (v: string) => void;
   isLoading: boolean;
   isEditing: boolean;
@@ -18,7 +18,7 @@ export interface TextUpdaterProps {
 }
 
 function TextUpdater({
-  value: valueInit,
+  text: textInit,
   onSave,
   isLoading,
   isEditing,
@@ -30,7 +30,7 @@ function TextUpdater({
   classNameNonEditing = ''
 }: TextUpdaterProps) {
   const handleCancelEdit = () => setIsEditing(false);
-  const [value, setValue] = useState(valueInit);
+  const [text, setText] = useState(textInit);
   useEscKeydown(() => {
     if (isEditing) {
       handleCancelEdit();
@@ -42,24 +42,24 @@ function TextUpdater({
         minRows={minRows}
         maxRows={maxRows}
         placeholder={placeholder!}
-        value={value}
-        onChange={setValue}
+        text={text}
+        onChange={setText}
       />
       <SaveCancelButtons
         saveLabel="Save"
         cancelLabel="Cancel"
         onSave={() => {
-          onSave(value);
+          onSave(text);
           handleCancelEdit();
         }}
         onCancel={handleCancelEdit}
-        isSaveDisabled={value.length === 0 || isLoading}
+        isSaveDisabled={text.length === 0 || isLoading}
         isCancelDisabled={isLoading}
       />
     </Column>
   ) : (
     <Row className={twcn('TextUpdaterNonEditing w-full gap-2 items-start', classNameNonEditing)}>
-      <P value={value || placeholder} />
+      <Textarea className="grow min-h-5" rows={6} text={text} placeholder={placeholder} />
       <EditIcon className="cursor-pointer text-blue-500" onClick={() => setIsEditing(true)} />
     </Row>
   );

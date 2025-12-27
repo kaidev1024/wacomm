@@ -1,6 +1,6 @@
 import { twcn } from 'waujs';
 import loadingGifUrl from './loading.gif';
-import Img from '../Img';
+import Img from '../html/Img';
 
 interface LoadingIconProps {
   className?: string;

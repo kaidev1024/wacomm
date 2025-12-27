@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useState } from 'react';
 import ReactModal from 'react-modal';
 import { useIsMobile, CUTOFF_WIDTH_SM, ZeroFuncType } from 'waujs';
-import H1 from './H1';
+import H1 from './html/H1';
 import { CloseIcon } from './icons';
 import { Row } from './containers';
 

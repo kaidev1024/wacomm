@@ -6,7 +6,7 @@ interface TextareaAutosizeProps {
   placeholder?: string;
   minRows?: number;
   maxRows?: number;
-  value?: string;
+  text?: string;
   onChange: (v: string) => void;
 }
 
@@ -15,7 +15,7 @@ const TextareaAutosize = ({
   placeholder = 'Write a message...',
   minRows = 1,
   maxRows = 5,
-  value,
+  text,
   onChange
 }: TextareaAutosizeProps) => {
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -30,7 +30,7 @@ const TextareaAutosize = ({
       placeholder={placeholder}
       minRows={minRows}
       maxRows={maxRows}
-      value={value}
+      value={text}
       onChange={handleChange}
     />
   );
