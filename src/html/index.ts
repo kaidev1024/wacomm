@@ -4,3 +4,4 @@ export { default as H1 } from './H1';
 export { default as TextInput } from './TextInput';
 export { default as P } from './P';
 export { default as Textarea } from './Textarea';
+export { default as Span } from './Span';
