@@ -6,7 +6,7 @@ import { CloseIcon } from './icons';
 import { Row } from './containers';
 
 interface ModalProps {
-  isOpen: boolean;
+  isOpen?: boolean;
   onClose: ZeroFuncType;
   title: ReactNode;
   content: ReactNode;
@@ -81,7 +81,7 @@ const mergeModalStyles = (style: ModalStyleProps, width: number) => {
 };
 
 function Modal({
-  isOpen,
+  isOpen = true,
   onClose,
   title,
   content,
