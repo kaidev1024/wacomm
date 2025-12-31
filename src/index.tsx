@@ -39,4 +39,3 @@ export { default as CheckboxGroup } from './checkboxGroup/CheckboxGroup';
 export type { CheckboxGroupItemProps } from './checkboxGroup/CheckboxGroup';
 export { default as TextUpdater } from './TextUpdater';
 export { default as TextareaAutosize } from './TextareaAutosize';
-export { default as FileInput } from './FileInput';
