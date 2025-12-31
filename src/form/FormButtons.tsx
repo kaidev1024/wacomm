@@ -7,9 +7,8 @@ interface FormButtonsProps {
   cancelEdit?: ZeroFuncType;
   isLoading?: boolean;
   disabled?: boolean;
-  submitLabel?: string;
-  cancelLabel?: string;
-  formID?: string;
+  submitLabel: string;
+  cancelLabel: string;
   isCancelable?: boolean;
 }
 
@@ -18,32 +17,26 @@ function FormButtons({
   isLoading = false,
   disabled = false,
   isCancelable = true,
-  formID = undefined,
-  submitLabel = undefined,
-  cancelLabel = undefined
+  submitLabel,
+  cancelLabel
 }: FormButtonsProps) {
-  let optional = {};
-  // formID is used in case submit button is outside form tag
-  if (formID) optional = { formID };
-
   return (
-    <Row className="FormButtons flex-row-reverse">
-      <SubmitButton
-        className="w-fit"
-        isLoading={isLoading}
-        disabled={disabled}
-        label={submitLabel || 'Save'}
-        {...optional}
-      />
+    <Row className="FormButtons mt-2 justify-end">
       {isCancelable && (
         <Button
-          label={cancelLabel || 'Cancel'}
+          label={cancelLabel}
           onClick={cancelEdit}
           className="CancelButton w-fit mr-2"
           labelClassName="text-sm"
           disabled={isLoading || disabled}
         />
       )}
+      <SubmitButton
+        className="w-fit"
+        isLoading={isLoading}
+        disabled={disabled}
+        label={submitLabel}
+      />
     </Row>
   );
 }

@@ -6,7 +6,6 @@ interface SubmitButtonProps {
   className?: string;
   isLoading?: boolean;
   disabled?: boolean;
-  formID?: string;
   label: string;
   onClick?: ZeroFuncType;
 }
@@ -16,12 +15,8 @@ function SubmitButton({
   className = '',
   isLoading = false,
   disabled = false,
-  formID = undefined,
   onClick = ZeroFunc
 }: SubmitButtonProps) {
-  let optional = {};
-  // formID is used in case submit button is outside form tag
-  if (formID) optional = { form: formID };
   return (
     <button
       type="submit"
@@ -31,7 +26,6 @@ function SubmitButton({
       )}
       disabled={disabled}
       onClick={onClick}
-      {...optional}
     >
       <Row>
         <div className="w-full text-sm">{label}</div>
