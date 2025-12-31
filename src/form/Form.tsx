@@ -23,7 +23,7 @@ function Form({
   isCancelable = true
 }: FormProps) {
   return (
-    <form className={twcn('flex flex-col', className)}>
+    <form className={twcn('flex flex-col gap-2 w-full', className)}>
       {children}
       <FormButtons
         cancelEdit={cancelEdit}
