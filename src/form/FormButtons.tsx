@@ -1,4 +1,4 @@
-import { ZeroFunc, ZeroFuncType } from 'waujs';
+import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
 import SubmitButton from './SubmitButton';
 import { Button } from 'src/buttons';
 import { Row } from 'src/containers';
@@ -10,6 +10,7 @@ interface FormButtonsProps {
   submitLabel: string;
   cancelLabel: string;
   isCancelable?: boolean;
+  className?: string;
 }
 
 function FormButtons({
@@ -18,26 +19,32 @@ function FormButtons({
   disabled = false,
   isCancelable = true,
   submitLabel,
-  cancelLabel
+  cancelLabel,
+  className = ''
 }: FormButtonsProps) {
-  return (
-    <Row className="FormButtons mt-2 justify-end">
-      {isCancelable && (
-        <Button
-          label={cancelLabel}
-          onClick={onCancel}
-          className="CancelButton w-fit mr-2"
-          labelClassName="text-sm"
-          disabled={isLoading || disabled}
-        />
-      )}
+  return isCancelable ? (
+    <Row className={twcn('FormButtons mt-2 justify-end', className)}>
+      <Button
+        label={cancelLabel}
+        onClick={onCancel}
+        className="CancelButton w-fit mr-2"
+        labelClassName="text-sm"
+        disabled={isLoading || disabled}
+      />
       <SubmitButton
-        className="w-fit"
+        className="SubmitButton w-fit"
         isLoading={isLoading}
         disabled={disabled}
         label={submitLabel}
       />
     </Row>
+  ) : (
+    <SubmitButton
+      className={twcn('SubmitButton w-fit', className)}
+      isLoading={isLoading}
+      disabled={disabled}
+      label={submitLabel}
+    />
   );
 }
 

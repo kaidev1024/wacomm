@@ -4,6 +4,7 @@ import FormButtons from './FormButtons';
 interface FormProps {
   children: React.ReactNode;
   className?: string;
+  buttonsClassName?: string;
   onSubmit?: ZeroFuncType;
   onCancel?: ZeroFuncType;
   isLoading?: boolean;
@@ -16,6 +17,7 @@ interface FormProps {
 function Form({
   children,
   className = '',
+  buttonsClassName = '',
   onSubmit = ZeroFunc,
   onCancel = ZeroFunc,
   isLoading = false,
@@ -40,6 +42,7 @@ function Form({
         submitLabel={submitLabel}
         cancelLabel={cancelLabel}
         isCancelable={isCancelable}
+        className={buttonsClassName}
       />
     </form>
   );
