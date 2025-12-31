@@ -4,7 +4,7 @@ import { Button } from 'src/buttons';
 import { Row } from 'src/containers';
 
 interface FormButtonsProps {
-  cancelEdit?: ZeroFuncType;
+  onCancel?: ZeroFuncType;
   isLoading?: boolean;
   disabled?: boolean;
   submitLabel: string;
@@ -13,7 +13,7 @@ interface FormButtonsProps {
 }
 
 function FormButtons({
-  cancelEdit = ZeroFunc,
+  onCancel = ZeroFunc,
   isLoading = false,
   disabled = false,
   isCancelable = true,
@@ -25,7 +25,7 @@ function FormButtons({
       {isCancelable && (
         <Button
           label={cancelLabel}
-          onClick={cancelEdit}
+          onClick={onCancel}
           className="CancelButton w-fit mr-2"
           labelClassName="text-sm"
           disabled={isLoading || disabled}

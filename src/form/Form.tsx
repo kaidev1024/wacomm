@@ -4,7 +4,8 @@ import FormButtons from './FormButtons';
 interface FormProps {
   children: React.ReactNode;
   className?: string;
-  cancelEdit?: ZeroFuncType;
+  onSubmit?: ZeroFuncType;
+  onCancel?: ZeroFuncType;
   isLoading?: boolean;
   disabled?: boolean;
   submitLabel?: string;
@@ -15,7 +16,8 @@ interface FormProps {
 function Form({
   children,
   className = '',
-  cancelEdit = ZeroFunc,
+  onSubmit = ZeroFunc,
+  onCancel = ZeroFunc,
   isLoading = false,
   disabled = false,
   submitLabel = 'Submit',
@@ -23,10 +25,16 @@ function Form({
   isCancelable = true
 }: FormProps) {
   return (
-    <form className={twcn('flex flex-col gap-2 w-full', className)}>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        onSubmit();
+      }}
+      className={twcn('flex flex-col gap-2 w-full', className)}
+    >
       {children}
       <FormButtons
-        cancelEdit={cancelEdit}
+        onCancel={onCancel}
         isLoading={isLoading}
         disabled={disabled}
         submitLabel={submitLabel}
