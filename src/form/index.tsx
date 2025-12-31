@@ -1,2 +1,1 @@
-export { default as SubmitButton } from './SubmitButton';
-export { default as FormButtons } from './FormButtons';
+export { default as Form } from './Form';
