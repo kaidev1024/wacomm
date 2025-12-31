@@ -1,40 +1,41 @@
 import { twcn } from 'waujs';
+import { InputType } from './util';
 
+// TODO: need to add input validation based on type
 interface TextInputProps {
-  onChange: (value: string, name?: string) => void;
+  onChange: (value: string) => void;
   value: string;
-  name?: string;
   placeholder?: string;
   className?: string;
   disabled?: boolean;
+  type: InputType;
 }
 
-function TextInput({
+function Input({
   value,
-  name = '',
   placeholder = '',
   className = '',
   disabled = false,
-  onChange
+  onChange,
+  type
 }: TextInputProps) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(e.target.value, name);
+    onChange(e.target.value);
   };
 
   return (
     <input
       value={value}
       onChange={handleChange}
-      name={name}
       className={twcn(
         'TextInput border border-gray-300 rounded px-1 py-0 w-full text-gray-600 border-gray-300',
         className
       )}
-      type="text"
+      type={type}
       placeholder={placeholder}
       disabled={disabled}
     />
   );
 }
 
-export default TextInput;
+export default Input;
