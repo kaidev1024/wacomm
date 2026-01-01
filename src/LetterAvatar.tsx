@@ -1,15 +1,24 @@
 import { twcn } from 'waujs';
+import { Img } from './html';
 
 interface LetterAvatarProps {
   letter?: string;
   className?: string;
+  imgUrl?: string;
 }
 
-function LetterAvatar({ letter = 'A', className = 'w-full h-full' }: LetterAvatarProps) {
+function LetterAvatar({
+  letter = 'N',
+  className = 'w-full h-full',
+  imgUrl = ''
+}: LetterAvatarProps) {
+  if (imgUrl) {
+    return <Img className="rounded-full w-full h-full" src={imgUrl} alt={letter} />;
+  }
   return (
     <div
       className={twcn(
-        'LetterAvatar flex items-center justify-center rounded-full bg-blue-300 text-white font-bold',
+        'LetterAvatar flex items-center justify-center rounded-full w-full h-full bg-blue-300 text-white font-bold',
         className
       )}
     >
