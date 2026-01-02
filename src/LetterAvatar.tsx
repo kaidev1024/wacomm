@@ -1,19 +1,19 @@
 import { twcn } from 'waujs';
-import { Image } from './html';
+import { Img } from './html';
 
 interface LetterAvatarProps {
   letter?: string;
   className?: string;
-  imageSrc?: string;
+  imgSrc?: string;
 }
 
 function LetterAvatar({
   letter = 'N',
   className = 'w-full h-full',
-  imageSrc = ''
+  imgSrc = ''
 }: LetterAvatarProps) {
-  if (imageSrc) {
-    return <Image className="rounded-full w-full h-full" src={imageSrc} alt={letter} />;
+  if (imgSrc) {
+    return <Img className="rounded-full w-full h-full" src={imgSrc} alt={letter} />;
   }
   return (
     <div

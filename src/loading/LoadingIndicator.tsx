@@ -1,6 +1,6 @@
 import { twcn } from 'waujs';
 import loadingGifUrl from './loading.gif';
-import Image from '../html/Image';
+import Img from '../html/Img';
 import { Row } from 'src/containers';
 
 interface LoadingIndicatorProps {
@@ -18,7 +18,7 @@ function LoadingIndicator({
 }: LoadingIndicatorProps) {
   return (
     <Row className={twcn('LoadingIndicator', className)}>
-      <Image src={loadingGifUrl} alt="loading" className={twcn('w-5', imgClassName)} />
+      <Img src={loadingGifUrl} alt="loading" className={twcn('w-5', imgClassName)} />
       <div className={twcn('ml-2', labelClassName)}>{label}</div>
     </Row>
   );

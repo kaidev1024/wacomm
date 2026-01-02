@@ -1,17 +1,17 @@
 import React from 'react';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
 
-interface ImageProps {
-  ref: React.Ref<HTMLImageElement>;
+interface ImgProps {
   src: string;
   alt: string;
+  ref?: React.Ref<HTMLImageElement>;
   className?: string;
   onClick?: ZeroFuncType;
   style?: Object;
   onLoad?: any;
 }
 
-function Image({
+function Img({
   src,
   alt,
   ref = null,
@@ -19,7 +19,7 @@ function Image({
   onClick = ZeroFunc,
   style = undefined,
   onLoad = undefined
-}: ImageProps) {
+}: ImgProps) {
   return (
     <img
       ref={ref}
@@ -33,4 +33,4 @@ function Image({
   );
 }
 
-export default Image;
+export default Img;
