@@ -1,13 +1,13 @@
 import { twcn } from 'waujs';
 import loadingGifUrl from './loading.gif';
-import Img from '../html/Img';
+import Image from '../html/Image';
 
 interface LoadingIconProps {
   className?: string;
 }
 
 function LoadingIcon({ className = '' }: LoadingIconProps) {
-  return <Img src={loadingGifUrl} alt="loading" className={twcn('LoadingIcon w-5', className)} />;
+  return <Image src={loadingGifUrl} alt="loading" className={twcn('LoadingIcon w-5', className)} />;
 }
 
 export default LoadingIcon;
