@@ -4,16 +4,16 @@ import { Img } from './html';
 interface LetterAvatarProps {
   letter?: string;
   className?: string;
-  imgUrl?: string;
+  imgSrc?: string;
 }
 
 function LetterAvatar({
   letter = 'N',
   className = 'w-full h-full',
-  imgUrl = ''
+  imgSrc = ''
 }: LetterAvatarProps) {
-  if (imgUrl) {
-    return <Img className="rounded-full w-full h-full" src={imgUrl} alt={letter} />;
+  if (imgSrc) {
+    return <Img className="rounded-full w-full h-full" src={imgSrc} alt={letter} />;
   }
   return (
     <div
