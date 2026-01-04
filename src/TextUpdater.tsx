@@ -59,8 +59,8 @@ function TextUpdater({
     </Column>
   ) : (
     <Row className={twcn('TextUpdaterNonEditing w-full gap-2 items-start', classNameNonEditing)}>
-      <Textarea className="grow min-h-5" rows={6} text={text} placeholder={placeholder} />
-      <EditIcon className="cursor-pointer text-blue-500" onClick={() => setIsEditing(true)} />
+      <Textarea className="grow" text={text} placeholder={placeholder} />
+      <EditIcon className="cursor-pointer" onClick={() => setIsEditing(true)} isHighlighted />
     </Row>
   );
 }
