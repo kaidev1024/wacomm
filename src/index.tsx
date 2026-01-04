@@ -29,6 +29,7 @@ export * from './separators';
 export * from './likes';
 export * from './subjectReaction';
 export * from './html';
+export * from './profileAttributeUpdater';
 export type { EditableBlockEditProps, EditableBlockDisplayProps } from './EditableBlock';
 export type { ModalStyleProps } from './Modal';
 export type { PickerOptionProps, onChangeType } from './Picker';
