@@ -1,5 +1,4 @@
 export { default as EditableBlock } from './EditableBlock';
-export { default as Picker } from './Picker';
 export { default as Tag, TagColor, TagLabelSize } from './Tag';
 export { default as List } from './List';
 export { default as Deletable } from './Deletable';
@@ -31,8 +30,9 @@ export * from './html';
 export * from './modal';
 export * from './profile';
 export * from './profileAttributeUpdater';
+export * from './pickers';
 export type { EditableBlockEditProps, EditableBlockDisplayProps } from './EditableBlock';
-export type { PickerOptionProps, onChangeType } from './Picker';
+export type { PickerOptionProps, onChangeType } from './pickers/Picker';
 export type { ExpandableContainerProps } from './expandableContainer/ExpandableContainer';
 import './tailwind.css';
 export { default as LetterAvatar } from './LetterAvatar';
