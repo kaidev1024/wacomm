@@ -1,6 +1,6 @@
 import { Gender, Pronoun } from 'wenum';
 
-export const GenderLabels: Record<Gender, string> = {
+export const GenderLabel: Record<Gender, string> = {
   [Gender.None]: 'Unspecified',
   [Gender.Male]: 'Male',
   [Gender.Female]: 'Female',
@@ -9,14 +9,14 @@ export const GenderLabels: Record<Gender, string> = {
 export const genderOptions = [
   {
     value: Gender.None,
-    label: GenderLabels[Gender.None],
+    label: GenderLabel[Gender.None],
   },
   {
     value: Gender.Male,
-    label: GenderLabels[Gender.Male],
+    label: GenderLabel[Gender.Male],
   },
   {
     value: Gender.Female,
-    label: GenderLabels[Gender.Female],
+    label: GenderLabel[Gender.Female],
   },
 ];

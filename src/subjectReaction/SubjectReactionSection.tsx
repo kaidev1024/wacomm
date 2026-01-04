@@ -2,7 +2,7 @@ import { Row } from 'src/containers';
 import { MiddleDot } from 'src/separators';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
 import SubjectReactionsCount from './SubjectReactionsCount';
-import { SubjectReactionLabels, SubjectReactionType } from './util';
+import { SubjectReactionLabel, SubjectReactionType } from './util';
 
 interface SubjectReactionProps {
   type: SubjectReactionType;
@@ -19,7 +19,7 @@ export default function SubjectReactionSection({
   count = 0,
   onClick
 }: SubjectReactionProps) {
-  const labels = SubjectReactionLabels[type];
+  const labels = SubjectReactionLabel[type];
   return (
     <Row className={className} onClick={onClick}>
       <span className={textClassName}>{labels.Single}</span>

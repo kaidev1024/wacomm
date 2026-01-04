@@ -1,0 +1,32 @@
+/* eslint-disable no-unused-vars */
+
+import { Handedness } from 'wenum';
+import Picker, { PickerOptionProps } from '../../../pickers/Picker';
+import { handednessOptions } from './util';
+
+interface HandednessPickerProps {
+  onChange: (p: Handedness) => void;
+  className?: string;
+  defaultValue?: Handedness;
+}
+
+function HandednessPicker({
+  onChange,
+  className = '',
+  defaultValue = Handedness.None
+}: HandednessPickerProps) {
+  const handleChange = (option: PickerOptionProps) => {
+    onChange(option.value);
+  };
+
+  return (
+    <Picker
+      options={handednessOptions}
+      defaultOption={handednessOptions[Number(defaultValue)]}
+      onChange={handleChange}
+      className={className}
+    />
+  );
+}
+
+export default HandednessPicker;

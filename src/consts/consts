@@ -2,7 +2,7 @@ import { Pronoun } from 'wenum';
 
 export const Unspecified = 'Unspecified';
 
-export const PronounLabels = {
+export const PronounLabel = {
   [Pronoun.None]: 'Unspecified',
   [Pronoun.He]: 'He/Him',
   [Pronoun.She]: 'She/Her'

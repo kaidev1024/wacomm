@@ -1,6 +1,6 @@
 import { P } from 'src/html';
 import { Pronoun } from 'wenum';
-import { PronounLabels } from './util';
+import { PronounLabel } from './util';
 
 interface PronounDisplayProps {
   pronoun: Pronoun;
@@ -8,7 +8,7 @@ interface PronounDisplayProps {
 
 function PronounDisplay({ pronoun }: PronounDisplayProps) {
   if (pronoun === Pronoun.None) return null;
-  return <P className="text-gray-600 text-sm" text={PronounLabels[pronoun]} />;
+  return <P className="text-gray-600 text-sm" text={PronounLabel[pronoun]} />;
 }
 
 export default PronounDisplay;

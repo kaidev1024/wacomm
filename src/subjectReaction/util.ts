@@ -2,7 +2,7 @@ export enum SubjectReactionType {
   Comment, Reply
 }
 
-export const SubjectReactionLabels = {
+export const SubjectReactionLabel = {
   [SubjectReactionType.Comment]: {
     Single: 'Comment',
     Plural: 'Comments',

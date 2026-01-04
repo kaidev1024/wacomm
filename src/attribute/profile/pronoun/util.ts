@@ -1,6 +1,6 @@
 import { Pronoun } from 'wenum';
 
-export const PronounLabels: Record<Pronoun, string> = {
+export const PronounLabel: Record<Pronoun, string> = {
   [Pronoun.None]: 'Unspecified',
   [Pronoun.He]: 'He/Him',
   [Pronoun.She]: 'She/Her',
@@ -9,14 +9,14 @@ export const PronounLabels: Record<Pronoun, string> = {
 export const pronounOptions = [
   {
     value: Pronoun.None,
-    label: PronounLabels[Pronoun.None]
+    label: PronounLabel[Pronoun.None]
   },
   {
     value: Pronoun.He,
-    label: PronounLabels[Pronoun.He]
+    label: PronounLabel[Pronoun.He]
   },
   {
     value: Pronoun.She,
-    label: PronounLabels[Pronoun.She]
+    label: PronounLabel[Pronoun.She]
   }
 ];
