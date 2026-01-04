@@ -1,4 +1,4 @@
-import { ZeroFunc, ZeroFuncType } from 'waujs';
+import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
 import StyledButton from './StyledButton';
 import { Row } from 'src/containers';
 
@@ -9,6 +9,7 @@ interface SaveCancelButtonsProps {
   onCancel?: ZeroFuncType;
   isSaveDisabled?: boolean;
   isCancelDisabled?: boolean;
+  className?: string;
 }
 
 export default function SaveCancelButtons({
@@ -17,10 +18,11 @@ export default function SaveCancelButtons({
   onSave = ZeroFunc,
   onCancel = ZeroFunc,
   isSaveDisabled = false,
-  isCancelDisabled = false
+  isCancelDisabled = false,
+  className = ''
 }: SaveCancelButtonsProps) {
   return (
-    <Row className="items-start">
+    <Row className={twcn('SaveCancelButtons w-full items-start', className)}>
       <StyledButton
         isHighlighted={true}
         label={saveLabel}
