@@ -22,7 +22,7 @@ export default function SaveCancelButtons({
   className = ''
 }: SaveCancelButtonsProps) {
   return (
-    <Row className={twcn('SaveCancelButtons w-full items-start', className)}>
+    <Row className={twcn('SaveCancelButtons w-full justify-end gap-2', className)}>
       <StyledButton
         isHighlighted={true}
         label={saveLabel}
