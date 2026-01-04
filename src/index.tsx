@@ -26,7 +26,7 @@ export * from './likes';
 export * from './subjectReaction';
 export * from './html';
 export * from './modal';
-export * from './page';
+export * from './attribute';
 export * from './pickers';
 export type { EditableBlockEditProps, EditableBlockDisplayProps } from './EditableBlock';
 export type { PickerOptionProps, onChangeType } from './pickers/Picker';
