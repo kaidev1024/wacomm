@@ -1,13 +1,13 @@
 /* eslint-disable no-nested-ternary */
 import { ElementType, useEffect, useState } from 'react';
 import { useEscKeydown } from 'waujs';
-import ProfileAttributeUnspecified from './ProfileAttributeUnspecified';
+import ProfileAttributeUnspecified from './AttributeUnspecified';
 import { Row } from 'src/containers';
 import { H1 } from 'src/html';
 import { SaveCancelButtons } from 'src/buttons';
 import { EditIcon } from 'src/icons';
 
-interface ProfileAttributeUpdaterProps {
+interface AttributeUpdaterProps {
   label: string;
   value: any;
   // eslint-disable-next-line no-unused-vars
@@ -16,13 +16,13 @@ interface ProfileAttributeUpdaterProps {
   DisplayElement: ElementType;
 }
 
-function ProfileAttributeUpdater({
+function AttributeUpdater({
   label,
   value: valueInit,
   onSave,
   EditElement,
   DisplayElement
-}: ProfileAttributeUpdaterProps) {
+}: AttributeUpdaterProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [value, setValue] = useState(valueInit);
   const handleSave = () => {
@@ -40,7 +40,7 @@ function ProfileAttributeUpdater({
     setIsEditing(false);
   });
   return (
-    <Row className="ProfileAttributeUpdater w-full items-start">
+    <Row className="AttributeUpdater w-full items-start">
       <H1 className="text-gray-600 w-1/5" label={label} />
       <Row className="w-4/5 justify-between items-start">
         {isEditing ? (
@@ -59,4 +59,4 @@ function ProfileAttributeUpdater({
   );
 }
 
-export default ProfileAttributeUpdater;
+export default AttributeUpdater;

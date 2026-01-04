@@ -29,7 +29,7 @@ export * from './subjectReaction';
 export * from './html';
 export * from './modal';
 export * from './profile';
-export * from './profileAttributeUpdater';
+export * from './page';
 export * from './pickers';
 export type { EditableBlockEditProps, EditableBlockDisplayProps } from './EditableBlock';
 export type { PickerOptionProps, onChangeType } from './pickers/Picker';
