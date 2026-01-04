@@ -1,28 +1,14 @@
 /* eslint-disable no-unused-vars */
 
 import { Pronoun } from 'wenum';
-import Picker, { PickerOptionProps } from './Picker';
+import Picker, { PickerOptionProps } from '../../../pickers/Picker';
+import { pronounOptions } from './util';
 
 interface PronounPickerProps {
   onChange: (p: Pronoun) => void;
   className?: string;
   defaultValue?: Pronoun;
 }
-
-const options = [
-  {
-    value: Pronoun.None,
-    label: 'Unspecified'
-  },
-  {
-    value: Pronoun.He,
-    label: 'He/Him'
-  },
-  {
-    value: Pronoun.She,
-    label: 'She/Her'
-  }
-];
 
 function PronounPicker({
   onChange,
@@ -35,8 +21,8 @@ function PronounPicker({
 
   return (
     <Picker
-      options={options}
-      defaultOption={options[Number(defaultValue)]}
+      options={pronounOptions}
+      defaultOption={pronounOptions[Number(defaultValue)]}
       onChange={handleChange}
       className={className}
     />
