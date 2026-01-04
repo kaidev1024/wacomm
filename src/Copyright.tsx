@@ -1,11 +1,7 @@
+import { P } from './html';
+
 function Copyright() {
-  return (
-    <div>
-      <span>Mycorp</span>
-      <span>&copy;</span>
-      <span>2023</span>
-    </div>
-  );
+  return <P text="BuddiesNearby © 2026" />;
 }
 
 export default Copyright;

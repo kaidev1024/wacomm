@@ -1,0 +1,9 @@
+import { Pronoun } from 'wenum';
+
+export const Unspecified = 'Unspecified';
+
+export const PronounLabels = {
+  [Pronoun.None]: 'Unspecified',
+  [Pronoun.He]: 'He/Him',
+  [Pronoun.She]: 'She/Her'
+};

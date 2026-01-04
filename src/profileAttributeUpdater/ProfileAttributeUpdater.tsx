@@ -1,10 +1,11 @@
 /* eslint-disable no-nested-ternary */
 import { ElementType, useEffect, useState } from 'react';
-import {
-  EditIcon, H1, Row, SaveCancelButtons
-} from 'wacomm';
 import { useEscKeydown } from 'waujs';
 import ProfileAttributeUnspecified from './ProfileAttributeUnspecified';
+import { Row } from 'src/containers';
+import { H1 } from 'src/html';
+import { SaveCancelButtons } from 'src/buttons';
+import { EditIcon } from 'src/icons';
 
 interface ProfileAttributeUpdaterProps {
   label: string;
@@ -20,7 +21,7 @@ function ProfileAttributeUpdater({
   value: valueInit,
   onSave,
   EditElement,
-  DisplayElement,
+  DisplayElement
 }: ProfileAttributeUpdaterProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [value, setValue] = useState(valueInit);
@@ -35,36 +36,24 @@ function ProfileAttributeUpdater({
   useEffect(() => {
     setValue(valueInit);
   }, [JSON.stringify(valueInit)]);
-  useEscKeydown(() => { setIsEditing(false); });
+  useEscKeydown(() => {
+    setIsEditing(false);
+  });
   return (
     <Row className="ProfileAttributeUpdater w-full items-start">
       <H1 className="text-gray-600 w-1/5" label={label} />
       <Row className="w-4/5 justify-between items-start">
-        {
-          isEditing
-            ? (
-              <Row className="w-full justify-between">
-                <EditElement
-                  value={value}
-                  onChange={setValue}
-                />
-                <SaveCancelButtons
-                  onSave={handleSave}
-                  onCancel={handleCancel}
-                />
-              </Row>
-            )
-            : (
-              valueInit
-                ? <DisplayElement value={valueInit} />
-                : <ProfileAttributeUnspecified />
-            )
-        }
-        <EditIcon
-          onClick={() => setIsEditing(true)}
-          hidden={isEditing}
-          isHighlighted
-        />
+        {isEditing ? (
+          <Row className="w-full justify-between">
+            <EditElement value={value} onChange={setValue} />
+            <SaveCancelButtons onSave={handleSave} onCancel={handleCancel} />
+          </Row>
+        ) : valueInit ? (
+          <DisplayElement value={valueInit} />
+        ) : (
+          <ProfileAttributeUnspecified />
+        )}
+        <EditIcon onClick={() => setIsEditing(true)} hidden={isEditing} isHighlighted />
       </Row>
     </Row>
   );
