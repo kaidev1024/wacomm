@@ -1,7 +1,7 @@
 import { Marker } from 'react-map-gl';
 import { MapboxLocationProps } from './util';
 import { ArrayUtil } from 'waujs';
-import List from '../List';
+import List from '../html/List';
 
 interface MapboxMarkerListProps {
   locations?: MapboxLocationProps[];

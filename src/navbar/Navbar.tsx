@@ -1,5 +1,5 @@
 import { twcn } from 'waujs';
-import List from '../List';
+import List from '../html/List';
 import NavbarTab from './NavbarTab';
 
 interface NavbarProps {

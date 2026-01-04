@@ -1,6 +1,6 @@
 import { twcn } from 'waujs';
 import { useRef } from 'react';
-import List from './List';
+import List from './html/List';
 
 interface ClassNamesProps {
   tabs?: string;

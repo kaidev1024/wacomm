@@ -1,6 +1,6 @@
 import { ReactNode, useState } from 'react';
 import Checkbox from './Checkbox';
-import List from 'src/List';
+import List from 'src/html/List';
 
 export interface CheckboxGroupItemProps {
   label: ReactNode;
