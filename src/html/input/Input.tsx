@@ -28,7 +28,8 @@ function Input({
       value={value}
       onChange={handleChange}
       className={twcn(
-        'TextInput border border-gray-300 rounded px-1 py-0 w-full text-gray-600 border-gray-300',
+        'TextInput border rounded px-1 py-0 w-full text-gray-600',
+        disabled ? 'border-gray-300 text-gray-300' : 'border-gray-600 text-gray-600',
         className
       )}
       type={type}
