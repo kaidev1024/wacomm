@@ -10,12 +10,15 @@ interface TextareaProps {
 function Textarea({
   text,
   className = '',
-  rows = 3,
+  rows = 2,
   placeholder = 'write something...'
 }: TextareaProps) {
   return (
     <textarea
-      className={twcn('Textarea p-1 text-grey-600 bg-grey-50 border-lg', className)}
+      className={twcn(
+        'Textarea p-1 text-gray-600 bg-gray-100 border rounded-lg max-h-16 overflow-y-auto',
+        className
+      )}
       disabled
       rows={rows}
       placeholder={placeholder}

@@ -37,8 +37,9 @@ function TextUpdater({
     }
   });
   return isEditing ? (
-    <Column className={twcn('TextUpdaterEditing w-full gap-2', classNameEditing)}>
+    <Column className="TextUpdaterEditing w-full gap-2">
       <TextareaAutosize
+        className={twcn('bg-gray-100 border border-gray-300 rounded-lg', classNameEditing)}
         minRows={minRows}
         maxRows={maxRows}
         placeholder={placeholder!}
@@ -59,7 +60,11 @@ function TextUpdater({
     </Column>
   ) : (
     <Row className={twcn('TextUpdaterNonEditing w-full gap-2 items-start', classNameNonEditing)}>
-      <Textarea className="grow" text={text} placeholder={placeholder} />
+      <Textarea
+        className={twcn('grow', classNameNonEditing)}
+        text={text}
+        placeholder={placeholder}
+      />
       <EditIcon className="cursor-pointer" onClick={() => setIsEditing(true)} isHighlighted />
     </Row>
   );
