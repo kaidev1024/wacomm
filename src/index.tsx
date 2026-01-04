@@ -1,5 +1,4 @@
 export { default as EditableBlock } from './EditableBlock';
-export { default as Modal } from './Modal';
 export { default as Picker } from './Picker';
 export { default as Tag, TagColor, TagLabelSize } from './Tag';
 export { default as List } from './List';
@@ -29,9 +28,9 @@ export * from './separators';
 export * from './likes';
 export * from './subjectReaction';
 export * from './html';
+export * from './modal';
 export * from './profileAttributeUpdater';
 export type { EditableBlockEditProps, EditableBlockDisplayProps } from './EditableBlock';
-export type { ModalStyleProps } from './Modal';
 export type { PickerOptionProps, onChangeType } from './Picker';
 export type { ExpandableContainerProps } from './expandableContainer/ExpandableContainer';
 import './tailwind.css';

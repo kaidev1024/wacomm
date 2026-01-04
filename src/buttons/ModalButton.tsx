@@ -1,6 +1,6 @@
 import { ReactNode, useState } from 'react';
 import StyledButton from './StyledButton';
-import Modal from 'src/Modal';
+import { Modal } from 'src/modal';
 
 interface ModalButtonProps {
   label: string;
