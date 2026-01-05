@@ -7,13 +7,13 @@ import { handednessOptions } from './util';
 interface HandednessPickerProps {
   onChange: (p: Handedness) => void;
   className?: string;
-  defaultValue?: Handedness;
+  value?: Handedness;
 }
 
 function HandednessPicker({
   onChange,
   className = '',
-  defaultValue = Handedness.None
+  value = Handedness.None
 }: HandednessPickerProps) {
   const handleChange = (option: PickerOptionProps) => {
     onChange(option.value);
@@ -22,7 +22,7 @@ function HandednessPicker({
   return (
     <Picker
       options={handednessOptions}
-      defaultOption={handednessOptions[Number(defaultValue)]}
+      defaultOption={handednessOptions[Number(value)]}
       onChange={handleChange}
       className={className}
     />

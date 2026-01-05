@@ -7,10 +7,10 @@ import { genderOptions } from './util';
 interface GenderPickerProps {
   onChange: (p: Gender) => void;
   className?: string;
-  defaultValue?: Gender;
+  value?: Gender;
 }
 
-function GenderPicker({ onChange, className = '', defaultValue = Gender.None }: GenderPickerProps) {
+function GenderPicker({ onChange, className = '', value = Gender.None }: GenderPickerProps) {
   const handleChange = (option: PickerOptionProps) => {
     onChange(option.value);
   };
@@ -18,7 +18,7 @@ function GenderPicker({ onChange, className = '', defaultValue = Gender.None }: 
   return (
     <Picker
       options={genderOptions}
-      defaultOption={genderOptions[Number(defaultValue)]}
+      defaultOption={genderOptions[Number(value)]}
       onChange={handleChange}
       className={className}
     />
