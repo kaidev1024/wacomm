@@ -3,11 +3,11 @@ import { Gender } from 'wenum';
 import { GenderLabel } from './util';
 
 interface GenderDisplayProps {
-  gender: Gender;
+  value: Gender;
 }
 
-function GenderDisplay({ gender }: GenderDisplayProps) {
-  return <P className="text-gray-600 text-sm" text={GenderLabel[gender]} />;
+function GenderDisplay({ value }: GenderDisplayProps) {
+  return <P className="text-gray-600 text-sm" text={GenderLabel[value]} />;
 }
 
 export default GenderDisplay;

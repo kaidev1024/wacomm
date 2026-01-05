@@ -4,14 +4,27 @@ import { Picker, PickerOptionProps } from 'src/pickers';
 import { PostPrivacy } from 'wenum';
 import { postPrivacyOptions } from './util';
 
-function PostPrivacyPicker() {
-  const handleChange = (option: PickerOptionProps) => {};
+interface PostPrivacyPickerProps {
+  onChange: (p: PostPrivacy) => void;
+  className?: string;
+  value?: PostPrivacy;
+}
+
+function PostPrivacyPicker({
+  onChange,
+  className = '',
+  value = PostPrivacy.Public
+}: PostPrivacyPickerProps) {
+  const handleChange = (option: PickerOptionProps) => {
+    onChange(option.value);
+  };
 
   return (
     <Picker
       options={postPrivacyOptions}
-      defaultOption={postPrivacyOptions[PostPrivacy.Public]}
+      defaultOption={postPrivacyOptions[value as number]}
       onChange={handleChange}
+      className={className}
     />
   );
 }

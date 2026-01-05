@@ -4,14 +4,27 @@ import { Picker, PickerOptionProps } from 'src/pickers';
 import { ProfilePrivacy } from 'wenum';
 import { profilePrivacyOptions } from './util';
 
-function ProfilePrivacyPicker() {
-  const handleChange = (option: PickerOptionProps) => {};
+interface ProfilePrivacyPickerProps {
+  onChange: (p: ProfilePrivacy) => void;
+  className?: string;
+  value?: ProfilePrivacy;
+}
+
+function ProfilePrivacyPicker({
+  onChange,
+  className = '',
+  value = ProfilePrivacy.Public
+}: ProfilePrivacyPickerProps) {
+  const handleChange = (option: PickerOptionProps) => {
+    onChange(option.value);
+  };
 
   return (
     <Picker
       options={profilePrivacyOptions}
-      defaultOption={profilePrivacyOptions[ProfilePrivacy.Public]}
+      defaultOption={profilePrivacyOptions[value as number]}
       onChange={handleChange}
+      className={className}
     />
   );
 }

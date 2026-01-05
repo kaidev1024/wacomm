@@ -3,11 +3,11 @@ import { ProfilePrivacy } from 'wenum';
 import { ProfilePrivacyLabel } from './util';
 
 interface ProfilePrivacyDisplayProps {
-  profileprivacy: ProfilePrivacy;
+  value: ProfilePrivacy;
 }
 
-function ProfilePrivacyDisplay({ profileprivacy }: ProfilePrivacyDisplayProps) {
-  return <P className="text-gray-600 text-sm" text={ProfilePrivacyLabel[profileprivacy]} />;
+function ProfilePrivacyDisplay({ value }: ProfilePrivacyDisplayProps) {
+  return <P className="text-gray-600 text-sm" text={ProfilePrivacyLabel[value]} />;
 }
 
 export default ProfilePrivacyDisplay;
