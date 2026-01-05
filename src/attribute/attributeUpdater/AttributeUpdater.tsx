@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import { ElementType, useEffect, useState } from 'react';
 import { useEscKeydown } from 'waujs';
-import ProfileAttributeUnspecified from './AttributeUnspecified';
+import AttributeUnspecified from './AttributeUnspecified';
 import { Row } from 'src/containers';
 import { H1 } from 'src/html';
 import { SaveCancelButtons } from 'src/buttons';
@@ -51,7 +51,7 @@ function AttributeUpdater({
         ) : valueInit ? (
           <DisplayElement value={valueInit} />
         ) : (
-          <ProfileAttributeUnspecified />
+          <AttributeUnspecified />
         )}
         <EditIcon onClick={() => setIsEditing(true)} hidden={isEditing} isHighlighted />
       </Row>
