@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import { Handedness } from 'wenum';
-import Picker, { PickerOptionProps } from '../../../pickers/Picker';
+import { Picker, PickerOptionProps } from 'src/pickers';
 import { handednessOptions } from './util';
 
 interface HandednessPickerProps {

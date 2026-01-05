@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import { Gender } from 'wenum';
-import Picker, { PickerOptionProps } from '../../../pickers/Picker';
+import { Picker, PickerOptionProps } from 'src/pickers';
 import { genderOptions } from './util';
 
 interface GenderPickerProps {

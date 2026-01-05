@@ -1,4 +1,4 @@
-import { Gender, Pronoun } from 'wenum';
+import { Gender } from 'wenum';
 
 export const GenderLabel: Record<Gender, string> = {
   [Gender.None]: 'Unspecified',
