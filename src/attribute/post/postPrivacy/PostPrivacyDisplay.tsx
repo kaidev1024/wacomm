@@ -1,12 +1,9 @@
 import { P } from 'src/html';
 import { PostPrivacy } from 'wenum';
 import { PostPrivacyLabel } from './util';
+import { ProfileAttributeDisplayElementProps } from 'src/attribute';
 
-interface PostPrivacyDisplayProps {
-  value: PostPrivacy;
-}
-
-function PostPrivacyDisplay({ value }: PostPrivacyDisplayProps) {
+function PostPrivacyDisplay({ value }: ProfileAttributeDisplayElementProps<PostPrivacy>) {
   return <P className="text-gray-600 text-sm" text={PostPrivacyLabel[value]} />;
 }
 

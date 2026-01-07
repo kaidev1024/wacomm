@@ -1,20 +1,14 @@
 /* eslint-disable no-unused-vars */
-
 import { Picker, PickerOptionProps } from 'src/pickers';
 import { ProfilePrivacy } from 'wenum';
 import { profilePrivacyOptions } from './util';
-
-interface ProfilePrivacyPickerProps {
-  onChange: (p: ProfilePrivacy) => void;
-  className?: string;
-  value?: ProfilePrivacy;
-}
+import { ProfileAttributeEditElementProps } from 'src/attribute';
 
 function ProfilePrivacyPicker({
   onChange,
   className = '',
   value = ProfilePrivacy.Public
-}: ProfilePrivacyPickerProps) {
+}: ProfileAttributeEditElementProps<ProfilePrivacy>) {
   const handleChange = (option: PickerOptionProps) => {
     onChange(option.value);
   };

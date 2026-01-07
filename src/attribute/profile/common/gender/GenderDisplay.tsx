@@ -1,12 +1,9 @@
 import { P } from 'src/html';
 import { Gender } from 'wenum';
 import { GenderLabel } from './util';
+import { ProfileAttributeDisplayElementProps } from 'src/attribute/attributeUpdater';
 
-interface GenderDisplayProps {
-  value: Gender;
-}
-
-function GenderDisplay({ value }: GenderDisplayProps) {
+function GenderDisplay({ value }: ProfileAttributeDisplayElementProps<Gender>) {
   return <P className="text-gray-600 text-sm" text={GenderLabel[value]} />;
 }
 

@@ -3,18 +3,13 @@
 import { Picker, PickerOptionProps } from 'src/pickers';
 import { PostPrivacy } from 'wenum';
 import { postPrivacyOptions } from './util';
-
-interface PostPrivacyPickerProps {
-  onChange: (p: PostPrivacy) => void;
-  className?: string;
-  value?: PostPrivacy;
-}
+import { ProfileAttributeEditElementProps } from 'src/attribute';
 
 function PostPrivacyPicker({
   onChange,
   className = '',
   value = PostPrivacy.Public
-}: PostPrivacyPickerProps) {
+}: ProfileAttributeEditElementProps<PostPrivacy>) {
   const handleChange = (option: PickerOptionProps) => {
     onChange(option.value);
   };
