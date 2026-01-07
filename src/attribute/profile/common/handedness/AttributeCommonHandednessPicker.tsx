@@ -1,27 +1,27 @@
 /* eslint-disable no-unused-vars */
 
-import { Gender } from 'wenum';
+import { Handedness } from 'wenum';
 import { Picker, PickerOptionProps } from 'src/pickers';
-import { genderOptions } from './util';
+import { handednessOptions } from './util';
 import { ProfileAttributeEditElementProps } from 'src/attribute';
 
-function GenderPicker({
+function AttributeCommonHandednessPicker({
   onChange,
   className = '',
-  value = Gender.None
-}: ProfileAttributeEditElementProps<Gender>) {
+  value = Handedness.None
+}: ProfileAttributeEditElementProps<Handedness>) {
   const handleChange = (option: PickerOptionProps) => {
     onChange(option.value);
   };
 
   return (
     <Picker
-      options={genderOptions}
-      defaultOption={genderOptions[Number(value)]}
+      options={handednessOptions}
+      defaultOption={handednessOptions[Number(value)]}
       onChange={handleChange}
       className={className}
     />
   );
 }
 
-export default GenderPicker;
+export default AttributeCommonHandednessPicker;

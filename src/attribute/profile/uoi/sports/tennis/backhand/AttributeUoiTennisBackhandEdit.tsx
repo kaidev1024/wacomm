@@ -4,7 +4,7 @@ import { tennisBackhandOptions } from './util';
 import { Picker, PickerOptionProps } from 'src/pickers';
 import { ProfileAttributeEditElementProps } from 'src/attribute/attributeUpdater';
 
-function TennisBackhandEdit({
+function AttributeUoiTennisBackhandEdit({
   onChange,
   className = '',
   value = TennisBackhand.None
@@ -23,4 +23,4 @@ function TennisBackhandEdit({
   );
 }
 
-export default TennisBackhandEdit;
+export default AttributeUoiTennisBackhandEdit;

@@ -1,2 +1,2 @@
-export { default as TennisBackhandEdit } from './TennisBackhandEdit';
-export { default as TennisBackhandDisplay } from './TennisBackhandDisplay';
+export { default as AttributeUoiTennisBackhandEdit } from './AttributeUoiTennisBackhandEdit';
+export { default as AttributeUoiTennisBackhandDisplay } from './AttributeUoiTennisBackhandDisplay';

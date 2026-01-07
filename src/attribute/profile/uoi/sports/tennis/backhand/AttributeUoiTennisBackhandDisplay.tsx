@@ -3,7 +3,7 @@ import { TennisBackhandLabel } from './util';
 import { P } from 'src/html';
 import { ProfileAttributeDisplayElementProps } from 'src/attribute/attributeUpdater';
 
-export default function TennisBackhandDisplay({
+export default function AttributeUoiTennisBackhandDisplay({
   value
 }: ProfileAttributeDisplayElementProps<TennisBackhand>) {
   return <P text={TennisBackhandLabel[value]} />;

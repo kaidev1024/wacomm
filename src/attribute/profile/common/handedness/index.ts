@@ -1,2 +1,2 @@
-export { default as HandednessPicker } from './HandednessPicker';
-export { default as HandednessDisplay } from './HandednessDisplay';
+export { default as AttributeCommonHandednessPicker } from './AttributeCommonHandednessPicker';
+export { default as AttributeCommonHandednessDisplay } from './AttributeCommonHandednessDisplay';

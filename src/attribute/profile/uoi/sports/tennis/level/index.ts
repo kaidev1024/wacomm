@@ -1,2 +1,2 @@
-export { default as TennisLevelEdit } from './TennisLevelEdit';
-export { default as TennisLevelDisplay } from './TennisLevelDisplay';
+export { default as AttributeUoiTennisLevelEdit } from './AttributeUoiTennisLevelEdit';
+export { default as AttributeUoiTennisLevelDisplay } from './AttributeUoiTennisLevelDisplay';

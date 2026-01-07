@@ -1,2 +1,2 @@
-export { default as GenderPicker } from './GenderPicker';
-export { default as GenderDisplay } from './GenderDisplay';
+export { default as AttributeCommonGenderPicker } from './AttributeCommonGenderPicker';
+export { default as AttributeCommonGenderDisplay } from './AttributeCommonGenderDisplay';

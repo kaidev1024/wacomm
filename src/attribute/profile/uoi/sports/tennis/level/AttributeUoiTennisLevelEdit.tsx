@@ -4,7 +4,7 @@ import { tennisLevelOptions } from './util';
 import { Picker, PickerOptionProps } from 'src/pickers';
 import { ProfileAttributeEditElementProps } from 'src/attribute/attributeUpdater';
 
-function TennisLevelEdit({
+export default function AttributeUoiTennisLevelEdit({
   onChange,
   className = '',
   value = TennisLevel.None
@@ -22,5 +22,3 @@ function TennisLevelEdit({
     />
   );
 }
-
-export default TennisLevelEdit;
