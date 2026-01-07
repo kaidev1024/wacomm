@@ -1,4 +1,3 @@
-export * from './pronoun';
-export * from './gender';
-export * from './handedness';
+export * from './user';
+export * from './common';
 export * from './profilePrivacy';
