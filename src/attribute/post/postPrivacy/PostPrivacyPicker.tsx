@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-
 import { Picker, PickerOptionProps } from 'src/pickers';
 import { PostPrivacy } from 'wenum';
 import { postPrivacyOptions } from './util';
