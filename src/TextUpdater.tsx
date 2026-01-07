@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { twcn, useEscKeydown } from 'waujs';
 import TextareaAutosize from './TextareaAutosize';
 import { Column, Row } from 'src/containers';
-import { EditIcon, SaveCancelButtons, Textarea } from 'src';
+import { EditIcon, P, SaveCancelButtons } from 'src';
 
 export interface TextUpdaterProps {
   text: string;
@@ -60,11 +60,7 @@ function TextUpdater({
     </Column>
   ) : (
     <Row className={twcn('TextUpdaterNonEditing w-full gap-2 items-start', classNameNonEditing)}>
-      <Textarea
-        className={twcn('grow', classNameNonEditing)}
-        text={text}
-        placeholder={placeholder}
-      />
+      <P className={twcn('grow', classNameNonEditing)} text={text} placeholder={placeholder} />
       <EditIcon className="cursor-pointer" onClick={() => setIsEditing(true)} isHighlighted />
     </Row>
   );
