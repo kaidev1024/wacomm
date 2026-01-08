@@ -1,4 +1,4 @@
 export * from './attributeUpdater';
 export * from './profile';
-export * from './post';
-export * from './page';
+export * from '../page/post';
+export * from '../page';
