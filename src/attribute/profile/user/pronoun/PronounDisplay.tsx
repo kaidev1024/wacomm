@@ -1,9 +1,9 @@
 import { P } from 'src/html';
 import { Pronoun } from 'wenum';
 import { PronounLabel } from './util';
-import { ProfileAttributeDisplayElementProps } from 'src/attribute';
+import { AttributeDisplayProps } from 'src/attribute';
 
-function PronounDisplay({ value }: ProfileAttributeDisplayElementProps<Pronoun>) {
+function PronounDisplay({ value }: AttributeDisplayProps<Pronoun>) {
   if (value === Pronoun.None) return null;
   return <P className="text-gray-600 text-sm" text={PronounLabel[value]} />;
 }

@@ -3,13 +3,13 @@
 import { Handedness } from 'wenum';
 import { Picker, PickerOptionProps } from 'src/pickers';
 import { handednessOptions } from './util';
-import { ProfileAttributeEditElementProps } from 'src/attribute';
+import { AttributeEditProps } from 'src/attribute';
 
 function AttributeCommonHandednessPicker({
   onChange,
   className = '',
   value = Handedness.None
-}: ProfileAttributeEditElementProps<Handedness>) {
+}: AttributeEditProps<Handedness>) {
   const handleChange = (option: PickerOptionProps) => {
     onChange(option.value);
   };

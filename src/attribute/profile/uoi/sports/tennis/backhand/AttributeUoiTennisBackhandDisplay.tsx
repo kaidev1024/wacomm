@@ -1,10 +1,10 @@
 import { TennisBackhand } from 'wenum';
 import { TennisBackhandLabel } from './util';
 import { P } from 'src/html';
-import { ProfileAttributeDisplayElementProps } from 'src/attribute/attributeUpdater';
+import { AttributeDisplayProps } from 'src/attribute';
 
 export default function AttributeUoiTennisBackhandDisplay({
   value
-}: ProfileAttributeDisplayElementProps<TennisBackhand>) {
+}: AttributeDisplayProps<TennisBackhand>) {
   return <P text={TennisBackhandLabel[value]} />;
 }

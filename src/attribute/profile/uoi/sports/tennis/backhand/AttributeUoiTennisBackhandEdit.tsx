@@ -2,13 +2,13 @@
 import { TennisBackhand } from 'wenum';
 import { tennisBackhandOptions } from './util';
 import { Picker, PickerOptionProps } from 'src/pickers';
-import { ProfileAttributeEditElementProps } from 'src/attribute/attributeUpdater';
+import { AttributeEditProps } from 'src/attribute';
 
 function AttributeUoiTennisBackhandEdit({
   onChange,
   className = '',
   value = TennisBackhand.None
-}: ProfileAttributeEditElementProps<TennisBackhand>) {
+}: AttributeEditProps<TennisBackhand>) {
   const handleChange = (option: PickerOptionProps) => {
     onChange(option.value);
   };

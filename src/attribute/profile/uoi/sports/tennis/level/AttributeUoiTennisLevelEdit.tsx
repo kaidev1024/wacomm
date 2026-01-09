@@ -2,13 +2,13 @@
 import { TennisLevel } from 'wenum';
 import { tennisLevelOptions } from './util';
 import { Picker, PickerOptionProps } from 'src/pickers';
-import { ProfileAttributeEditElementProps } from 'src/attribute/attributeUpdater';
+import { AttributeEditProps } from 'src/attribute';
 
 export default function AttributeUoiTennisLevelEdit({
   onChange,
   className = '',
   value = TennisLevel.None
-}: ProfileAttributeEditElementProps<TennisLevel>) {
+}: AttributeEditProps<TennisLevel>) {
   const handleChange = (option: PickerOptionProps) => {
     onChange(option.value);
   };

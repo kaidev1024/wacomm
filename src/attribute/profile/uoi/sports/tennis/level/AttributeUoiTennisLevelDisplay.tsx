@@ -1,10 +1,10 @@
 import { TennisLevel } from 'wenum';
 import { TennisLevelLabels } from './util';
 import { P } from 'src/html';
-import { ProfileAttributeDisplayElementProps } from 'src/attribute/attributeUpdater';
+import { AttributeDisplayProps } from 'src/attribute';
 
 export default function AttributeUoiTennisLevelDisplay({
   value
-}: ProfileAttributeDisplayElementProps<TennisLevel>) {
+}: AttributeDisplayProps<TennisLevel>) {
   return <P text={TennisLevelLabels[value]} />;
 }

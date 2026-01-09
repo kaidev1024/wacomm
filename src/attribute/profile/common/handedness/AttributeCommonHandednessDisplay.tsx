@@ -1,11 +1,9 @@
 import { P } from 'src/html';
 import { Handedness } from 'wenum';
 import { HandednessLabel } from './util';
-import { ProfileAttributeDisplayElementProps } from 'src/attribute';
+import { AttributeDisplayProps } from 'src/attribute';
 
-function AttributeCommonHandednessDisplay({
-  value
-}: ProfileAttributeDisplayElementProps<Handedness>) {
+function AttributeCommonHandednessDisplay({ value }: AttributeDisplayProps<Handedness>) {
   return <P text={HandednessLabel[value]} />;
 }
 

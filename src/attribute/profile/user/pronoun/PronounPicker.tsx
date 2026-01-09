@@ -3,13 +3,13 @@
 import { Pronoun } from 'wenum';
 import { Picker, PickerOptionProps } from 'src/pickers';
 import { pronounOptions } from './util';
-import { ProfileAttributeEditElementProps } from 'src/attribute';
+import { AttributeEditProps } from 'src/attribute';
 
 function PronounPicker({
   onChange,
   className = '',
   value = Pronoun.None
-}: ProfileAttributeEditElementProps<Pronoun>) {
+}: AttributeEditProps<Pronoun>) {
   const handleChange = (option: PickerOptionProps) => {
     onChange(option.value);
   };

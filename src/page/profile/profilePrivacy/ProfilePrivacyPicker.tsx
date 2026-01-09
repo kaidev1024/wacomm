@@ -2,13 +2,13 @@
 import { Picker, PickerOptionProps } from 'src/pickers';
 import { ProfilePrivacy } from 'wenum';
 import { profilePrivacyOptions } from './util';
-import { ProfileAttributeEditElementProps } from 'src/attribute';
+import { AttributeEditProps } from 'src/attribute';
 
 function ProfilePrivacyPicker({
   onChange,
   className = '',
   value = ProfilePrivacy.Public
-}: ProfileAttributeEditElementProps<ProfilePrivacy>) {
+}: AttributeEditProps<ProfilePrivacy>) {
   const handleChange = (option: PickerOptionProps) => {
     onChange(option.value);
   };
