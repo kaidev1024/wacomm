@@ -8,3 +8,7 @@ export interface AttributeEditProps<T> {
 export interface AttributeDisplayProps<T> {
   value: T;
 }
+
+export interface AttributeFieldProps<T> {
+  value: T;
+}
