@@ -1,11 +1,10 @@
 /* eslint-disable no-unused-vars */
-
 import { Gender } from 'wenum';
 import { Picker, PickerOptionProps } from 'src/pickers';
 import { genderOptions } from './util';
 import { AttributeEditProps } from 'src/attribute';
 
-function AttributeCommonGenderPicker({
+function AttributeCommonGenderEdit({
   onChange,
   className = '',
   value = Gender.None
@@ -24,4 +23,4 @@ function AttributeCommonGenderPicker({
   );
 }
 
-export default AttributeCommonGenderPicker;
+export default AttributeCommonGenderEdit;

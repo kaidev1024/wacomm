@@ -5,7 +5,7 @@ import { Picker, PickerOptionProps } from 'src/pickers';
 import { handednessOptions } from './util';
 import { AttributeEditProps } from 'src/attribute';
 
-function AttributeCommonHandednessPicker({
+function AttributeCommonHandednessEdit({
   onChange,
   className = '',
   value = Handedness.None
@@ -24,4 +24,4 @@ function AttributeCommonHandednessPicker({
   );
 }
 
-export default AttributeCommonHandednessPicker;
+export default AttributeCommonHandednessEdit;

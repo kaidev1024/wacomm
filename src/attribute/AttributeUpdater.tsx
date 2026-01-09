@@ -12,16 +12,16 @@ interface AttributeUpdaterProps {
   value: any;
   // eslint-disable-next-line no-unused-vars
   onSave: (v: any) => void;
-  EditElement: ElementType;
-  DisplayElement: ElementType;
+  AttributeEdit: ElementType;
+  AttributeDisplay: ElementType;
 }
 
 function AttributeUpdater({
   label,
   value: valueInit,
   onSave,
-  EditElement,
-  DisplayElement
+  AttributeEdit,
+  AttributeDisplay
 }: AttributeUpdaterProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [value, setValue] = useState(valueInit);
@@ -45,11 +45,11 @@ function AttributeUpdater({
       <Row className="w-4/5 justify-between items-start">
         {isEditing ? (
           <Row className="w-full justify-between">
-            <EditElement value={value} onChange={setValue} />
+            <AttributeEdit value={value} onChange={setValue} />
             <SaveCancelButtons onSave={handleSave} onCancel={handleCancel} />
           </Row>
         ) : valueInit ? (
-          <DisplayElement value={valueInit} />
+          <AttributeDisplay value={valueInit} />
         ) : (
           <AttributeUnspecified />
         )}
