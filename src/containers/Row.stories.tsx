@@ -5,18 +5,17 @@ const meta: Meta<typeof Row> = {
   title: 'Containers/Row',
   component: Row,
   parameters: {
-    layout: 'centered',
+    layout: 'centered'
   },
   tags: ['autodocs'],
   argTypes: {
-    onClick: { action: 'clicked' },
     className: {
-      control: 'text',
+      control: 'text'
     },
     children: {
-      control: 'text',
-    },
-  },
+      control: 'text'
+    }
+  }
 };
 
 export default meta;
@@ -30,8 +29,8 @@ export const Default: Story = {
         <div className="p-4 bg-green-100 rounded">Item 2</div>
         <div className="p-4 bg-yellow-100 rounded">Item 3</div>
       </>
-    ),
-  },
+    )
+  }
 };
 
 export const WithCustomClassName: Story = {
@@ -42,6 +41,6 @@ export const WithCustomClassName: Story = {
         <div className="p-4 bg-orange-100 rounded">Item 2</div>
       </>
     ),
-    className: 'p-6 border-2 border-gray-300 rounded-lg bg-gray-50',
-  },
+    className: 'p-6 border-2 border-gray-300 rounded-lg bg-gray-50'
+  }
 };

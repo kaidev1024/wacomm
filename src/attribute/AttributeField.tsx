@@ -11,7 +11,7 @@ import {
 } from 'wenum';
 import AttributeUnspecified from './AttributeUnspecified';
 
-interface AttributeDisplayProps {
+interface AttributeFieldProps {
   profileType: ProfileType;
   categoryName?: CategoryName;
   interestName?: InterestName;
@@ -20,16 +20,16 @@ interface AttributeDisplayProps {
   value: ReactNode;
 }
 
-function AttributeDisplay({
+function AttributeField({
   profileType,
   categoryName,
   interestName,
   attributeType,
   className = '',
   value
-}: AttributeDisplayProps) {
+}: AttributeFieldProps) {
   return (
-    <Row className={twcn('AttributeDisplay justify-between', className)}>
+    <Row className={twcn('AttributeField justify-between', className)}>
       <Span
         text={getProfileAttributeLabel({
           profileType,
@@ -43,4 +43,4 @@ function AttributeDisplay({
   );
 }
 
-export default AttributeDisplay;
+export default AttributeField;

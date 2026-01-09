@@ -1,31 +1,16 @@
-import { ZeroFunc, ZeroFuncType } from 'waujs';
 import { Column, Row } from '.';
 
 interface ContainerProps {
   children: any;
   className?: string;
   isVertical?: boolean;
-  onClick?: ZeroFuncType;
 }
 
-function Container({
-  children,
-  className = '',
-  isVertical = false,
-  onClick = ZeroFunc
-}: ContainerProps) {
+function Container({ children, className = '', isVertical = false }: ContainerProps) {
   if (isVertical) {
-    return (
-      <Column className={className} onClick={onClick}>
-        {children}
-      </Column>
-    );
+    return <Column className={className}>{children}</Column>;
   }
-  return (
-    <Row className={className} onClick={onClick}>
-      {children}
-    </Row>
-  );
+  return <Row className={className}>{children}</Row>;
 }
 
 export default Container;

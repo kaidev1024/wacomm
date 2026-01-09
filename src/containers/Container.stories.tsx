@@ -5,21 +5,20 @@ const meta: Meta<typeof Container> = {
   title: 'Containers/Container',
   component: Container,
   parameters: {
-    layout: 'centered',
+    layout: 'centered'
   },
   tags: ['autodocs'],
   argTypes: {
-    onClick: { action: 'clicked' },
     className: {
-      control: 'text',
+      control: 'text'
     },
     children: {
-      control: 'text',
+      control: 'text'
     },
     isVertical: {
-      control: 'boolean',
-    },
-  },
+      control: 'boolean'
+    }
+  }
 };
 
 export default meta;
@@ -34,8 +33,8 @@ export const HorizontalDefault: Story = {
         <div className="p-4 bg-yellow-100 rounded">Item 3</div>
       </>
     ),
-    isVertical: false,
-  },
+    isVertical: false
+  }
 };
 
 export const VerticalDefault: Story = {
@@ -47,8 +46,8 @@ export const VerticalDefault: Story = {
         <div className="p-4 bg-yellow-100 rounded">Item 3</div>
       </>
     ),
-    isVertical: true,
-  },
+    isVertical: true
+  }
 };
 
 export const HorizontalWithCustomClassName: Story = {
@@ -60,8 +59,8 @@ export const HorizontalWithCustomClassName: Story = {
       </>
     ),
     className: 'p-6 border-2 border-gray-300 rounded-lg bg-gray-50',
-    isVertical: false,
-  },
+    isVertical: false
+  }
 };
 
 export const VerticalWithCustomClassName: Story = {
@@ -73,6 +72,6 @@ export const VerticalWithCustomClassName: Story = {
       </>
     ),
     className: 'p-6 border-2 border-blue-300 rounded-lg bg-blue-50',
-    isVertical: true,
-  },
+    isVertical: true
+  }
 };
