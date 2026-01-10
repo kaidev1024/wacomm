@@ -1,5 +1,5 @@
 import { ClickableRow } from 'src/containers';
-import { P } from 'src/html';
+import { Span } from 'src/html';
 import { InterestSvg, SvgSize } from 'wasvg';
 import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
 import { CategoryName, InterestName } from 'wenum';
@@ -35,7 +35,7 @@ export default function InterestTag({
         size={SvgSize.xs}
         className={isHighlighted ? 'fill-blue-500 text-blue-500' : 'fill-gray-600'}
       />
-      <P
+      <Span
         text={label}
         className={isHighlighted ? 'text-blue-500 text-sm' : 'text-gray-600 text-sm'}
       />
