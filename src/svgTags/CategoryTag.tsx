@@ -1,5 +1,5 @@
 import { ClickableRow } from 'src/containers';
-import { P } from 'src/html';
+import { Span } from 'src/html';
 import { CategorySvg, SvgSize } from 'wasvg';
 import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
 import { CategoryName } from 'wenum';
@@ -32,7 +32,7 @@ export default function CategoryTag({
         size={SvgSize.xs}
         className={isHighlighted ? 'fill-emerald-300 text-emerald-300' : 'fill-gray-600'}
       />
-      <P text={label} className={isHighlighted ? 'text-emerald-300' : 'text-gray-600'} />
+      <Span text={label} className={isHighlighted ? 'text-emerald-300' : 'text-gray-600'} />
     </ClickableRow>
   );
 }
