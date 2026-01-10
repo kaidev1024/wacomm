@@ -6,27 +6,27 @@ import { DateTime } from './util';
 
 const DatePickerWrapper = (args: any) => {
   const [value, setValue] = useState<DateTime>(args.value);
-  return <DatePicker value={value} setValue={setValue} />;
+  return <DatePicker value={String(value)} setValue={setValue} />;
 };
 
 const meta: Meta<typeof DatePicker> = {
   title: 'DateTime/DatePicker',
   component: DatePicker,
   parameters: {
-    layout: 'centered',
+    layout: 'centered'
   },
   tags: ['autodocs'],
   render: DatePickerWrapper,
   argTypes: {
     value: {
       control: false,
-      description: 'Selected date value (Dayjs object or null)',
+      description: 'Selected date value (Dayjs object or null)'
     },
     setValue: {
       control: false,
-      description: 'Function to update the selected date',
-    },
-  },
+      description: 'Function to update the selected date'
+    }
+  }
 };
 
 export default meta;
@@ -34,30 +34,12 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    value: dayjs('2024-01-15'),
-  },
+    value: '2024-01-15'
+  }
 };
 
 export const EmptyValue: Story = {
   args: {
-    value: null,
-  },
-};
-
-export const TodaysDate: Story = {
-  args: {
-    value: dayjs(),
-  },
-};
-
-export const FutureDate: Story = {
-  args: {
-    value: dayjs().add(30, 'day'),
-  },
-};
-
-export const PastDate: Story = {
-  args: {
-    value: dayjs('2023-06-15'),
-  },
+    value: ''
+  }
 };

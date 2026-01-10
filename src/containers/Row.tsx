@@ -1,6 +1,6 @@
 import { twcn } from 'waujs';
 
-interface RowProps {
+export interface RowProps {
   children: any;
   className?: string;
 }

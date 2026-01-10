@@ -10,7 +10,11 @@ interface ContainerProps {
 function Container({ children, className = '', isVertical = false, onClick }: ContainerProps) {
   return (
     <div
-      className={twcn(className, isVertical ? 'flex flex-col' : 'flex flex-row')}
+      className={twcn(
+        className,
+        'gap-1 items-center',
+        isVertical ? 'flex flex-col' : 'flex flex-row'
+      )}
       onClick={onClick}
     >
       {children}

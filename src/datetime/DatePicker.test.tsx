@@ -12,7 +12,7 @@ describe('DatePicker', () => {
     mockSetValue.mockClear();
   });
   test('renders correctly with test date', () => {
-    const testDate = dayjs('2024-01-15');
+    const testDate = '2024-01-15';
     render(<DatePicker value={testDate} setValue={mockSetValue} />);
 
     // Check that the DatePicker renders with all date sections
@@ -40,7 +40,7 @@ describe('DatePicker', () => {
 
   test('calls setValue when date is changed', async () => {
     const user = userEvent.setup();
-    const testDate = dayjs('2024-01-15');
+    const testDate = '2024-01-15';
     render(<DatePicker value={testDate} setValue={mockSetValue} />);
 
     // Get the month input and change its value
@@ -62,7 +62,7 @@ describe('DatePicker', () => {
 
   test('supports keyboard navigation with arrow keys', async () => {
     const user = userEvent.setup();
-    const testDate = dayjs('2024-01-15');
+    const testDate = '2024-01-15';
     render(<DatePicker value={testDate} setValue={mockSetValue} />);
 
     // Get the month input and focus it
@@ -93,7 +93,7 @@ describe('DatePicker', () => {
 
   test('opens calendar popup and allows date selection', async () => {
     const user = userEvent.setup();
-    const testDate = dayjs('2024-01-15');
+    const testDate = '2024-01-15';
     render(<DatePicker value={testDate} setValue={mockSetValue} />);
 
     // Click the calendar button to open popup
