@@ -12,7 +12,7 @@ function Container({ children, className = '', isVertical = false, onClick }: Co
     <div
       className={twcn(
         className,
-        'gap-1 items-center',
+        'gap-2 items-center',
         isVertical ? 'flex flex-col' : 'flex flex-row'
       )}
       onClick={onClick}
