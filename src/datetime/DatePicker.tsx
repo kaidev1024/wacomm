@@ -1,11 +1,11 @@
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker as MuiDatePicker } from '@mui/x-date-pickers/DatePicker';
-import { DateTime, SetDateTime } from './util';
+import { SetDateTime } from './util';
 import dayjs from 'dayjs';
 
 interface DatePickerProps {
-  value: DateTime;
+  value: string;
   setValue: SetDateTime;
 }
 
@@ -13,7 +13,7 @@ function DatePicker({ value, setValue }: DatePickerProps) {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <MuiDatePicker
-        value={value}
+        value={dayjs(value)}
         // minDate={dayjs()}
         onChange={setValue}
         slotProps={{
