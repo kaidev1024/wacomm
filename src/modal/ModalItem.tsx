@@ -14,7 +14,7 @@ function ModalItem({ label, optional, children }: ModalItemProps) {
       <Row className="w-full items-start">
         <Column className="w-1/5">
           <Span text={label} className="font-semibold" />
-          {optional && <div className="mt-2">{optional}</div>}
+          {optional}
         </Column>
         <div className="w-4/5">{children}</div>
       </Row>

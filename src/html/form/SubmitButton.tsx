@@ -24,7 +24,7 @@ function SubmitButton({
         'SubmitButton px-1 border border-gray-300 rounded-lg w-full px-2 bg-blue-500 text-white',
         className
       )}
-      disabled={disabled}
+      disabled={disabled || isLoading}
       onClick={onClick}
     >
       <Row>
