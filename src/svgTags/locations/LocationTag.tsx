@@ -18,14 +18,12 @@ function LocationTag({
 }: LocationTagProps) {
   const getTag = () => {
     switch (locationType) {
-      case LocationType.Point:
-        return <LocationPointTag label={address} onClick={onClick} />;
       case LocationType.Street:
         return <StreetTag label={address} onClick={onClick} />;
       case LocationType.City:
         return <CityTag label={address} onClick={onClick} />;
       default:
-        return null;
+        return <LocationPointTag label={address} onClick={onClick} />;
     }
   };
   return <Row className="text-gray-600 bg-white rounded-lg w-fit">{getTag()}</Row>;
