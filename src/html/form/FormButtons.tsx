@@ -29,7 +29,7 @@ function FormButtons({
         onClick={onCancel}
         className="CancelButton w-fit mr-2"
         labelClassName="text-sm"
-        disabled={isLoading || disabled}
+        disabled={isLoading}
       />
       <SubmitButton
         className="SubmitButton w-fit"

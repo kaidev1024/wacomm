@@ -21,7 +21,10 @@ function SubmitButton({
     <button
       type="submit"
       className={twcn(
-        'SubmitButton px-1 border border-gray-300 rounded-lg w-full px-2 bg-blue-500 text-white',
+        'SubmitButton px-1 border border-gray-300 rounded-lg w-full px-2 text-white',
+        disabled || isLoading
+          ? 'bg-gray-300 cursor-not-allowed'
+          : 'bg-blue-500 hover:bg-blue-600 cursor-pointer',
         className
       )}
       disabled={disabled || isLoading}
