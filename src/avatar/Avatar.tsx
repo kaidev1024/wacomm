@@ -1,24 +1,33 @@
-import { twcn } from 'waujs';
-import { Img } from './html';
+import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
+import { Img } from '../html';
 
-interface LetterAvatarProps {
+interface AvatarProps {
   letter?: string;
   className?: string;
   imgSrc?: string;
+  onClick?: ZeroFuncType;
 }
 
-function LetterAvatar({
+function Avatar({
   letter = 'N',
   className = 'w-full h-full',
-  imgSrc = ''
-}: LetterAvatarProps) {
+  imgSrc = '',
+  onClick = ZeroFunc
+}: AvatarProps) {
   if (imgSrc) {
-    return <Img className="rounded-full w-full h-full" src={imgSrc} alt={letter} />;
+    return (
+      <Img
+        className="Avatar rounded-full w-full h-full"
+        src={imgSrc}
+        alt={letter}
+        onClick={onClick}
+      />
+    );
   }
   return (
     <div
       className={twcn(
-        'LetterAvatar flex items-center justify-center rounded-full w-full h-full bg-blue-300 text-white font-bold',
+        'Avatar flex items-center justify-center rounded-full w-full h-full bg-blue-300 text-white font-bold',
         className
       )}
     >
@@ -29,7 +38,7 @@ function LetterAvatar({
         width="100%"
         height="100%"
         role="img"
-        aria-label={letter.charAt(0).toUpperCase()}
+        aria-label={letter}
         xmlns="http://www.w3.org/2000/svg"
       >
         <text
@@ -42,11 +51,11 @@ function LetterAvatar({
           fontSize="80"
           fill="currentColor"
         >
-          {letter.charAt(0).toUpperCase()}
+          {letter}
         </text>
       </svg>
     </div>
   );
 }
 
-export default LetterAvatar;
+export default Avatar;
