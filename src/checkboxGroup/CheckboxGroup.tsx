@@ -12,7 +12,7 @@ interface CheckboxGroupProps {
   // eslint-disable-next-line no-unused-vars
   toggle: (values: string[]) => void;
   name?: string;
-  maxN?: number;
+  maxNumber?: number;
   className?: string;
   itemClassName?: string;
   labelClassName?: string;
@@ -22,7 +22,7 @@ function CheckboxGroup({
   items,
   toggle,
   name = 'checkbox-group',
-  maxN = 0,
+  maxNumber = 0,
   className = '',
   itemClassName = '',
   labelClassName = ''
@@ -48,7 +48,7 @@ function CheckboxGroup({
           value={value}
           isSelected={isSelected}
           toggle={handleToggle}
-          disabled={!isSelected && maxN > 0 && selectedNumber >= maxN}
+          disabled={!isSelected && maxNumber > 0 && selectedNumber >= maxNumber}
           className={itemClassName}
           labelClassName={labelClassName}
         />

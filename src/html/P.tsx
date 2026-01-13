@@ -1,7 +1,7 @@
 import { twcn } from 'waujs';
 
 interface PProps {
-  text: string;
+  text: string | number;
   className?: string;
   placeholder?: string;
 }

@@ -26,6 +26,7 @@ function Avatar({
   }
   return (
     <div
+      onClick={onClick}
       className={twcn(
         'Avatar flex items-center justify-center rounded-full w-full h-full bg-blue-300 text-white font-bold',
         className
