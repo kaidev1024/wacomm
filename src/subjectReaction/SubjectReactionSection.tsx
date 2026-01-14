@@ -1,4 +1,4 @@
-import { ClickableRow, Row } from 'src/containers';
+import { Row, Row } from 'src/containers';
 import { MiddleDot } from 'src/separators';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
 import SubjectReactionsCount from './SubjectReactionsCount';
@@ -21,7 +21,7 @@ export default function SubjectReactionSection({
 }: SubjectReactionProps) {
   const labels = SubjectReactionLabel[type];
   return (
-    <ClickableRow className={className} onClick={onClick}>
+    <Row className={className} onClick={onClick}>
       <span className={textClassName}>{labels.Single}</span>
       {count > 0 && (
         <>
@@ -35,6 +35,6 @@ export default function SubjectReactionSection({
           />
         </>
       )}
-    </ClickableRow>
+    </Row>
   );
 }

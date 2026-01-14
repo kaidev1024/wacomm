@@ -1,3 +1,4 @@
+import { ClickableDiv } from 'src/html';
 import { twcn, ZeroFuncType } from 'waujs';
 
 interface ContainerProps {
@@ -9,16 +10,12 @@ interface ContainerProps {
 
 function Container({ children, className = '', isVertical = false, onClick }: ContainerProps) {
   return (
-    <div
-      className={twcn(
-        className,
-        'gap-2 items-center',
-        isVertical ? 'flex flex-col' : 'flex flex-row'
-      )}
+    <ClickableDiv
+      className={twcn(className, 'gap-2 items-center flex ', isVertical ? 'flex-col' : 'flex-row')}
       onClick={onClick}
     >
       {children}
-    </div>
+    </ClickableDiv>
   );
 }
 

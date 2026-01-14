@@ -1,4 +1,4 @@
-import { ClickableRow } from 'src/containers';
+import { Row } from 'src/containers';
 import { Span } from 'src/html';
 import { InterestSvg, SvgSize } from 'wasvg';
 import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
@@ -22,7 +22,7 @@ export default function InterestTag({
   label
 }: InterestTagProps) {
   return (
-    <ClickableRow
+    <Row
       className={twcn(
         `${isHighlighted ? 'bg-blue-100 border-blue-500' : 'border-gray-300'} gap-0 rounded-full border px-1 py-0`,
         className
@@ -39,6 +39,6 @@ export default function InterestTag({
         text={label}
         className={isHighlighted ? 'text-blue-500 text-sm' : 'text-gray-600 text-sm'}
       />
-    </ClickableRow>
+    </Row>
   );
 }

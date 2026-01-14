@@ -5,5 +5,6 @@ export { default as P } from './P';
 export { default as Textarea } from './Textarea';
 export { default as Span } from './Span';
 export { default as List } from './List';
+export { default as ClickableDiv } from './ClickableDiv';
 export * from './input';
 export * from './form';
