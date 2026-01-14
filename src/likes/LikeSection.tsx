@@ -2,6 +2,7 @@ import { Row } from 'src/containers';
 import { MiddleDot } from 'src/separators';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
 import LikesCount from './LikesCount';
+import { ClickableDiv } from 'src/html';
 
 interface LikeSectionProps {
   className?: string;
@@ -20,9 +21,12 @@ export default function LikeSection({
 }: LikeSectionProps) {
   return (
     <Row className={className}>
-      <span onClick={onLike} className={`${isHighlighted ? 'text-blue-500' : textClassName}`}>
+      <ClickableDiv
+        onClick={onLike}
+        className={`${isHighlighted ? 'text-blue-500' : textClassName}`}
+      >
         Like
-      </span>
+      </ClickableDiv>
       {count > 0 && (
         <>
           <MiddleDot className={textClassName} />

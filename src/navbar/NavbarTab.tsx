@@ -1,3 +1,4 @@
+import { ClickableDiv } from 'src/html';
 import { twcn } from 'waujs';
 
 interface NavbarTabProps {
@@ -18,7 +19,7 @@ function NavbarTab({
   tabHighlightedClassName
 }: NavbarTabProps) {
   return (
-    <div
+    <ClickableDiv
       className={twcn(
         'px-3 py-0.5 text-gray-600 text-center',
         className,
@@ -27,7 +28,7 @@ function NavbarTab({
       onClick={() => onPick(tabName)}
     >
       {label}
-    </div>
+    </ClickableDiv>
   );
 }
 

@@ -1,4 +1,4 @@
-import { Row, Row } from 'src/containers';
+import { Row } from 'src/containers';
 import { MiddleDot } from 'src/separators';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
 import SubjectReactionsCount from './SubjectReactionsCount';

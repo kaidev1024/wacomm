@@ -1,3 +1,3 @@
-export { default as StaticRow } from './StaticRow';
-export { default as StaticColumn } from './StaticColumn';
-export * from './util';
+export * from './container';
+export { default as StaticImg } from './StaticImg';
+export type { StaticImgProps } from './StaticImg';

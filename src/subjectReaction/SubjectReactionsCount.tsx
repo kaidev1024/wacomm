@@ -1,3 +1,4 @@
+import { ClickableDiv } from 'src/html';
 import { ZeroFuncType } from 'waujs';
 
 interface SubjectReactionsCountProps {
@@ -16,8 +17,8 @@ export default function SubjectReactionsCount({
   className = 'text-gray-500 text-sm'
 }: SubjectReactionsCountProps) {
   return (
-    <div onClick={onClick}>
+    <ClickableDiv onClick={onClick}>
       <span className={className}>{`${count} ${count === 1 ? singleLabel : pluralLabel}`}</span>
-    </div>
+    </ClickableDiv>
   );
 }

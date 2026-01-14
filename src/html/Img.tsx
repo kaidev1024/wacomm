@@ -1,5 +1,6 @@
 import React from 'react';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
+import ClickableDiv from './ClickableDiv';
 
 interface ImgProps {
   src: string;
@@ -21,15 +22,17 @@ function Img({
   onLoad = undefined
 }: ImgProps) {
   return (
-    <img
-      ref={ref}
-      src={src}
-      alt={alt}
-      style={style}
-      className={className}
-      onClick={onClick}
-      onLoad={onLoad}
-    />
+    <ClickableDiv>
+      <img
+        ref={ref}
+        src={src}
+        alt={alt}
+        style={style}
+        className={className}
+        onClick={onClick}
+        onLoad={onLoad}
+      />
+    </ClickableDiv>
   );
 }
 

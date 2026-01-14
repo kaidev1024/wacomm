@@ -1,3 +1,4 @@
+import { ClickableDiv } from 'src';
 import { ZeroFuncType } from 'waujs';
 
 interface LikesCountProps {
@@ -14,9 +15,9 @@ export default function LikesCount({
   textClassName = 'text-gray-500'
 }: LikesCountProps) {
   return (
-    <div className={className} onClick={onClick}>
+    <ClickableDiv className={className} onClick={onClick}>
       <span>❤️&nbsp;</span>
       <span className={textClassName}>{count}</span>
-    </div>
+    </ClickableDiv>
   );
 }
