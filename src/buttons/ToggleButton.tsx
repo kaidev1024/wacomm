@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import Switch from 'react-switch';
 import { twcn } from 'waujs';
-import { Row } from 'src/containers';
+import { StaticRow } from 'src/static';
 
 interface ToggleButtonProps {
   label: string | ReactElement;
@@ -20,7 +20,7 @@ function ToggleButton({
   disabled = false
 }: ToggleButtonProps) {
   return (
-    <Row className={twcn('w-full p-1', className)}>
+    <StaticRow className={twcn('w-full p-1', className)}>
       {label}
       <Switch
         className="z-1"
@@ -33,7 +33,7 @@ function ToggleButton({
         width={40}
         handleDiameter={18}
       />
-    </Row>
+    </StaticRow>
   );
 }
 
