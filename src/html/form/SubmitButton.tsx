@@ -1,7 +1,6 @@
 import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
 import { LoadingIcon } from 'src/loading';
 import { StaticRow } from 'src/static';
-import P from '../P';
 
 interface SubmitButtonProps {
   className?: string;
@@ -32,7 +31,7 @@ function SubmitButton({
       onClick={onClick}
     >
       <StaticRow>
-        <P className="w-full text-sm" text={label} />
+        <p className="w-full text-sm">{label}</p>
         {isLoading && <LoadingIcon />}
       </StaticRow>
     </button>
