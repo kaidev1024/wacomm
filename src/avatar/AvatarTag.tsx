@@ -1,7 +1,6 @@
 import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
 import Avatar from './Avatar';
-import { Row } from 'src/containers';
-import { H1 } from 'src';
+import { H1, StaticRow } from 'src';
 
 interface AvatarTagProps {
   name: string;
@@ -19,7 +18,7 @@ function AvatarTag({
   imgSrc = ''
 }: AvatarTagProps) {
   return (
-    <Row className={twcn('AvatarTag bg-white rounded-lg py-1', className)}>
+    <StaticRow className={twcn('AvatarTag bg-white rounded-lg py-1', className)}>
       <Avatar
         className={avatarClassName}
         onClick={onClick}
@@ -27,7 +26,7 @@ function AvatarTag({
         imgSrc={imgSrc}
       />
       <H1 label={name} />
-    </Row>
+    </StaticRow>
   );
 }
 

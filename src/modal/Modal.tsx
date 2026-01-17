@@ -3,7 +3,7 @@ import ReactModal from 'react-modal';
 import { useIsMobile, CUTOFF_WIDTH_SM, ZeroFuncType } from 'waujs';
 import H1 from '../html/H1';
 import { CloseIcon } from '../icons';
-import { Row } from '../containers';
+import { StaticRow } from 'src/static';
 
 interface ModalProps {
   isOpen?: boolean;
@@ -120,10 +120,10 @@ function Modal({
       shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
       onRequestClose={onClose}
     >
-      <Row className="justify-between items-center w-full h-fit border-b border-gray-300 border-dashed pb-2 mb-2">
+      <StaticRow className="justify-between items-center w-full h-fit border-b border-gray-300 border-dashed pb-2 mb-2">
         {typeof title === 'string' ? <H1 label={title} /> : title}
         {!isCloseIconHidden && <CloseIcon className="right-1 text-gray-600" onClick={onClose} />}
-      </Row>
+      </StaticRow>
       {content}
     </ReactModal>
   );

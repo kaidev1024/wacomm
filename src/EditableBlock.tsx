@@ -2,6 +2,7 @@ import { ElementType, ReactNode, useState } from 'react';
 import { ZeroFuncType } from 'waujs';
 import { CloseIcon, EditIcon } from './icons';
 import { Column, Row } from './containers';
+import { StaticColumn, StaticRow } from './static';
 
 interface EditableBlockProps {
   Edit: ElementType;
@@ -33,13 +34,13 @@ function EditableBlock({
   const cancelEdit = () => setIsEditting(false);
   if (!editable) {
     return (
-      <Column className={`EditableBlock-${title} bg-white rounded-lg px-2 py-1 mb-2`}>
-        <Row className="justify-between">
+      <StaticColumn className={`EditableBlock-${title} bg-white rounded-lg px-2 py-1 mb-2`}>
+        <StaticRow className="justify-between">
           <div className="p-1 text-lg text-blue-500">{title}</div>
           {optionalMenu}
-        </Row>
+        </StaticRow>
         <Display defaultValues={{ ...defaultValues, editable }} />
-      </Column>
+      </StaticColumn>
     );
   }
   return (

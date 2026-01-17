@@ -1,6 +1,6 @@
 import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
 import StyledButton from './StyledButton';
-import { Row } from 'src/containers';
+import { StaticRow } from 'src/static';
 
 interface SaveCancelButtonsProps {
   saveLabel?: string;
@@ -22,7 +22,7 @@ export default function SaveCancelButtons({
   className = ''
 }: SaveCancelButtonsProps) {
   return (
-    <Row className={twcn('SaveCancelButtons w-full justify-end gap-2', className)}>
+    <StaticRow className={twcn('SaveCancelButtons w-full justify-end gap-2', className)}>
       <StyledButton
         isHighlighted={true}
         label={saveLabel}
@@ -35,6 +35,6 @@ export default function SaveCancelButtons({
         onClick={onCancel}
         disabled={isCancelDisabled}
       />
-    </Row>
+    </StaticRow>
   );
 }

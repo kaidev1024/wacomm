@@ -3,6 +3,7 @@ import { MiddleDot } from 'src/separators';
 import { ZeroFunc, ZeroFuncType } from 'waujs';
 import SubjectReactionsCount from './SubjectReactionsCount';
 import { SubjectReactionLabel, SubjectReactionType } from './util';
+import { Span } from 'src/html';
 
 interface SubjectReactionProps {
   type: SubjectReactionType;
@@ -22,7 +23,7 @@ export default function SubjectReactionSection({
   const labels = SubjectReactionLabel[type];
   return (
     <Row className={className} onClick={onClick}>
-      <span className={textClassName}>{labels.Single}</span>
+      <Span className={textClassName} text={labels.Single} />
       {count > 0 && (
         <>
           <MiddleDot className="text-gray-300" />

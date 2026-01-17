@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { Column, Row } from 'src/containers';
 import { Span } from 'src/html';
+import { StaticColumn, StaticRow } from 'src/static';
 
 interface ModalItemProps {
   label: string;
@@ -11,20 +11,20 @@ interface ModalItemProps {
 function ModalItem({ label, optional, children }: ModalItemProps) {
   if (optional) {
     return (
-      <Row className="w-full items-start">
-        <Column className="w-1/5">
+      <StaticRow className="w-full items-start">
+        <StaticColumn className="w-1/5">
           <Span text={label} className="font-semibold" />
           {optional}
-        </Column>
+        </StaticColumn>
         <div className="w-4/5">{children}</div>
-      </Row>
+      </StaticRow>
     );
   }
   return (
-    <Row className="w-full items-start">
+    <StaticRow className="w-full items-start">
       <Span text={label} className="text-gray-600 w-1/5" />
       <div className="w-4/5">{children}</div>
-    </Row>
+    </StaticRow>
   );
 }
 

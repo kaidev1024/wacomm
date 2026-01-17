@@ -1,7 +1,7 @@
 import { ReactNode, useState } from 'react';
 import { twcn } from 'waujs';
 import ExpandableContainerHeader from './ExpandableContainerHeader';
-import { Column } from 'src/containers';
+import { StaticColumn } from 'src/static';
 
 export interface ExpandableContainerProps {
   title: ReactNode;
@@ -20,7 +20,7 @@ function ExpandableContainer({
   const onClick = () => setIsShown((prev) => !prev);
 
   return (
-    <Column className={twcn('gap-0 bg-white rounded-lg px-2', className)}>
+    <StaticColumn className={twcn('gap-0 bg-white rounded-lg px-2', className)}>
       <ExpandableContainerHeader
         isExpandable={isExpandable}
         isShown={isShown}
@@ -28,7 +28,7 @@ function ExpandableContainer({
         onClick={onClick}
       />
       {isShown && <div className="border-t border-dashed">{children}</div>}
-    </Column>
+    </StaticColumn>
   );
 }
 

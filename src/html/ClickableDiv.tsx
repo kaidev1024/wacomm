@@ -11,7 +11,11 @@ export interface ClickableDivProps {
 
 function ClickableDiv({ children, className = '', onClick = ZeroFunc }: ClickableDivProps) {
   return (
-    <button className={twcn('ClickableDiv', divClassName, className)} onClick={onClick}>
+    <button
+      type="button"
+      className={twcn('ClickableDiv', divClassName, className)}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

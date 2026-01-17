@@ -2,6 +2,7 @@ import { AddSvg, SvgSize, MinusSvg } from 'wasvg';
 import { ZeroFuncType } from 'waujs';
 import { Row } from 'src/containers';
 import { ReactNode } from 'react';
+import { ClickableDiv, StaticRow } from 'src';
 
 interface ExpandableContainerHeaderProps {
   isShown: boolean;
@@ -17,18 +18,18 @@ function ExpandableContainerHeader({
   isExpandable = true
 }: ExpandableContainerHeaderProps) {
   return (
-    <Row className="text-blue-500 justify-between py-0.5">
+    <StaticRow className="text-blue-500 justify-between py-0.5">
       {title}
       {isExpandable && (
-        <div onClick={onClick}>
+        <ClickableDiv onClick={onClick}>
           {isShown ? (
             <MinusSvg size={SvgSize.sm} className="fill-gray-888" />
           ) : (
             <AddSvg size={SvgSize.sm} className="fill-gray-888" />
           )}
-        </div>
+        </ClickableDiv>
       )}
-    </Row>
+    </StaticRow>
   );
 }
 

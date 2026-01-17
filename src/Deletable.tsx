@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { CloseIcon } from './icons';
-import { Row } from './containers';
+import { StaticRow } from './static';
 
 interface DeletableProps {
   content: ReactNode;
@@ -10,10 +10,10 @@ interface DeletableProps {
 
 function Deletable({ content, onDelete, className = '' }: DeletableProps) {
   return (
-    <Row className={className}>
+    <StaticRow className={className}>
       <CloseIcon onClick={onDelete} />
       {content}
-    </Row>
+    </StaticRow>
   );
 }
 

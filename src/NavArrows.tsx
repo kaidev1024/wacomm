@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { twConcat, twcn, ZeroFuncType, useOutsideClick } from 'waujs';
 import { LeftArrowSvg, RightArrowSvg } from 'wasvg';
 import { Row } from './containers';
+import { StaticRow } from './static';
+import { ClickableDiv } from './html';
 
 interface NavArrowsProps {
   handlePrev: ZeroFuncType;
@@ -42,8 +44,8 @@ function NavArrows({ handleNext, handlePrev }: NavArrowsProps) {
 
   return (
     <div ref={ref}>
-      <Row className="NavArrows gap-0">
-        <div
+      <StaticRow className="NavArrows gap-0">
+        <ClickableDiv
           className={twcn(
             getArrowStype(clickedArrow * Arrow.Prev),
             'mx-2 rounded-full text-center pl-2 pr-1 py-0'
@@ -51,11 +53,11 @@ function NavArrows({ handleNext, handlePrev }: NavArrowsProps) {
           onClick={onClickPrev}
         >
           <LeftArrowSvg className="fill-gray-600" />
-        </div>
-        <div className={getArrowStype(clickedArrow * Arrow.Next)} onClick={onClickNext}>
+        </ClickableDiv>
+        <ClickableDiv className={getArrowStype(clickedArrow * Arrow.Next)} onClick={onClickNext}>
           <RightArrowSvg className="fill-gray-600" />
-        </div>
-      </Row>
+        </ClickableDiv>
+      </StaticRow>
     </div>
   );
 }

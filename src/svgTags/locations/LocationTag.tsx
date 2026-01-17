@@ -3,7 +3,7 @@ import { ZeroFunc, ZeroFuncType } from 'waujs';
 import LocationPointTag from './LocationPointTag';
 import StreetTag from './StreetTag';
 import CityTag from './CityTag';
-import { Row } from 'src/containers';
+import { StaticRow } from 'src/static';
 
 interface LocationTagProps {
   address: string;
@@ -26,7 +26,7 @@ function LocationTag({
         return <LocationPointTag label={address} onClick={onClick} />;
     }
   };
-  return <Row className="text-gray-600 bg-white rounded-lg w-fit">{getTag()}</Row>;
+  return <StaticRow className="text-gray-600 bg-white rounded-lg w-fit">{getTag()}</StaticRow>;
 }
 
 export default LocationTag;
