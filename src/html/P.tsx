@@ -10,7 +10,7 @@ function P({ className = '', placeholder = 'write something...', text }: PProps)
   return (
     <p
       className={twcn(
-        'text-gray-600 bg-gray-100 p-1 rounded-lg max-h-40 overflow-y-auto whitespace-pre-wrap',
+        'text-gray-600 bg-gray-100 p-1 rounded-lg max-h-40 overflow-y-auto whitespace-pre-wrap w-full',
         className
       )}
     >

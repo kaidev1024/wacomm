@@ -1,7 +1,7 @@
 import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
 
 export const divClassName =
-  'appearance-none bg-transparent border-none p-0 m-0 text-left cursor-pointer focus:outline-none';
+  'appearance-none bg-transparent p-0 m-0 text-left cursor-pointer focus:outline-none';
 
 export interface ClickableDivProps {
   children: React.ReactNode;
