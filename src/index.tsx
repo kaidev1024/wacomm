@@ -15,6 +15,7 @@ export { default as CheckboxGroup } from './checkboxGroup/CheckboxGroup';
 export { default as TextUpdater } from './TextUpdater';
 export { default as TextareaAutosize } from './TextareaAutosize';
 export { default as GameScore } from './GameScore';
+export { default as ProfileList } from './ProfileList';
 export * from './static/container/util';
 export { SvgSize } from 'wasvg';
 export * from './expandableContainer';

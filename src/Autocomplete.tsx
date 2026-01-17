@@ -2,13 +2,20 @@ import { SyntheticEvent, useState } from 'react';
 import { Autocomplete as MuiAutocomplete, TextField } from '@mui/material';
 
 interface AutocompleteProps {
+  ref?: React.Ref<any>;
   options: any[];
   placeholder?: string;
   onSelect: (placeID: string, description: string) => void;
   onChange: (text: string) => void;
 }
 
-function Autocomplete({ options, onSelect, onChange, placeholder = '' }: AutocompleteProps) {
+function Autocomplete({
+  ref = null,
+  options,
+  onSelect,
+  onChange,
+  placeholder = ''
+}: AutocompleteProps) {
   const [isFocused, setIsFocused] = useState(false);
 
   const handleOnChange = (event: SyntheticEvent, newOption: any) => {
@@ -23,6 +30,7 @@ function Autocomplete({ options, onSelect, onChange, placeholder = '' }: Autocom
 
   return (
     <MuiAutocomplete
+      ref={ref}
       options={options}
       getOptionLabel={(option) => option.description}
       popupIcon={null}
