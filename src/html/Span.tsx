@@ -2,7 +2,7 @@ import { twcn } from 'waujs';
 
 interface SpanProps {
   className?: string;
-  text: string;
+  text: string | number;
 }
 
 function Span({ className = '', text }: SpanProps) {
