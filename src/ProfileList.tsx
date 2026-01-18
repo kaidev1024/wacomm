@@ -22,7 +22,7 @@ function ProfileList({
 }: ProfileListProps) {
   return (
     <StaticColumn className={twcn('ProfileList bg-white p-2 rounded-lg w-full ', className)}>
-      <H1 label={title} className="border-b border-gray-300 pb-1 w-full" />
+      {title && <H1 label={title} className="border-b border-gray-300 pb-1 w-full" />}
       {ArrayUtil.IsZeroArray(items) ? (
         <NotFound label={notFoundLabel} />
       ) : (
