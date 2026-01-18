@@ -22,7 +22,7 @@ function AvatarTag({
       <Avatar
         className={avatarClassName}
         onClick={onClick}
-        letter={name.charAt(0).toUpperCase()}
+        letter={name?.charAt(0).toUpperCase()}
         imgSrc={imgSrc}
       />
       <H1 label={name} />
