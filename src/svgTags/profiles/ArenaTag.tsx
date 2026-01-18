@@ -23,7 +23,7 @@ function ArenaTag({
 }: ArenaTagProps) {
   return (
     <SvgTag
-      label={label}
+      label={label || 'Arena'}
       icon={{ Svg: ArenaSvg, size: svgSize, className: svgClassName }}
       onClick={onClick}
       className={className}

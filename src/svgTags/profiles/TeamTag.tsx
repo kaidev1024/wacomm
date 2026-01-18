@@ -23,7 +23,7 @@ function TeamTag({
 }: TeamTagProps) {
   return (
     <SvgTag
-      label={label}
+      label={label || 'Team'}
       icon={{ Svg: TeamSvg, size: svgSize, className: svgClassName }}
       onClick={onClick}
       className={className}

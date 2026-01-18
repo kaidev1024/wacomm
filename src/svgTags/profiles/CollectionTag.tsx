@@ -23,7 +23,7 @@ function CollectionsTag({
 }: CollectionsTagProps) {
   return (
     <SvgTag
-      label={label}
+      label={label || 'Collection'}
       icon={{
         Svg: CollectionSvg,
         size: svgSize,

@@ -52,7 +52,7 @@ const defaultStyle = {
     backgroundColor: 'rgba(0, 0, 0, 0.1)'
   },
   content: {
-    top: '15%',
+    top: '20%',
     left: '50%',
     transform: 'translate(-50%, 0%)',
     border: '1px solid #ccc',
@@ -65,16 +65,37 @@ const defaultStyle = {
   }
 };
 
-const mergeModalStyles = (style: ModalStyleProps, width: number) => {
-  if (!style) return defaultStyle;
+const mobileDefaultStyle = {
+  overlay: {
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.1)'
+  },
+  content: {
+    top: '20%',
+    transform: 'translate(-40px, 0%)',
+    border: '1px solid #ccc',
+    background: '#fff',
+    borderRadius: '4px',
+    height: 'fit-content',
+    boxShadow: '3px 3px 2px grey',
+    padding: '10px 15px',
+    overflow: 'visible'
+  }
+};
+
+const mergeModalStyles = (style: ModalStyleProps, width: number, isMobile: boolean) => {
+  if (!style) return isMobile ? mobileDefaultStyle : defaultStyle;
   return {
     overlay: {
-      ...defaultStyle.overlay,
+      ...(isMobile ? mobileDefaultStyle.overlay : defaultStyle.overlay),
       ...(style.overlay || {})
     },
     content: {
       width: `${width}px`,
-      ...defaultStyle.content,
+      ...(isMobile ? mobileDefaultStyle.content : defaultStyle.content),
       ...(style.content || {})
     }
   };
@@ -115,7 +136,7 @@ function Modal({
   return (
     <ReactModal
       isOpen={isOpen}
-      style={mergeModalStyles(style, width)}
+      style={mergeModalStyles(style, width, isMobile)}
       shouldCloseOnEsc={shouldCloseOnEsc}
       shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
       onRequestClose={onClose}

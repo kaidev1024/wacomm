@@ -1,9 +1,6 @@
 export { default as TeamTag } from './TeamTag';
 export { default as ArenaTag } from './ArenaTag';
 export { default as CollectionTag } from './CollectionTag';
-export { default as CreateArenaTag } from './CreateArenaTag';
-export { default as CreateCollectionTag } from './CreateCollectionTag';
-export { default as CreateTeamTag } from './CreateTeamTag';
 export { default as EventTag } from './EventTag';
 export { default as MarketTag } from './MarketTag';
 export { default as UserTag } from './UserTag';
