@@ -6,13 +6,15 @@ interface UserTagProps {
   svgSize?: SvgSize;
   labelClassName?: string;
   svgClassName?: string;
+  isVertical?: boolean;
 }
 
 function UserTag({
   label,
   svgSize = SvgSize.md,
   labelClassName = '',
-  svgClassName = ''
+  svgClassName = '',
+  isVertical = false
 }: UserTagProps) {
   return (
     <SvgTag
@@ -22,7 +24,7 @@ function UserTag({
         size: svgSize,
         className: svgClassName
       }}
-      isVertical={false}
+      isVertical={isVertical}
       labelClassName={labelClassName}
     />
   );

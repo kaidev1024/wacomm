@@ -10,6 +10,7 @@ interface LeaderboardTagProps {
   svgClassName?: string;
   labelClassName?: string;
   svgSize?: SvgSize;
+  isVertical?: boolean;
 }
 
 function LeaderboardTag({
@@ -19,7 +20,8 @@ function LeaderboardTag({
   className = '',
   svgClassName = '',
   svgSize = SvgSize.md,
-  labelClassName = ''
+  labelClassName = '',
+  isVertical = false
 }: LeaderboardTagProps) {
   return (
     <SvgTag
@@ -29,6 +31,7 @@ function LeaderboardTag({
       className={className}
       isHighlighted={isHighlighted}
       labelClassName={labelClassName}
+      isVertical={isVertical}
     />
   );
 }

@@ -10,6 +10,7 @@ interface EventTagProps {
   svgSize?: SvgSize;
   labelClassName?: string;
   svgClassName?: string;
+  isVertical?: boolean;
 }
 
 function EventTag({
@@ -19,7 +20,8 @@ function EventTag({
   className = '',
   svgSize = SvgSize.md,
   labelClassName = '',
-  svgClassName = ''
+  svgClassName = '',
+  isVertical = false
 }: EventTagProps) {
   return (
     <SvgTag
@@ -32,7 +34,7 @@ function EventTag({
       onClick={onClick}
       className={className}
       isHighlighted={isHighlighted}
-      isVertical={false}
+      isVertical={isVertical}
       labelClassName={labelClassName}
     />
   );

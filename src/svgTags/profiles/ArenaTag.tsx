@@ -10,6 +10,7 @@ interface ArenaTagProps {
   svgClassName?: string;
   labelClassName?: string;
   svgSize?: SvgSize;
+  isVertical?: boolean;
 }
 
 function ArenaTag({
@@ -19,7 +20,8 @@ function ArenaTag({
   className = '',
   svgClassName = '',
   svgSize = SvgSize.md,
-  labelClassName = ''
+  labelClassName = '',
+  isVertical = false
 }: ArenaTagProps) {
   return (
     <SvgTag
@@ -29,6 +31,7 @@ function ArenaTag({
       className={className}
       isHighlighted={isHighlighted}
       labelClassName={labelClassName}
+      isVertical={isVertical}
     />
   );
 }

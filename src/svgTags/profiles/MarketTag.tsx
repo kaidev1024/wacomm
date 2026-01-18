@@ -10,6 +10,7 @@ interface MarketTagProps {
   svgSize?: SvgSize;
   labelClassName?: string;
   svgClassName?: string;
+  isVertical?: boolean;
 }
 
 function MarketTag({
@@ -19,7 +20,8 @@ function MarketTag({
   className = '',
   svgSize = SvgSize.md,
   labelClassName = '',
-  svgClassName = ''
+  svgClassName = '',
+  isVertical = false
 }: MarketTagProps) {
   return (
     <SvgTag
@@ -29,6 +31,7 @@ function MarketTag({
       className={className}
       isHighlighted={isHighlighted}
       labelClassName={labelClassName}
+      isVertical={isVertical}
     />
   );
 }

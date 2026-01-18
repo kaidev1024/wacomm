@@ -10,6 +10,7 @@ interface TeamTagProps {
   svgSize?: SvgSize;
   labelClassName?: string;
   svgClassName?: string;
+  isVertical?: boolean;
 }
 
 function TeamTag({
@@ -19,7 +20,8 @@ function TeamTag({
   className = '',
   svgSize = SvgSize.md,
   labelClassName = '',
-  svgClassName = ''
+  svgClassName = '',
+  isVertical = false
 }: TeamTagProps) {
   return (
     <SvgTag
@@ -29,6 +31,7 @@ function TeamTag({
       className={className}
       isHighlighted={isHighlighted}
       labelClassName={labelClassName}
+      isVertical={isVertical}
     />
   );
 }

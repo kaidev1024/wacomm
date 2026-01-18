@@ -9,6 +9,7 @@ interface CoachTagProps {
   className?: string;
   labelClassName?: string;
   svgSize?: SvgSize;
+  isVertical?: boolean;
 }
 
 function CoachTag({
@@ -17,7 +18,8 @@ function CoachTag({
   onClick = ZeroFunc,
   className = '',
   svgSize = SvgSize.md,
-  labelClassName = ''
+  labelClassName = '',
+  isVertical = false
 }: CoachTagProps) {
   return (
     <SvgTag
@@ -27,6 +29,7 @@ function CoachTag({
       className={className}
       isHighlighted={isHighlighted}
       labelClassName={labelClassName}
+      isVertical={isVertical}
     />
   );
 }

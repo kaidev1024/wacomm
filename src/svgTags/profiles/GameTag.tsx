@@ -10,6 +10,7 @@ interface GameTagProps {
   svgClassName?: string;
   labelClassName?: string;
   svgSize?: SvgSize;
+  isVertical?: boolean;
 }
 
 function GameTag({
@@ -19,7 +20,8 @@ function GameTag({
   className = '',
   svgClassName = '',
   svgSize = SvgSize.md,
-  labelClassName = ''
+  labelClassName = '',
+  isVertical = false
 }: GameTagProps) {
   return (
     <SvgTag
@@ -29,6 +31,7 @@ function GameTag({
       className={className}
       isHighlighted={isHighlighted}
       labelClassName={labelClassName}
+      isVertical={isVertical}
     />
   );
 }

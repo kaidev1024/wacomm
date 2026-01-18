@@ -10,6 +10,7 @@ interface CollectionsTagProps {
   svgSize?: SvgSize;
   labelClassName?: string;
   svgClassName?: string;
+  isVertical?: boolean;
 }
 
 function CollectionsTag({
@@ -19,7 +20,8 @@ function CollectionsTag({
   className = '',
   labelClassName = '',
   svgClassName = '',
-  svgSize = SvgSize.md
+  svgSize = SvgSize.md,
+  isVertical = false
 }: CollectionsTagProps) {
   return (
     <SvgTag
@@ -33,6 +35,7 @@ function CollectionsTag({
       className={className}
       labelClassName={labelClassName}
       isHighlighted={isHighlighted}
+      isVertical={isVertical}
     />
   );
 }
