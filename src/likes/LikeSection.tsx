@@ -1,5 +1,5 @@
 import { MiddleDot } from 'src/separators';
-import { ZeroFunc, ZeroFuncType } from 'waujs';
+import { twcn, ZeroFunc, ZeroFuncType } from 'waujs';
 import LikesCount from './LikesCount';
 import { ClickableDiv } from 'src/html';
 import { StaticRow } from 'src/static';
@@ -14,7 +14,7 @@ interface LikeSectionProps {
 
 export default function LikeSection({
   className = '',
-  textClassName = 'text-gray-300 text-sm',
+  textClassName = 'text-gray-500 text-xs',
   count = 0,
   isHighlighted = false,
   onLike
@@ -23,7 +23,7 @@ export default function LikeSection({
     <StaticRow className={className}>
       <ClickableDiv
         onClick={onLike}
-        className={`${isHighlighted ? 'text-blue-500' : textClassName}`}
+        className={twcn(textClassName, `${isHighlighted && 'text-blue-500'}`)}
       >
         Like
       </ClickableDiv>

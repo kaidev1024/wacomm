@@ -16,7 +16,7 @@ interface SubjectReactionProps {
 export default function SubjectReactionSection({
   type,
   className = '',
-  textClassName = 'text-gray-500 text-sm',
+  textClassName = 'text-gray-500 text-xs',
   count = 0,
   onClick
 }: SubjectReactionProps) {
