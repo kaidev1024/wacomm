@@ -18,6 +18,7 @@ function DatePicker({ value, setValue }: DatePickerProps) {
         onChange={setValue}
         slotProps={{
           textField: {
+            error: false,
             sx: {
               '& .MuiPickersSectionList-root': {
                 padding: 0
