@@ -10,6 +10,7 @@ interface TextPostTagProps {
   labelClassName?: string;
   svgSize?: SvgSize;
   label?: string;
+  isVertical?: boolean;
 }
 
 function TextPostTag({
@@ -19,7 +20,8 @@ function TextPostTag({
   labelClassName = '',
   svgClassName = '',
   svgSize = SvgSize.md,
-  label = ''
+  label = '',
+  isVertical = false
 }: TextPostTagProps) {
   return (
     <SvgTag
@@ -29,6 +31,7 @@ function TextPostTag({
       className={className}
       labelClassName={labelClassName}
       isHighlighted={isHighlighted}
+      isVertical={isVertical}
     />
   );
 }
